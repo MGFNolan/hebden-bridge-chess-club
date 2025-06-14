@@ -1,5 +1,1 @@
 @import 'tailwindcss';
-
-p {
-    @apply font-bold text-red-500;
-}
