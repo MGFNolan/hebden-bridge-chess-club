@@ -1,14 +1,13 @@
 import { NavLinks } from '../utils/content';
 
-import LogoIconBlack from './Icons/LogoIconBlack.tsx';
+import LogoIcon from './Icons/LogoIcon.tsx';
 
 export default function NavBar() {
     return (
         <nav className="nav">
             <div className="nav__logo">
-                <a href="/">
-                    <LogoIconBlack />
-                    <span>Hebden Bridge Chess Club</span>
+                <a href="/" className="nav__logo__link">
+                    <LogoIcon />
                 </a>
 
                 <ul>
