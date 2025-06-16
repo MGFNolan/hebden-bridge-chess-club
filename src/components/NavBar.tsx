@@ -5,14 +5,14 @@ import LogoIcon from './Icons/LogoIcon.tsx';
 export default function NavBar() {
     return (
         <nav className="nav">
-            <div className="nav__logo">
-                <a href="/" className="nav__logo__link">
+            <div className="nav__group">
+                <a href="/" className="nav__group__logo">
                     <LogoIcon />
                 </a>
 
-                <ul>
+                <ul className="nav__links">
                     {NavLinks.map((link) => (
-                        <li key={link.id} className="nav__link">
+                        <li key={link.id} className="nav__link__individual">
                             <a href={link.href}>{link.text}</a>
                         </li>
                     ))}
