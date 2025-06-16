@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+@import './css/nav-bar.css';
+
+:root {
+    @apply bg-black;
+}
