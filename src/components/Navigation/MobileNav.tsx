@@ -22,7 +22,7 @@ export default function MobileNav() {
                     display: 'flex',
                 },
             }}
-            className="fixed top-0 right-0 bottom-0 left-0 hidden justify-end bg-white/30 pl-30"
+            className="mobile-nav-wrapper"
         >
             <motion.nav
                 animate={menuOpened ? 'visible' : 'hidden'}
@@ -40,7 +40,7 @@ export default function MobileNav() {
                     duration: 0.35,
                     ease: 'easeInOut',
                 }}
-                className="flex h-full w-full max-w-96 min-w-65 flex-col items-start gap-y-18 bg-white p-6 pl-7"
+                className="mobile-nav"
             >
                 <Close />
                 <motion.ul
@@ -59,12 +59,12 @@ export default function MobileNav() {
                         ease: 'easeOut',
                         delay: 0.05,
                     }}
-                    className="flex flex-col gap-y-8"
+                    className="mobile-nav__links"
                 >
                     {NavLinks.map((link) => (
                         <li
                             key={link.id}
-                            className={`group relative flex flex-col font-medium transition-all duration-300 ease-in-out ${
+                            className={`mobile-nav__link-individual ${
                                 activeLinkId === link.id ? 'gap-y-6' : 'gap-y-0'
                             }`}
                             onClick={() =>
@@ -73,12 +73,12 @@ export default function MobileNav() {
                                 )
                             }
                         >
-                            <div className="flex cursor-pointer items-center gap-x-1.75">
+                            <div className="mobile-nav__link-individual__wrapper">
                                 <a
-                                    href="#"
-                                    className={`text-grey-600 ${
+                                    href={link.href}
+                                    className={`text-orange-500 ${
                                         activeLinkId === link.id
-                                            ? 'text-grey-1000'
+                                            ? 'text-orange-600'
                                             : ''
                                     }`}
                                 >
