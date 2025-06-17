@@ -6,6 +6,5 @@
 
 :root {
     @apply bg-black;
-
     scroll-behavior: smooth;
 }

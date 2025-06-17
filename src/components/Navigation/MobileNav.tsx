@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Close from '../Icons/Close';
 
 export default function MobileNav() {
-    const { menuOpened } = useMenuContext();
+    const { menuOpened, setMenuOpened } = useMenuContext();
     const [activeLinkId, setActiveLinkId] = useState<number>(-1);
 
     return (
@@ -23,6 +23,10 @@ export default function MobileNav() {
                 },
             }}
             className="mobile-nav-wrapper"
+            id="mobile-nav"
+            role="dialog"
+            aria-modal="true"
+            aria-label="mobile navigation menu"
         >
             <motion.nav
                 animate={menuOpened ? 'visible' : 'hidden'}
@@ -67,11 +71,12 @@ export default function MobileNav() {
                             className={`mobile-nav__link-individual ${
                                 activeLinkId === link.id ? 'gap-y-6' : 'gap-y-0'
                             }`}
-                            onClick={() =>
+                            onClick={() => {
                                 setActiveLinkId(
                                     activeLinkId === link.id ? -1 : link.id
-                                )
-                            }
+                                );
+                                setMenuOpened(false);
+                            }}
                         >
                             <div className="mobile-nav__link-individual__wrapper">
                                 <a
@@ -81,6 +86,11 @@ export default function MobileNav() {
                                             ? 'text-orange-600'
                                             : ''
                                     }`}
+                                    aria-current={
+                                        activeLinkId === link.id
+                                            ? 'true'
+                                            : undefined
+                                    }
                                 >
                                     {link.text}
                                 </a>

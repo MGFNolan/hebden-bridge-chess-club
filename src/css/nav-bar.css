@@ -11,6 +11,12 @@
         &:hover {
             @apply text-orange-400;
         }
+
+        a {
+            &:focus {
+                @apply outline-none ring-2 ring-amber-400 ring-offset-2;
+            }
+        }
     }
 
     .nav__group {

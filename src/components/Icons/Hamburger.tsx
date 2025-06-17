@@ -1,9 +1,12 @@
 import { useMenuContext } from '../../context/MobileMenuContext';
 
 export default function Hamburger() {
-    const { setMenuOpened } = useMenuContext();
+    const { setMenuOpened, menuOpened } = useMenuContext();
     return (
         <button
+            aria-label="Open mobile navigation menu"
+            aria-expanded={menuOpened}
+            aria-controls="mobile-nav"
             className="hidden cursor-pointer flex-col justify-center gap-y-1.75 max-md:flex max-sm:gap-y-1.5"
             onClick={() => setMenuOpened(true)}
         >
