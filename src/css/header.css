@@ -1,0 +1,27 @@
+header {
+    @apply pt-8 pb-23;
+}
+
+/* Desktop - Smaller */
+
+header {
+    @media (max-width: 1280px) {
+        @apply pb-6 pt-6;
+    }
+}
+
+/* Tablet */
+
+header {
+    @media (max-width: 960px) {
+        @apply pb-0;
+    }
+}
+
+/* Mobile */
+
+header {
+    @media (max-width: 760px) {
+        @apply pt-4;
+    }
+}
