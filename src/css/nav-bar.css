@@ -43,13 +43,13 @@
 /* Tablet */
 
 .nav {
-    @media (max-width: 960px) {
+    @media (max-width: 959px) {
         .nav__links {
-            @apply gap-x-4;
+            @apply hidden;
         }
 
         .nav__link__individual {
-            @apply text-xs;
+            @apply hidden;
         }
     }
 }

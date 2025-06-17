@@ -1,6 +1,6 @@
-import { NavLinks } from '../utils/content';
-
-import LogoIcon from './Icons/LogoIcon.tsx';
+import { NavLinks } from '../../utils/content';
+import Hamburger from './../Icons/Hamburger.tsx';
+import LogoIcon from './../Icons/LogoIcon.tsx';
 
 export default function NavBar() {
     return (
@@ -17,6 +17,7 @@ export default function NavBar() {
                         </li>
                     ))}
                 </ul>
+                <Hamburger />
             </div>
         </nav>
     );
