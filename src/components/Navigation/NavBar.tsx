@@ -12,7 +12,7 @@ export default function NavBar() {
 
                 <ul className="nav__links">
                     {NavLinks.map((link) => (
-                        <li key={link.id} className="nav__link__individual">
+                        <li key={link.id} className="nav__link-individual">
                             <a href={link.href}>{link.text}</a>
                         </li>
                     ))}
