@@ -5,8 +5,9 @@ export default function Close() {
     return (
         <div className="w-full">
             <button
-                className="relative ml-auto flex size-6 cursor-pointer items-center"
+                className="relative ml-auto flex size-6 cursor-pointer items-center focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
                 onClick={() => setMenuOpened(false)}
+                aria-label="Close mobile navigation menu"
             >
                 <div className="absolute h-0.5 w-6 rotate-45 bg-orange-500" />
                 <div className="absolute h-0.5 w-6 -rotate-45 bg-orange-500" />
