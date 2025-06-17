@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
-p {
-    @apply font-bold text-red-500;
+@import './css/nav-bar.css';
+@import './css/header.css';
+@import './css/mobile-nav.css';
+
+:root {
+    @apply bg-black;
+
+    scroll-behavior: smooth;
 }
