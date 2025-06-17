@@ -6,7 +6,7 @@
         @apply flex items-stretch gap-x-10;
     }
 
-    .nav__link__individual {
+    .nav__link-individual {
         @apply text-orange-500;
         &:hover {
             @apply text-orange-400;
@@ -34,7 +34,7 @@
             @apply gap-x-6;
         }
 
-        .nav__link__individual {
+        .nav__link-individual {
             @apply text-sm;
         }
     }
@@ -48,7 +48,7 @@
             @apply hidden;
         }
 
-        .nav__link__individual {
+        .nav__link-individual {
             @apply hidden;
         }
     }
@@ -58,7 +58,7 @@
 
 .nav {
     @media (max-width: 760px) {
-        .nav__link__individual {
+        .nav__link-individual {
             @apply text-blue-500;
         }
     }
