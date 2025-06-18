@@ -7,6 +7,7 @@ import Header from './components/Header';
 //Mobile Nav
 import MenuContextProvider from './context/MobileMenuContext';
 import MobileNav from './components/Navigation/MobileNav';
+import Hero from './components/Hero';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Page>
                 <Header>
                     <NavBar />
+                    <Hero />
                     <MobileNav />
                 </Header>
             </Page>
