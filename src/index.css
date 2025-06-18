@@ -1,7 +1,10 @@
 @import 'tailwindcss';
 
-@import './css/nav-bar.css';
+@import './css/theme.css';
+
 @import './css/header.css';
+@import './css/nav-bar.css';
+@import './css/hero.css';
 @import './css/mobile-nav.css';
 
 :root {
