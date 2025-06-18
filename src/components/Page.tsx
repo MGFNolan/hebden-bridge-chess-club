@@ -5,7 +5,7 @@ interface PageProps {
 }
 
 function Page(props: PageProps) {
-    return <div>{props.children}</div>;
+    return <div id="main-content">{props.children}</div>;
 }
 
 export default Page;

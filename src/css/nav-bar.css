@@ -1,5 +1,5 @@
 .nav {
-    @apply m-auto mb-12 mt-3 w-full;
+    @apply m-auto mt-3 w-full;
     @apply border-b-orange-500 border-b-1;
 
     .nav__links {
@@ -10,12 +10,6 @@
         @apply text-orange-500;
         &:hover {
             @apply text-orange-400;
-        }
-
-        a {
-            &:focus {
-                @apply outline-none ring-2 ring-amber-400 ring-offset-2;
-            }
         }
     }
 
