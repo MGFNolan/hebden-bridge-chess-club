@@ -1,8 +1,8 @@
 .hero {
-    @apply relative w-full overflow-hidden;
+    @apply relative overflow-hidden;
 
     .hero__bg {
-        @apply relative flex items-center justify-center aspect-[16/9] w-full h-full;
+        @apply relative flex items-center justify-center aspect-auto w-full h-full pb-55 pt-45;
 
         &::before {
             content: '';
@@ -20,7 +20,7 @@
         @apply relative z-10 text-center h-[50%] max-w-[75%];
 
         .hero__text__title {
-            @apply text-8xl font-bold;
+            @apply text-8xl font-bold mb-5;
 
             /* from Google Fonts */
             font-family: 'Bangers', system-ui;
@@ -40,7 +40,7 @@
     @media (max-width: 1280px) {
         .hero__text {
             .hero__text__title {
-                @apply text-6xl;
+                @apply text-7xl;
             }
 
             .hero__text__lede {
@@ -53,8 +53,7 @@
 
     @media (max-width: 959px) {
         .hero__bg {
-            @apply aspect-auto;
-            @apply py-35;
+            @apply pt-40;
         }
 
         .hero__text {
@@ -72,7 +71,6 @@
 
     @media (max-width: 760px) {
         .hero__bg {
-            @apply aspect-auto;
             @apply pb-50 pt-35;
         }
 
