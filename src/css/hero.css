@@ -1,0 +1,87 @@
+.hero {
+    @apply relative overflow-hidden;
+
+    .hero__bg {
+        @apply relative flex items-center justify-center aspect-auto w-full h-full pb-55 pt-45;
+
+        &::before {
+            content: '';
+            @apply absolute top-1/2 left-1/2 w-full h-full;
+
+            /* background image */
+            @apply bg-bottom bg-no-repeat bg-cover;
+            background-image: url('/chess-board.svg');
+            transform: translate(-50%, -50%) scale(1.1);
+            z-index: -1;
+        }
+    }
+
+    .hero__text {
+        @apply relative z-10 text-center h-[50%] max-w-[75%];
+
+        .hero__text__title {
+            @apply text-8xl font-bold mb-5;
+
+            /* from Google Fonts */
+            font-family: 'Bangers', system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .hero__text__lede {
+            @apply mt-2 p-3;
+            @apply text-lg;
+            @apply bg-black/80  rounded-md;
+        }
+    }
+
+    /* Desktop - Smaller */
+
+    @media (max-width: 1280px) {
+        .hero__text {
+            .hero__text__title {
+                @apply text-7xl;
+            }
+
+            .hero__text__lede {
+                @apply text-sm;
+            }
+        }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 959px) {
+        .hero__bg {
+            @apply pt-40;
+        }
+
+        .hero__text {
+            .hero__text__title {
+                @apply text-6xl;
+            }
+
+            .hero__text__lede {
+                @apply text-xs leading-6;
+            }
+        }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+        .hero__bg {
+            @apply pb-50 pt-35;
+        }
+
+        .hero__text {
+            .hero__text__title {
+                @apply text-6xl;
+            }
+
+            .hero__text__lede {
+                @apply text-xs;
+            }
+        }
+    }
+}

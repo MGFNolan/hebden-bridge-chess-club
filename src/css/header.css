@@ -1,12 +1,12 @@
 header {
-    @apply pt-8 pb-23;
+    @apply pb-23;
 }
 
 /* Desktop - Smaller */
 
 header {
     @media (max-width: 1280px) {
-        @apply pb-6 pt-6;
+        @apply pb-6;
     }
 }
 

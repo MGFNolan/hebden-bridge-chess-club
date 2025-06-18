@@ -1,0 +1,21 @@
+html {
+    @apply text-orange-500;
+}
+
+a,
+button {
+    &:focus {
+        @apply outline-none ring-2 ring-amber-400 ring-offset-2;
+    }
+}
+
+.btn--primary {
+    @apply my-3 px-5 py-2.5;
+    @apply transition-all duration-350;
+    @apply cursor-pointer place-content-center rounded-xl;
+    @apply border-orange-500 border-2 bg-black;
+
+    &:hover {
+        @apply bg-orange-500 text-black;
+    }
+}
