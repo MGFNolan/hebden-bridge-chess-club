@@ -1,3 +1,5 @@
+import { motion } from 'motion/react';
+
 export default function Hero() {
     return (
         <section
@@ -7,9 +9,21 @@ export default function Hero() {
         >
             <div className="hero__bg">
                 <div className="hero__text">
-                    <h1 className="hero__text__title">
+                    <motion.h1
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                            duration: 0.4,
+                            scale: {
+                                type: 'spring',
+                                visualDuration: 0.6,
+                                bounce: 0.5,
+                            },
+                        }}
+                        className="hero__text__title"
+                    >
                         Hebden Bridge Chess Club
-                    </h1>
+                    </motion.h1>
                     <p className="hero__text__lede">
                         No matter whether you’re new to chess, an online player
                         who wants to try playing over the board, a lapsed player
