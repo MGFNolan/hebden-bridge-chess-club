@@ -1,13 +1,13 @@
 import "./index.css";
 
-import NavBar from "./components/Navigation/NavBar";
-import Page from "./components/Page";
-import Header from "./components/Header";
-
-//Mobile Nav
 import MenuContextProvider from "./context/MobileMenuContext";
-import MobileNav from "./components/Navigation/MobileNav";
+import Page from "./components/Page";
+
+//Header
+import Header from "./components/Header";
+import NavBar from "./components/Navigation/NavBar";
 import Hero from "./components/Hero";
+import MobileNav from "./components/Navigation/MobileNav";
 
 //Main
 import Main from "./components/Main";
