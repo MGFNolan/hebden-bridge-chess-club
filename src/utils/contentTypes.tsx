@@ -4,4 +4,10 @@ interface NavLink {
     text: string;
 }
 
-export type { NavLink };
+interface ClubInformation {
+    id: number;
+    title: string;
+    description: string;
+}
+
+export type { NavLink, ClubInformation };
