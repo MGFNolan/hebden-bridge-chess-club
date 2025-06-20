@@ -28,7 +28,7 @@ const NavLinks: NavLink[] = [
     },
 ];
 
-const ClubInformation: ClubInformation[] = [
+const ClubInformationContent: ClubInformation[] = [
     {
         id: 1,
         title: "Juniors",
@@ -38,8 +38,7 @@ const ClubInformation: ClubInformation[] = [
     {
         id: 2,
         title: "League Chess",
-        description:
-            "If it's competitive chess you're after, then you've come to the right place! Last season we had four teams participating in the Calderdale Chess League and our B team became league champions for 2024-25. The club also won League 1 in 2022-23, 2021-22 and in 2018-19 and we are current holders of the Calderdale Chess Team Lightning title. <br /> We also take part in online events and have three teams in the 4 Nations Chess League (4NCL) Online competition. Our first team won the Division 2 title in season 7, Division 3 in seasons 6 and 5, and the Division 5 title in season 4.",
+        description: `If it's competitive chess you're after, then you've come to the right place! Last season we had four teams participating in the Calderdale Chess League and our B team became league champions for 2024-25. The club also won League 1 in 2022-23, 2021-22 and in 2018-19 and we are current holders of the Calderdale Chess Team Lightning title. We also take part in online events and have three teams in the 4 Nations Chess League (4NCL) Online competition. Our first team won the Division 2 title in season 7, Division 3 in seasons 6 and 5, and the Division 5 title in season 4.`,
     },
     {
         id: 3,
@@ -49,4 +48,4 @@ const ClubInformation: ClubInformation[] = [
     },
 ];
 
-export { NavLinks };
+export { NavLinks, ClubInformationContent };

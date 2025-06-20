@@ -1,11 +1,13 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-@import './css/theme.css';
+@import "./css/theme.css";
 
-@import './css/header.css';
-@import './css/nav-bar.css';
-@import './css/hero.css';
-@import './css/mobile-nav.css';
+@import "./css/header.css";
+@import "./css/nav-bar.css";
+@import "./css/hero.css";
+@import "./css/mobile-nav.css";
+@import "./css/club-Information-Individual.css";
+@import "./css/club-Information.css";
 
 :root {
     @apply bg-black;
