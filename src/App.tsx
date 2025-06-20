@@ -1,16 +1,17 @@
-import './index.css';
+import "./index.css";
 
-import NavBar from './components/Navigation/NavBar';
-import Page from './components/Page';
-import Header from './components/Header';
+import NavBar from "./components/Navigation/NavBar";
+import Page from "./components/Page";
+import Header from "./components/Header";
 
 //Mobile Nav
-import MenuContextProvider from './context/MobileMenuContext';
-import MobileNav from './components/Navigation/MobileNav';
-import Hero from './components/Hero';
+import MenuContextProvider from "./context/MobileMenuContext";
+import MobileNav from "./components/Navigation/MobileNav";
+import Hero from "./components/Hero";
 
 //Main
-import Main from './components/Main';
+import Main from "./components/Main";
+import ClubInformation from "./components/Club Information/ClubInformation";
 
 function App() {
     return (
@@ -22,7 +23,9 @@ function App() {
                     <MobileNav />
                 </Header>
 
-                <Main></Main>
+                <Main>
+                    <ClubInformation />
+                </Main>
             </Page>
         </MenuContextProvider>
     );
