@@ -9,6 +9,9 @@ import MenuContextProvider from './context/MobileMenuContext';
 import MobileNav from './components/Navigation/MobileNav';
 import Hero from './components/Hero';
 
+//Main
+import Main from './components/Main';
+
 function App() {
     return (
         <MenuContextProvider>
@@ -18,6 +21,8 @@ function App() {
                     <Hero />
                     <MobileNav />
                 </Header>
+
+                <Main></Main>
             </Page>
         </MenuContextProvider>
     );
