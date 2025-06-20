@@ -1,8 +1,4 @@
-import {
-    type ClubInformation,
-    type NavLink,
-    ClubInformation,
-} from './contentTypes';
+import { type ClubInformation, type NavLink } from './contentTypes';
 
 const NavLinks: NavLink[] = [
     {
