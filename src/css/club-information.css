@@ -5,7 +5,7 @@
         @apply max-w-[75%] text-center flex flex-col;
     }
     .club-information__list {
-        @apply flex gap-x-7;
+        @apply flex mt-7;
     }
     .club-information__title {
         @apply text-center w-[100%];

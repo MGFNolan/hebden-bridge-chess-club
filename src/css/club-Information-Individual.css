@@ -1,3 +1,10 @@
 .Info-Individual {
-    @apply w-[33%];
+    @apply w-[33%] px-6;
+    &:hover {
+        background-image: url("/chess-board.svg");
+    }
+
+    &:nth-child(2) {
+        @apply border-orange-500 border-l-2 border-r-2;
+    }
 }
