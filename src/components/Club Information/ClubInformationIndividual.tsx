@@ -8,10 +8,10 @@ export default function ClubInformationIndividual({
     information,
 }: Information) {
     return (
-        <li key={information.id} className="Info-Individual">
-            <div className="Info-Individual__wrapper">
-                <h3 className="Info-Individual__title">{information.title}</h3>
-                <p className="Info-Individual__desciption">
+        <li key={information.id} className="info-individual">
+            <div className="info-individual__wrapper">
+                <h3 className="info-individual__title">{information.title}</h3>
+                <p className="info-individual__desciption">
                     {information.description}
                 </p>
             </div>
