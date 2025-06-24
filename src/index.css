@@ -113,8 +113,8 @@ li:not(nav *) {
     margin-bottom: 0.5rem;
 }
 
-/* Links */
-a {
+/* Links not inside <nav> */
+a:not(nav *) {
     color: inherit;
     text-decoration: underline;
     text-decoration-thickness: 2px;
