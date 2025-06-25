@@ -19,12 +19,15 @@
             @apply border-orange-500 border-l-0 border-r-0 border-t-2 border-b-2;
         }
     }
+
+    /* Mobile */
+
     @media (max-width: 959px) {
         @apply w-[95%];
-        /* Mobile */
     }
+
+    /* Tablet */
+
     @media (max-width: 760px) {
     }
 }
-
-/* Tablet */
