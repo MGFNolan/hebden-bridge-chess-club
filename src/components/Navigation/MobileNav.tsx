@@ -1,9 +1,9 @@
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
-import { NavLinks } from '../../utils/content';
-import { useMenuContext } from '../../context/MobileMenuContext';
-import { useState } from 'react';
-import Close from '../Icons/Close';
+import { NavLinksContent } from "../../utils/content";
+import { useMenuContext } from "../../context/MobileMenuContext";
+import { useState } from "react";
+import Close from "../Icons/Close";
 
 export default function MobileNav() {
     const { menuOpened, setMenuOpened } = useMenuContext();
@@ -11,15 +11,15 @@ export default function MobileNav() {
 
     return (
         <motion.div
-            animate={menuOpened ? 'visible' : 'hidden'}
+            animate={menuOpened ? "visible" : "hidden"}
             variants={{
                 hidden: {
                     opacity: 0,
-                    display: 'none',
+                    display: "none",
                 },
                 visible: {
                     opacity: 1,
-                    display: 'flex',
+                    display: "flex",
                 },
             }}
             className="mobile-nav-wrapper"
@@ -29,47 +29,47 @@ export default function MobileNav() {
             aria-label="mobile navigation menu"
         >
             <motion.nav
-                animate={menuOpened ? 'visible' : 'hidden'}
+                animate={menuOpened ? "visible" : "hidden"}
                 variants={{
                     hidden: {
                         opacity: 0,
-                        x: '100%',
+                        x: "100%",
                     },
                     visible: {
                         opacity: 1,
-                        x: '0%',
+                        x: "0%",
                     },
                 }}
                 transition={{
                     duration: 0.35,
-                    ease: 'easeInOut',
+                    ease: "easeInOut",
                 }}
                 className="mobile-nav"
             >
                 <Close />
                 <motion.ul
-                    animate={menuOpened ? 'visible' : 'hidden'}
+                    animate={menuOpened ? "visible" : "hidden"}
                     variants={{
                         hidden: {
                             opacity: 0,
-                            x: '100%',
+                            x: "100%",
                         },
                         visible: {
                             opacity: 1,
-                            x: '0%',
+                            x: "0%",
                         },
                     }}
                     transition={{
-                        ease: 'easeOut',
+                        ease: "easeOut",
                         delay: 0.05,
                     }}
                     className="mobile-nav__links"
                 >
-                    {NavLinks.map((link) => (
+                    {NavLinksContent.map((link) => (
                         <li
                             key={link.id}
                             className={`mobile-nav__link-individual ${
-                                activeLinkId === link.id ? 'gap-y-6' : 'gap-y-0'
+                                activeLinkId === link.id ? "gap-y-6" : "gap-y-0"
                             }`}
                             onClick={() => {
                                 setActiveLinkId(
@@ -83,12 +83,12 @@ export default function MobileNav() {
                                     href={link.href}
                                     className={`text-orange-500 ${
                                         activeLinkId === link.id
-                                            ? 'text-orange-600'
-                                            : ''
+                                            ? "text-orange-600"
+                                            : ""
                                     }`}
                                     aria-current={
                                         activeLinkId === link.id
-                                            ? 'true'
+                                            ? "true"
                                             : undefined
                                     }
                                 >
