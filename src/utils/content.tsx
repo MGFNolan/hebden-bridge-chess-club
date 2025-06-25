@@ -1,10 +1,14 @@
-import { type ClubInformation, type NavLink } from "./contentTypes";
+import {
+    type ClubInformation,
+    type NavLink,
+    type WhatWeOffer,
+} from "./contentTypes";
 
-const NavLinks: NavLink[] = [
+const NavLinksContent: NavLink[] = [
     {
         id: 1,
-        href: "/",
-        text: "Home",
+        href: "#club-information",
+        text: "Club Information",
     },
     {
         id: 2,
@@ -13,13 +17,13 @@ const NavLinks: NavLink[] = [
     },
     {
         id: 3,
-        href: "#club-information",
-        text: "Club Information",
+        href: "#club-history",
+        text: "Club History",
     },
     {
         id: 4,
-        href: "#club-history",
-        text: "Club History",
+        href: "#gallery",
+        text: "Gallery",
     },
     {
         id: 5,
@@ -48,4 +52,49 @@ const ClubInformationContent: ClubInformation[] = [
     },
 ];
 
-export { NavLinks, ClubInformationContent };
+const WhatWeOfferContent: WhatWeOffer[] = [
+    {
+        id: 1,
+        image: "/",
+        title: "Social Chess",
+        description:
+            "Just turn up, find a dancing partner, and play some chess! All levels are welcome, even if you've never played before.",
+    },
+    {
+        id: 2,
+        image: "/",
+        title: "Summer Programme",
+        description:
+            "We have all sorts of fun going on in the summer months, from internal competitions, to chess variants, to lectures.",
+    },
+    {
+        id: 3,
+        image: "/",
+        title: "A Safe Space",
+        description:
+            "Everyone is welcome at the club. Whoever you are, we would love to have you and play some chess!",
+    },
+    {
+        id: 4,
+        image: "/",
+        title: "Calderdale League",
+        description:
+            "We partake in the Calderdale Chess League, and players of all abilities are welcome to take part.",
+    },
+    {
+        id: 5,
+        image: "/",
+        title: "Online Chess",
+        description:
+            "We also partake in the 4NCL online congresses, and players of all abilities are welcome to take part.",
+    },
+    {
+        id: 6,
+        image: "/",
+        title: "Membership",
+        description:
+            "While membership is required for competitive chess, you're welcome to come along and see how you find things with no obligations.",
+    },
+];
+
+export { NavLinksContent, ClubInformationContent, WhatWeOfferContent };
