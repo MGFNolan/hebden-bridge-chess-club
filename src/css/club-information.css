@@ -1,5 +1,5 @@
 .club-information {
-    @apply mx-7 justify-items-center pb-55;
+    @apply mx-7 justify-items-center;
 
     .club-information__wrapper {
         @apply max-w-[80%] text-center flex flex-col;
