@@ -12,6 +12,7 @@ import MobileNav from "./components/Navigation/MobileNav";
 //Main
 import Main from "./components/Main";
 import ClubInformation from "./components/Club Information/ClubInformation";
+import WhatWeOffer from "./components/WhatWeOffer";
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
 
                 <Main>
                     <ClubInformation />
+                    <WhatWeOffer />
                 </Main>
             </Page>
         </MenuContextProvider>
