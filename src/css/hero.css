@@ -1,8 +1,8 @@
 .hero {
-    @apply relative overflow-hidden;
+    @apply h-[100vh] relative overflow-hidden;
 
     .hero__bg {
-        @apply relative flex items-center justify-center aspect-auto w-full h-full pb-55 pt-45;
+        @apply relative flex justify-center w-full h-full pt-25;
 
         &::before {
             content: "";
@@ -53,16 +53,15 @@
 
     @media (max-width: 959px) {
         .hero__bg {
-            @apply pt-40;
+            @apply items-start pt-10;
         }
-
         .hero__text {
             .hero__text__title {
                 @apply text-6xl;
             }
 
             .hero__text__lede {
-                @apply text-xs leading-6;
+                @apply text-xl leading-6;
             }
         }
     }
@@ -71,16 +70,12 @@
 
     @media (max-width: 760px) {
         .hero__bg {
-            @apply pb-50 pt-35;
+            @apply pb-50;
         }
 
         .hero__text {
             .hero__text__title {
                 @apply text-6xl;
-            }
-
-            .hero__text__lede {
-                @apply text-xs;
             }
         }
     }
