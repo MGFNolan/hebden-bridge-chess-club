@@ -4,8 +4,12 @@ interface Information {
 }
 export default function Card({ information }: Information) {
     return (
-        <div key={information.id} className="card">
-            <div className="matt">
+        <div
+            className="card"
+            role="listitem"
+            aria-label={`Offering: ${information.title}`}
+        >
+            <div>
                 <img
                     src={information.image}
                     alt={information.alt}
