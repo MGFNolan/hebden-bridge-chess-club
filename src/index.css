@@ -8,6 +8,8 @@
 @import "./css/mobile-nav.css";
 @import "./css/club-Information-Individual.css";
 @import "./css/club-Information.css";
+@import "./css/card.css";
+@import "./css/what-we-offer.css";
 
 :root {
     @apply bg-black;
@@ -105,6 +107,7 @@ p {
     margin-bottom: 1rem;
     overflow-wrap: break-word;
     text-wrap: pretty;
+    font-size: 1rem;
 }
 
 /* Lists not inside <nav> */
@@ -159,6 +162,11 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
     max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
 }

@@ -1,6 +1,6 @@
-import { NavLinks } from '../../utils/content';
-import Hamburger from './../Icons/Hamburger.tsx';
-import LogoIcon from './../Icons/LogoIcon.tsx';
+import { NavLinksContent } from "../../utils/content";
+import Hamburger from "./../Icons/Hamburger.tsx";
+import LogoIcon from "./../Icons/LogoIcon.tsx";
 
 export default function NavBar() {
     return (
@@ -11,13 +11,13 @@ export default function NavBar() {
                 </a>
 
                 <ul className="nav__links">
-                    {NavLinks.map((link) => (
+                    {NavLinksContent.map((link) => (
                         <li key={link.id} className="nav__link-individual">
                             <a
                                 href={link.href}
                                 aria-current={
                                     location.pathname === link.href
-                                        ? 'page'
+                                        ? "page"
                                         : undefined
                                 }
                             >
