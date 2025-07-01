@@ -1,0 +1,45 @@
+.card {
+    @apply min-w-[315px] max-w-[80%] justify-self-center;
+    @apply bg-orange-500 text-black rounded-md;
+    @apply transition-all duration-300;
+    @apply shadow-[0_0_20px_2px_rgba(249,115,22,0.7)];
+
+    &:hover {
+        @apply shadow-[0_0_50px_5px_rgba(249,115,22,0.7)];
+        @apply scale-105;
+    }
+
+    .card__img {
+        @apply rounded-t-sm object-cover h-[16rem];
+    }
+
+    /* Desktop - Smaller */
+
+    @media (max-width: 1280px) {
+        @apply grid-cols-2;
+    }
+
+    /* Tablet */
+
+    @media (max-width: 959px) {
+        @apply grid-cols-2;
+
+        .card__img {
+            @apply h-[21rem];
+        }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+        @apply grid-cols-1 max-w-[95%];
+        .card__img {
+            @apply h-[19rem];
+        }
+    }
+}
+
+.card__text {
+    @apply flex flex-col items-center;
+    @apply px-5;
+}
