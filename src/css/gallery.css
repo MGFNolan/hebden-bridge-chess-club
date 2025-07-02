@@ -1,19 +1,34 @@
 .gallery {
-    width: 75%;
-    margin: auto;
-}
+    @apply w-[100%] m-auto;
+    .swiper {
+        @apply w-[50%] h-[100%];
+    }
 
-.swiper {
-    width: 50%;
-    height: 100%;
-}
+    .gallery-thumbs {
+        @apply mt-5;
+    }
 
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-}
+    .swiper-thumbs img {
+        @apply w-[100%] h-[150px];
+    }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
+    .swiper-button-prev,
+    .swiper-button-next {
+        @apply text-orange-500 bg-black/30;
+        @apply rounded-full p-8;
+    }
+
+    /* For the main Swiper images */
+    .swiper-slide img {
+        @apply w-[100%] object-cover cursor-grab;
+
+        &:active {
+            @apply cursor-grabbing;
+        }
+    }
+
+    /* For the thumbnail Swiper images */
+    .swiper-thumbnail .swiper-slide img {
+        @apply w-[100%] object-cover;
+    }
 }
