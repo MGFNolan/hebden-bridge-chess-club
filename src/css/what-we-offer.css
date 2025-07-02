@@ -20,8 +20,4 @@
         @media (max-width: 760px) {
         }
     }
-
-    .what-we-offer__title {
-        @apply text-center w-[100%];
-    }
 }

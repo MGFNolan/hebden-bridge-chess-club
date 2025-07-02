@@ -1,5 +1,6 @@
 import {
     type ClubInformation,
+    type Image,
     type NavLink,
     type WhatWeOffer,
 } from "./contentTypes";
@@ -103,4 +104,42 @@ const WhatWeOfferContent: WhatWeOffer[] = [
     },
 ];
 
-export { NavLinksContent, ClubInformationContent, WhatWeOfferContent };
+const GalleryContent: Image[] = [
+    {
+        id: 1,
+        image: "/hbcc-photos/board-close-up-colour.jpg",
+        alt: "A table with a chess board and pieces set up for a game. There is a chess clock, extra Queen pieces, and a scoresheet. In the background but out of focus is a similarly set up table.",
+    },
+    {
+        id: 2,
+        image: "/hbcc-photos/move-close-up.jpg",
+        alt: "A man playing as Black in a game of chess, making his move with a Black pawn.",
+    },
+    {
+        id: 3,
+        image: "/hbcc-photos/trades-club-inside.jpg",
+        alt: "A black door close up depicting the words Trades Club.",
+    },
+    {
+        id: 4,
+        image: "/hbcc-photos/wide-shot.jpg",
+        alt: "Ten people playing chess across five tables. Each player is either thinking, making a move, or writing down a move they just made.",
+    },
+    {
+        id: 5,
+        image: "/hbcc-photos/player-thinking.jpg",
+        alt: "A man and a woman playing chess. The woman is looking at the board and calculating.",
+    },
+    {
+        id: 6,
+        image: "/hbcc-photos/scratching-face.jpg",
+        alt: "A man with a pen in hand, scratching his face while he thinks on his next move.",
+    },
+];
+
+export {
+    NavLinksContent,
+    ClubInformationContent,
+    WhatWeOfferContent,
+    GalleryContent,
+};
