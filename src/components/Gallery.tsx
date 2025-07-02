@@ -8,8 +8,9 @@ import { useState } from "react";
 
 import { GalleryContent } from "../utils/content";
 
-export default function App() {
+export default function Gallery() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
+    const [mainSwiper, setMainSwiper] = useState<SwiperClass | null>(null);
 
     return (
         <section
@@ -24,6 +25,7 @@ export default function App() {
             </div>
             <div className="gallery__swiper">
                 <Swiper
+                    onSwiper={setMainSwiper}
                     loop={true}
                     spaceBetween={10}
                     navigation={true}
@@ -67,7 +69,7 @@ export default function App() {
                             aria-label={`View larger image: ${image.alt}`}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ") {
-                                    thumbsSwiper?.slideToLoop(image.id);
+                                    mainSwiper?.slideToLoop(image.id - 1);
                                     e.preventDefault();
                                 }
                             }}
