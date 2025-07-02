@@ -7,9 +7,6 @@
     .club-information__list {
         @apply flex mt-7 p-3;
     }
-    .club-information__title {
-        @apply text-center w-[100%];
-    }
 
     /* Desktop - Smaller */
 
