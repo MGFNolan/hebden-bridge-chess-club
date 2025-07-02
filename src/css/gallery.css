@@ -9,13 +9,18 @@
     }
 
     .swiper-thumbs img {
-        @apply w-[100%] h-[150px];
+        @apply w-[100%] h-[100px];
     }
 
     .swiper-button-prev,
     .swiper-button-next {
         @apply text-orange-500 bg-black/30;
         @apply rounded-full p-8;
+        @apply transition-all duration-300 ease-in-out;
+
+        &:hover {
+            @apply font-bold;
+        }
     }
 
     /* For the main Swiper images */
@@ -30,5 +35,29 @@
     /* For the thumbnail Swiper images */
     .swiper-thumbnail .swiper-slide img {
         @apply w-[100%] object-cover;
+    }
+
+    /* Desktop - Smaller */
+
+    @media (max-width: 1280px) {
+        .swiper {
+            @apply w-[65%];
+        }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 959px) {
+        .swiper {
+            @apply w-[80%];
+        }
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+        .swiper-thumbs img {
+            @apply h-[50px];
+        }
     }
 }

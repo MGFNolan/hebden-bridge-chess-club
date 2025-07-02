@@ -12,9 +12,15 @@ export default function App() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
 
     return (
-        <section id="gallery" className="gallery">
+        <section
+            id="gallery"
+            className="gallery"
+            aria-labelledby="gallery-heading"
+        >
             <div>
-                <h2 className="gallery__title">Gallery</h2>
+                <h2 className="gallery__title" id="gallery-heading">
+                    Gallery
+                </h2>
             </div>
             <div className="gallery__swiper">
                 <Swiper
@@ -24,10 +30,20 @@ export default function App() {
                     thumbs={{ swiper: thumbsSwiper }}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="gallery-swiper"
+                    aria-label="Image gallery, main display"
                 >
                     {GalleryContent.map((image) => (
-                        <SwiperSlide key={image.id}>
-                            <img src={image.image} alt={image.alt} />
+                        <SwiperSlide
+                            key={image.id}
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label={image.alt}
+                        >
+                            <img
+                                loading="lazy"
+                                src={image.image}
+                                alt={image.alt}
+                            />
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -40,10 +56,27 @@ export default function App() {
                     watchSlidesProgress={true}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="gallery-thumbs"
+                    aria-label="Thumbnail image navigation"
                 >
                     {GalleryContent.map((image) => (
-                        <SwiperSlide key={image.id}>
-                            <img src={image.image} alt={image.alt} />
+                        <SwiperSlide
+                            key={image.id}
+                            role="button"
+                            tabIndex={0}
+                            aria-roledescription="thumbnail"
+                            aria-label={`View larger image: ${image.alt}`}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    thumbsSwiper?.slideToLoop(image.id);
+                                    e.preventDefault();
+                                }
+                            }}
+                        >
+                            <img
+                                loading="lazy"
+                                src={image.image}
+                                alt={`Thumbnail: ${image.alt}`}
+                            />
                         </SwiperSlide>
                     ))}
                 </Swiper>
