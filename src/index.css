@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/effect-fade";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 @import "./css/theme.css";
 
@@ -10,6 +14,7 @@
 @import "./css/club-Information.css";
 @import "./css/card.css";
 @import "./css/what-we-offer.css";
+@import "./css/gallery.css";
 
 :root {
     @apply bg-black;
