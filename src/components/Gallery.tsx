@@ -1,8 +1,6 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperClass } from "swiper";
 
-// import required modules
 import { Navigation, FreeMode, Thumbs } from "swiper/modules";
 import { useState } from "react";
 
