@@ -18,4 +18,12 @@ interface WhatWeOffer {
     description: string;
 }
 
-export type { NavLink, ClubInformation, WhatWeOffer };
+interface Image {
+    id: number;
+    image: string;
+    alt: string;
+    title?: string;
+    description?: string;
+}
+
+export type { NavLink, ClubInformation, WhatWeOffer, Image };
