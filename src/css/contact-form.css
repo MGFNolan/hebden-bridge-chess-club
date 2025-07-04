@@ -1,0 +1,17 @@
+.contact-us {
+    @apply justify-self-center;
+
+    input,
+    select,
+    textarea {
+        @apply rounded-xl border-orange-500 border-2;
+    }
+
+    label {
+        @apply hidden;
+    }
+
+    button {
+        @apply ml-auto block;
+    }
+}
