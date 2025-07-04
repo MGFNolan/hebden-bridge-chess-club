@@ -3,6 +3,7 @@ import {
     type Image,
     type NavLink,
     type WhatWeOffer,
+    type ContactOptions,
 } from "./contentTypes";
 
 const NavLinksContent: NavLink[] = [
@@ -137,9 +138,16 @@ const GalleryContent: Image[] = [
     },
 ];
 
+const ContactOptionsContent: ContactOptions[] = [
+    { id: 1, option: "Join the Club" },
+    { id: 2, option: "Question" },
+    { id: 3, option: "Other" },
+];
+
 export {
     NavLinksContent,
     ClubInformationContent,
     WhatWeOfferContent,
     GalleryContent,
+    ContactOptionsContent,
 };
