@@ -27,6 +27,18 @@ export default function ContactForm() {
                         placeholder="Write your name here"
                     />
 
+                    <label className="contact-us__label" htmlFor="email">
+                        Email
+                    </label>
+                    <input
+                        autoComplete="email"
+                        className="contact-us__email"
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="Write your email here so we can reply to you"
+                    />
+
                     <label className="contact-us__label" htmlFor="subject">
                         Subject
                     </label>
@@ -35,6 +47,9 @@ export default function ContactForm() {
                         name="subject"
                         className="contact-us__subject"
                     >
+                        <option value="" disabled selected>
+                            Message subject
+                        </option>
                         {ContactOptionsContent.map((option) => (
                             <option value={option.option} key={option.id}>
                                 {option.option}
@@ -53,7 +68,10 @@ export default function ContactForm() {
                         className="contact-us__message"
                     />
 
-                    <button type="submit" className="btn--primary">
+                    <button
+                        type="submit"
+                        className="btn--primary contact-us__btn"
+                    >
                         Submit
                     </button>
                 </form>
