@@ -182,3 +182,7 @@ svg {
     background-size: cover;
     shape-margin: 0.75rem;
 }
+
+option {
+    background: black;
+}
