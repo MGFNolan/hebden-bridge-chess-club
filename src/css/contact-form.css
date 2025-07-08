@@ -1,18 +1,26 @@
 .contact-us {
-    @apply justify-self-center mx-3;
+    @apply max-w-[40%];
 
-    .contact-us__name,
-    .contact-us__subject,
-    .contact-us__email,
-    .contact-us__message {
-        @apply rounded-xl border-orange-500 border-2;
+    .contact-us-form {
+        @apply justify-self-center mx-3 w-[100%];
+
+        .contact-us__name,
+        .contact-us__subject,
+        .contact-us__email,
+        .contact-us__message {
+            @apply rounded-xl border-orange-500 border-2;
+        }
+
+        .contact-us__label {
+            @apply mb-2 mt-3 ml-2 block;
+        }
+
+        .contact-us__btn {
+            @apply ml-auto block;
+        }
     }
 
-    .contact-us__label {
-        @apply hidden;
-    }
-
-    .contact-us__btn {
-        @apply ml-auto block;
+    .error-message {
+        @apply text-white font-bold text-xs;
     }
 }
