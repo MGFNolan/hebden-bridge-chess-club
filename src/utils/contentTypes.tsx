@@ -26,4 +26,9 @@ interface Image {
     description?: string;
 }
 
-export type { NavLink, ClubInformation, WhatWeOffer, Image };
+interface ContactOptions {
+    id: number;
+    option: string;
+}
+
+export type { NavLink, ClubInformation, WhatWeOffer, Image, ContactOptions };

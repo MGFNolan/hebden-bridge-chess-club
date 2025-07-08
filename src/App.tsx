@@ -14,6 +14,7 @@ import Main from "./components/Main";
 import ClubInformation from "./components/Club Information/ClubInformation";
 import WhatWeOffer from "./components/WhatWeOffer";
 import ImageGallery from "./components/Gallery";
+import ContactForm from "./components/ContactForm";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     <ClubInformation />
                     <WhatWeOffer />
                     <ImageGallery />
+                    <ContactForm />
                 </Main>
             </Page>
         </MenuContextProvider>

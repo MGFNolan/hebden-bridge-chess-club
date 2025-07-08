@@ -15,7 +15,23 @@ button {
     @apply cursor-pointer place-content-center rounded-xl;
     @apply border-orange-500 border-2 bg-black;
 
-    &:hover {
+    &:enabled:hover {
         @apply bg-orange-500 text-black;
     }
+}
+
+.btn--idle {
+    @apply bg-black opacity-100 font-semibold;
+}
+
+.btn--pending {
+    @apply bg-orange-500 opacity-50 font-semibold text-black cursor-not-allowed;
+}
+
+.btn--success {
+    @apply bg-green-700 border-green-500 opacity-100 font-bold text-white cursor-not-allowed;
+}
+
+.btn--error {
+    @apply bg-red-700 border-white opacity-100 font-bold text-white cursor-not-allowed;
 }
