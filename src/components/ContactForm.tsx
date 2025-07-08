@@ -110,7 +110,9 @@ export default function ContactForm() {
                             required
                         />
                         {errors.name && (
-                            <p className="error-message">{errors.name}</p>
+                            <p className="error-message" role="alertdialog">
+                                {errors.name}
+                            </p>
                         )}
                     </label>
 
@@ -134,7 +136,9 @@ export default function ContactForm() {
                             required
                         />
                         {errors.email && (
-                            <p className="error-message">{errors.email}</p>
+                            <p className="error-message" role="alertdialog">
+                                {errors.email}
+                            </p>
                         )}
                     </label>
 
@@ -163,7 +167,9 @@ export default function ContactForm() {
                             ))}
                         </select>
                         {errors.subject && (
-                            <p className="error-message">{errors.subject}</p>
+                            <p className="error-message" role="alertdialog">
+                                {errors.subject}
+                            </p>
                         )}
                     </label>
 
@@ -185,7 +191,9 @@ export default function ContactForm() {
                             required
                         />
                         {errors.message && (
-                            <p className="error-message">{errors.message}</p>
+                            <p className="error-message" role="alertdialog">
+                                {errors.message}
+                            </p>
                         )}
                     </label>
 

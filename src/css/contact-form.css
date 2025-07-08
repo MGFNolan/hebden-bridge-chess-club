@@ -23,4 +23,22 @@
     .error-message {
         @apply text-white font-bold text-xs;
     }
+
+    /* Desktop - Smaller */
+
+    @media (max-width: 1280px) {
+        @apply max-w-[60%];
+    }
+
+    /* Tablet */
+
+    @media (max-width: 959px) {
+        @apply max-w-[80%];
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+        @apply max-w-[90%];
+    }
 }
