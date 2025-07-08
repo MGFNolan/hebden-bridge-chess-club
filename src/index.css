@@ -186,3 +186,7 @@ svg {
 option {
     background: black;
 }
+
+.mandatory {
+    @apply text-red-700;
+}
