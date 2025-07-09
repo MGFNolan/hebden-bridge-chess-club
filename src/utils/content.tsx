@@ -4,6 +4,7 @@ import {
     type NavLink,
     type WhatWeOffer,
     type ContactOptions,
+    type UsefulLinks,
 } from "./contentTypes";
 
 const NavLinksContent: NavLink[] = [
@@ -144,10 +145,39 @@ const ContactOptionsContent: ContactOptions[] = [
     { id: 3, option: "Other" },
 ];
 
+const UsefulLinksContent: UsefulLinks[] = [
+    {
+        id: 1,
+        href: "https://www.englishchess.org.uk/",
+        name: "ECF",
+        description: "Link to the English Chess Federation homepage",
+    },
+    {
+        id: 2,
+        href: "https://rating.englishchess.org.uk/v2/new/list_players.php?club_code=8HBB",
+        name: "ECF Ratings",
+        description:
+            "Link to the English Chess Federation rating database for Hebden Bridge Chess Club players",
+    },
+    {
+        id: 3,
+        href: "https://ecf.justgo.com/",
+        name: "ECF Member Portal",
+        description: "Link to the English Chess Federation member portal",
+    },
+    {
+        id: 4,
+        href: "https://www.youtube.com/@PowerPlayChess",
+        name: "Power Play YouTube",
+        description: "Link to the Power Play YouTube channel",
+    },
+];
+
 export {
     NavLinksContent,
     ClubInformationContent,
     WhatWeOfferContent,
     GalleryContent,
     ContactOptionsContent,
+    UsefulLinksContent,
 };
