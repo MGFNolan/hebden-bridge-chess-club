@@ -16,6 +16,7 @@
 @import "./css/what-we-offer.css";
 @import "./css/gallery.css";
 @import "./css/contact-form.css";
+@import "./css/footer.css";
 
 :root {
     @apply bg-black;

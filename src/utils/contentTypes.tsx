@@ -31,4 +31,18 @@ interface ContactOptions {
     option: string;
 }
 
-export type { NavLink, ClubInformation, WhatWeOffer, Image, ContactOptions };
+interface UsefulLinks {
+    id: number;
+    href: string;
+    name: string;
+    description: string;
+}
+
+export type {
+    NavLink,
+    ClubInformation,
+    WhatWeOffer,
+    Image,
+    ContactOptions,
+    UsefulLinks,
+};

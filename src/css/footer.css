@@ -1,0 +1,130 @@
+.footer {
+    @apply bg-orange-500 text-black px-35;
+
+    h2 {
+        @apply text-[1.75rem] leading-[1.3] text-justify;
+    }
+
+    .footer__content {
+        @apply flex justify-between;
+
+        .footer__left,
+        .footer__middle,
+        .footer__right {
+            @apply min-w-[30%] justify-center flex;
+        }
+
+        .footer__left {
+            @apply justify-start flex flex-col;
+
+            .footer__left__content {
+                @apply flex;
+
+                svg {
+                    @apply size-10 self-center mr-2 mb-10;
+                }
+            }
+        }
+
+        .footer__middle {
+            @apply flex-col justify-end gap-5;
+
+            .footer__content__logo {
+                @apply flex justify-center;
+
+                svg {
+                    @apply size-20;
+                }
+            }
+
+            .footer__content__icons {
+                @apply flex justify-center;
+
+                & * {
+                    @apply size-7 mx-5 justify-self-center transition-all duration-200;
+
+                    &:hover {
+                        @apply scale-105;
+                    }
+                }
+            }
+
+            .footer__content__text p {
+                @apply text-[0.625rem] text-center;
+            }
+        }
+
+        .footer__right {
+            @apply justify-end flex;
+
+            .footer__right__content {
+                @apply flex;
+
+                svg {
+                    @apply size-10 self-center mr-2 mb-10;
+                }
+            }
+        }
+    }
+
+    /* Desktop - Smaller */
+
+    @media (max-width: 1280px) {
+        @apply px-0;
+
+        .footer__left,
+        .footer__middle,
+        .footer__right {
+            @apply min-w-[0%];
+        }
+    }
+
+    /* Tablet */
+
+    @media (max-width: 959px) {
+        @apply px-2;
+
+        .footer__content {
+            @apply flex-col gap-2;
+
+            .footer__left {
+                @apply order-1 justify-center m-auto text-center;
+
+                p {
+                    @apply w-[100%];
+                }
+            }
+
+            .footer__middle {
+                @apply order-3 justify-center m-auto;
+            }
+
+            .footer__right {
+                @apply order-2 justify-center m-auto text-center;
+            }
+
+            .footer__left__content,
+            .footer__right__content {
+                @apply flex-col;
+
+                /* For whatever reason, this would not work without the !important tag */
+                svg {
+                    margin-right: 0 !important;
+                    margin-bottom: 1.5rem !important;
+                }
+            }
+        }
+
+        /* .footer__left__content,
+        .footer__right__content {
+            svg {
+                @apply hidden;
+            }
+        } */
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+    }
+}
