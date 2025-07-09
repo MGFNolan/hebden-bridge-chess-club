@@ -16,6 +16,9 @@ import WhatWeOffer from "./components/WhatWeOffer";
 import ImageGallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 
+//Footer
+import Footer from "./components/Footer";
+
 function App() {
     return (
         <MenuContextProvider>
@@ -32,6 +35,8 @@ function App() {
                     <ImageGallery />
                     <ContactForm />
                 </Main>
+
+                <Footer />
             </Page>
         </MenuContextProvider>
     );
