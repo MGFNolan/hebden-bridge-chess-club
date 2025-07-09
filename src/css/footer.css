@@ -1,6 +1,10 @@
 .footer {
     @apply bg-orange-500 text-black px-35;
 
+    h2 {
+        @apply text-[1.75rem] leading-[1.3] text-justify;
+    }
+
     .footer__content {
         @apply flex justify-between;
 
