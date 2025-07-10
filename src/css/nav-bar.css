@@ -1,6 +1,7 @@
 .nav {
-    @apply m-auto mt-3 w-full;
-    @apply border-b-orange-500 border-b-1;
+    @apply m-auto pt-3 w-full;
+    @apply border-b-orange-500 border-b-1 bg-black shadow-[inset_0_-4px_4px_rgba(249,115,22,0.3)];
+    @apply fixed top-0 z-999;
 
     .nav__links {
         @apply flex items-stretch gap-x-10;

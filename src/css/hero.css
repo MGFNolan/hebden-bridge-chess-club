@@ -1,5 +1,5 @@
 .hero {
-    @apply h-[95vh] relative overflow-hidden pt-7;
+    @apply h-[95vh] relative overflow-hidden pt-7 mt-19;
 
     .hero__bg {
         @apply relative flex justify-center w-full h-full;
@@ -81,6 +81,7 @@
     /* Mobile */
 
     @media (max-width: 760px) {
+        @apply mt-15;
         .hero__bg {
             @apply pb-50;
         }

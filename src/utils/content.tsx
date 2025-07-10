@@ -20,17 +20,12 @@ const NavLinksContent: NavLink[] = [
     },
     {
         id: 3,
-        href: "#club-history",
-        text: "Club History",
-    },
-    {
-        id: 4,
         href: "#gallery",
         text: "Gallery",
     },
     {
-        id: 5,
-        href: "#contact",
+        id: 4,
+        href: "#contact-us",
         text: "Contact Us",
     },
 ];

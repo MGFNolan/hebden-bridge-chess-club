@@ -44,7 +44,8 @@ export default function Hero() {
                     </p>
                     <button
                         onClick={() => {
-                            const target = document.getElementById("contact");
+                            const target =
+                                document.getElementById("contact-us");
                             target?.scrollIntoView({ behavior: "smooth" });
                         }}
                         className="btn--primary"

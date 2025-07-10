@@ -1,5 +1,5 @@
 .club-information {
-    @apply justify-items-center;
+    @apply justify-items-center scroll-m-15;
 
     .club-information__wrapper {
         @apply flex flex-col;
