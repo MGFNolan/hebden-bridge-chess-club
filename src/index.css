@@ -23,6 +23,14 @@
     scroll-behavior: smooth;
 }
 
+.screen-reader-text {
+    @apply absolute left-0 top-0 bg-blue-500 text-white py-2 px-4 transform -translate-y-full focus:translate-y-0 transition z-99999999;
+}
+
+#main-content {
+    @apply scroll-m-10;
+}
+
 /*### CSS RESET ###*/
 
 /* Base box sizing and margin reset */
