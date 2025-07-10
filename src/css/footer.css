@@ -2,7 +2,7 @@
     @apply bg-orange-500 text-black px-35;
 
     h2 {
-        @apply text-[1.75rem] leading-[1.3] text-justify;
+        @apply text-[1.75rem] leading-[1.3] text-justify mb-[.5rem];
     }
 
     .footer__content {
