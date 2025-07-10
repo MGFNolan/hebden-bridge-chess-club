@@ -2,7 +2,7 @@
     @apply h-[100vh] relative overflow-hidden;
 
     .hero__bg {
-        @apply relative flex justify-center w-full h-full pt-25;
+        @apply relative flex justify-center w-full h-full;
 
         &::before {
             content: "";
