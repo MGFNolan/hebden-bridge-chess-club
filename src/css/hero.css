@@ -1,5 +1,5 @@
 .hero {
-    @apply h-[100vh] relative overflow-hidden;
+    @apply h-[95vh] relative overflow-hidden pt-7;
 
     .hero__bg {
         @apply relative flex justify-center w-full h-full;
@@ -17,7 +17,7 @@
     }
 
     .hero__text {
-        @apply relative z-10 text-center h-[50%] m-auto;
+        @apply relative z-10 text-center h-[50%] mx-auto;
 
         .hero__text__title {
             @apply text-8xl font-bold mb-5;
@@ -26,12 +26,20 @@
             font-family: "Bangers", system-ui;
             font-weight: 400;
             font-style: normal;
+
+            .hero__text__title__hebden-bridge {
+            }
+
+            .hero__text__title__chess-club {
+                @apply text-[12rem];
+            }
         }
 
         .hero__text__lede {
-            @apply mt-2 p-3;
+            @apply mt-2 p-3 mx-auto;
             @apply text-lg;
-            @apply bg-black/80  rounded-md;
+            @apply bg-black/80 rounded-md;
+            @apply max-w-[75%];
         }
     }
 
@@ -41,10 +49,10 @@
         .hero__text {
             .hero__text__title {
                 @apply text-7xl;
-            }
 
-            .hero__text__lede {
-                @apply text-sm;
+                .hero__text__title__chess-club {
+                    @apply text-[9rem];
+                }
             }
         }
     }
@@ -52,12 +60,16 @@
     /* Tablet */
 
     @media (max-width: 959px) {
+        @apply pt-0;
         .hero__bg {
-            @apply items-start pt-10;
+            @apply items-start pt-2;
         }
         .hero__text {
             .hero__text__title {
                 @apply text-6xl;
+                .hero__text__title__chess-club {
+                    @apply text-[7rem];
+                }
             }
 
             .hero__text__lede {
@@ -76,6 +88,13 @@
         .hero__text {
             .hero__text__title {
                 @apply text-6xl;
+
+                .hero__text__title__chess-club {
+                    @apply text-[5.5rem];
+                }
+            }
+            .hero__text__lede {
+                @apply text-base;
             }
         }
     }

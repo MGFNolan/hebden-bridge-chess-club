@@ -22,7 +22,13 @@ export default function Hero() {
                         }}
                         className="hero__text__title"
                     >
-                        Hebden Bridge Chess Club
+                        <span className="hero__text__title__hebden-bridge">
+                            Hebden Bridge
+                        </span>{" "}
+                        <br />{" "}
+                        <span className="hero__text__title__chess-club">
+                            Chess Club
+                        </span>
                     </motion.h1>
                     <p className="hero__text__lede">
                         No matter whether you’re new to chess, an online player
@@ -30,7 +36,8 @@ export default function Hero() {
                         who is returning to the game, or an experienced wood
                         pusher, you are most welcome to join us at Hebden Bridge
                         Trades Club on a Monday night from 19:30. <br />
-                        We’re there most weeks. Any one{" "}
+                        <br />
+                        We’re there most weeks. Anyone{" "}
                         <strong>over the age of 16</strong> and of{" "}
                         <strong>any level of playing ability</strong> is welcome
                         to join us for a game!

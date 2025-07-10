@@ -80,6 +80,7 @@ h6 {
     overflow-wrap: break-word;
     text-wrap: balance;
     margin: 2rem 0;
+    letter-spacing: 0.1rem;
 
     /* from Google Fonts */
     font-family: "Bangers", system-ui;
