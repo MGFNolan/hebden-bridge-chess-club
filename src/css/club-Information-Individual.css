@@ -7,16 +7,6 @@
         }
     }
 
-    /* &:nth-child(even) {
-        @apply border-orange-500 border-l-2;
-    }
-    &:nth-child(2) {
-        @apply border-orange-500 border-b-2;
-    }
-    &:nth-child(3) {
-        @apply border-orange-500 border-t-2;
-    } */
-
     .info-individual__title {
         @apply text-center;
     }
