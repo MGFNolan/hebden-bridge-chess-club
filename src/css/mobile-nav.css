@@ -8,10 +8,10 @@
     @apply flex h-full w-full max-w-96 min-w-65 flex-col items-start gap-y-18 bg-black p-6 pl-7;
 
     .mobile-nav__links {
-        @apply flex flex-col gap-y-8;
+        @apply flex flex-col gap-y-15;
 
         .mobile-nav__link-individual {
-            @apply relative flex flex-col font-medium transition-all duration-300 ease-in-out;
+            @apply relative flex flex-col font-medium transition-all duration-300 ease-in-out text-2xl;
 
             .mobile-nav__link-individual__wrapper {
                 @apply flex cursor-pointer items-center gap-x-1.75;
