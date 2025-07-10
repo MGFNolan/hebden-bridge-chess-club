@@ -1,5 +1,5 @@
 .contact-us {
-    @apply max-w-[40%];
+    @apply max-w-[50%] m-auto;
 
     .contact-us-form {
         @apply justify-self-center mx-3 w-[100%];

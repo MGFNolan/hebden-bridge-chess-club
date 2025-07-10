@@ -63,6 +63,11 @@ section:not(:first-of-type) {
 
 .container {
     justify-self: center;
+    max-width: 75vw;
+
+    @media (max-width: 760px) {
+        max-width: 90vw;
+    }
 }
 
 /* Headings */
