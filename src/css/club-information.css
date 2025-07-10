@@ -13,7 +13,7 @@
     }
 
     .location-map {
-        @apply m-auto my-5 px-5 min-w-[600px] min-h-[450px];
+        @apply m-auto my-5 px-5 min-w-[50vw] min-h-[65vh];
     }
 
     /* Desktop - Smaller */
@@ -24,6 +24,9 @@
         }
         .club-information__list {
             @apply grid-cols-1 items-center;
+        }
+        .location-map {
+            @apply min-w-[75vw] min-h-[45vh];
         }
     }
 
@@ -44,10 +47,6 @@
 
         .club-information__list {
             @apply mt-0;
-        }
-
-        .location-map {
-            @apply min-w-[550px] min-h-[450px];
         }
     }
 }
