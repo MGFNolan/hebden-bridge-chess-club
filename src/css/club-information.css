@@ -1,26 +1,37 @@
 .club-information {
-    @apply mx-7 justify-items-center;
+    @apply justify-items-center;
 
     .club-information__wrapper {
-        @apply max-w-[80%] text-center flex flex-col;
+        @apply flex flex-col;
     }
     .club-information__list {
-        @apply flex mt-7 p-3;
+        @apply grid grid-cols-2 mt-7 p-3 gap-5;
+    }
+
+    .club-information__lede {
+        @apply m-auto text-center;
+    }
+
+    .location-map {
+        @apply m-auto my-5 px-5 min-w-[600px] min-h-[450px];
     }
 
     /* Desktop - Smaller */
 
     @media (max-width: 1280px) {
+        .club-information__wrapper {
+            @apply max-w-[100%];
+        }
         .club-information__list {
-            @apply flex flex-col items-center;
+            @apply grid-cols-1 items-center;
         }
     }
 
     /* Tablet */
 
     @media (max-width: 959px) {
-        .club-information__wrapper {
-            @apply max-w-[100%];
+        .club-information__list {
+            @apply grid-cols-1;
         }
     }
 
@@ -33,6 +44,10 @@
 
         .club-information__list {
             @apply mt-0;
+        }
+
+        .location-map {
+            @apply min-w-[550px] min-h-[450px];
         }
     }
 }

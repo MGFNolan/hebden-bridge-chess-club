@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 interface NavLink {
     id: number;
     href: string;
@@ -7,7 +9,7 @@ interface NavLink {
 interface ClubInformation {
     id: number;
     title: string;
-    description: string;
+    description: ReactNode;
 }
 
 interface WhatWeOffer {
