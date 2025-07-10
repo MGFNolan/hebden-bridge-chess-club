@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
 export default function Hero() {
     return (
@@ -8,14 +8,14 @@ export default function Hero() {
             aria-label="Hero section: Welcome message and contact information"
         >
             <div className="hero__bg">
-                <div className="hero__text">
+                <div className="container hero__text">
                     <motion.h1
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{
                             duration: 0.4,
                             scale: {
-                                type: 'spring',
+                                type: "spring",
                                 visualDuration: 0.6,
                                 bounce: 0.5,
                             },
@@ -30,15 +30,15 @@ export default function Hero() {
                         who is returning to the game, or an experienced wood
                         pusher, you are most welcome to join us at Hebden Bridge
                         Trades Club on a Monday night from 19:30. <br />
-                        We’re there most weeks. Any one{' '}
-                        <strong>over the age of 16</strong> and of{' '}
+                        We’re there most weeks. Any one{" "}
+                        <strong>over the age of 16</strong> and of{" "}
                         <strong>any level of playing ability</strong> is welcome
                         to join us for a game!
                     </p>
                     <button
                         onClick={() => {
-                            const target = document.getElementById('contact');
-                            target?.scrollIntoView({ behavior: 'smooth' });
+                            const target = document.getElementById("contact");
+                            target?.scrollIntoView({ behavior: "smooth" });
                         }}
                         className="btn--primary"
                         aria-label="Scroll to contact section"

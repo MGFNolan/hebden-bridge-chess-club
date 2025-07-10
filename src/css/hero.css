@@ -17,7 +17,7 @@
     }
 
     .hero__text {
-        @apply relative z-10 text-center h-[50%] max-w-[80%];
+        @apply relative z-10 text-center h-[50%] m-auto;
 
         .hero__text__title {
             @apply text-8xl font-bold mb-5;
