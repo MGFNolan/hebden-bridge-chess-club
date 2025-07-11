@@ -8,11 +8,19 @@
         .contact-us__subject,
         .contact-us__email,
         .contact-us__message {
-            @apply rounded-xl border-orange-500 border-2;
+            @apply rounded-xl border-orange-500 border-2 transition-shadow duration-200;
+
+            &:hover {
+                @apply shadow-[0_0_20px_2px_rgba(249,115,22,0.7)];
+            }
         }
 
         .contact-us__label {
-            @apply mb-2 mt-3 ml-2 block;
+            @apply mt-3 ml-2 block;
+
+            p {
+                @apply mb-[0.5rem];
+            }
         }
 
         .contact-us__btn {
