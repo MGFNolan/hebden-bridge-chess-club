@@ -24,7 +24,8 @@
 }
 
 .screen-reader-text {
-    @apply absolute left-0 top-0 bg-blue-500 text-white py-2 px-4 transform -translate-y-full focus:translate-y-0 transition z-99999999;
+    @apply absolute left-0 top-0 text-white py-2 px-4 transform -translate-y-full focus:translate-y-0 transition z-99999999;
+    background-color: #0000ff;
 }
 
 #main-content {
@@ -204,4 +205,17 @@ option {
 
 .mandatory {
     @apply text-red-700;
+}
+
+/* Firefox-specific Styling */
+
+#what-we-offer,
+#club-information,
+#contact-us,
+#footer {
+    display: grid;
+}
+
+#gallery .container {
+    display: contents;
 }
