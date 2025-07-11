@@ -25,6 +25,7 @@ export default function ClubInformation() {
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                         className="location-map"
+                        title="Google Maps showing the location of The Trades Club in Hebden Bridge"
                     ></iframe>
                     <ul className="club-information__list" role="list">
                         <ClubInformationIndividual
@@ -35,10 +36,11 @@ export default function ClubInformation() {
                                     <>
                                         Anyone is welcome to come along and play
                                         some social chess and see how they like
-                                        the club! <br /> If you'd like to then
-                                        become a member, we charge an annual
-                                        membership fee which runs from September
-                                        1st to August 31st:
+                                        the club! <br />
+                                        <br /> If you'd like to then become a
+                                        member, we charge an annual membership
+                                        fee which runs from September 1st to
+                                        August 31st:
                                         <br />
                                         <br />
                                         £30 for adults (reduced to £20 for
@@ -58,6 +60,7 @@ export default function ClubInformation() {
                                         we have made several attempts to
                                         re-establish a separate junior club with
                                         its own coach, so far without success.{" "}
+                                        <br />
                                         <br />
                                         However, we are still trying to get
                                         something organised. If you would like
@@ -80,6 +83,7 @@ export default function ClubInformation() {
                                     <>
                                         If it's competitive chess you're after,
                                         then you've come to the right place!
+                                        <br />
                                         <br /> Last season we had four teams
                                         participating in the Calderdale Chess
                                         League and our B team became league
@@ -88,6 +92,7 @@ export default function ClubInformation() {
                                         2018-19 and we are current holders of
                                         the Calderdale Chess Team Lightning
                                         title.
+                                        <br />
                                         <br /> We also take part in online
                                         events and have three teams in the 4
                                         Nations Chess League (4NCL) Online
@@ -108,6 +113,7 @@ export default function ClubInformation() {
                                         If you aren’t yet ready to take the
                                         plunge into competitive chess, then
                                         that’s no problem.
+                                        <br />
                                         <br /> We run a range of run and
                                         educational activities over the summer
                                         months and social chess is always
