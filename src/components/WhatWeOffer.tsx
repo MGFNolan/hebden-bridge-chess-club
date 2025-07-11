@@ -8,7 +8,7 @@ export default function WhatWeOffer() {
             className="what-we-offer"
             aria-labelledby="what-we-offer-heading"
         >
-            <div>
+            <div className="container">
                 <h2 className="what-we-offer__title" id="what-we-offer-heading">
                     What We Offer
                 </h2>

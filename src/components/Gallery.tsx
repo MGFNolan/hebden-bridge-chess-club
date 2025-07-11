@@ -16,7 +16,7 @@ export default function Gallery() {
             className="gallery"
             aria-labelledby="gallery-heading"
         >
-            <div>
+            <div className="container">
                 <h2 className="gallery__title" id="gallery-heading">
                     Gallery
                 </h2>

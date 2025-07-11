@@ -10,10 +10,10 @@ html {
     @apply my-3 px-5 py-2.5;
     @apply transition-all duration-350;
     @apply cursor-pointer place-content-center rounded-xl;
-    @apply border-orange-500 border-2 bg-black;
+    @apply border-orange-500 border-2 bg-black font-bold;
 
     &:enabled:hover {
-        @apply bg-orange-500 text-black;
+        @apply bg-orange-500 text-black scale-105;
     }
 }
 
@@ -31,4 +31,8 @@ html {
 
 .btn--error {
     @apply bg-red-700 border-white opacity-100 font-bold text-white cursor-not-allowed;
+}
+
+.email {
+    @apply font-bold;
 }
