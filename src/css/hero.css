@@ -10,9 +10,7 @@
 
             /* background image */
             @apply bg-bottom bg-no-repeat bg-cover;
-            background-image: url("/chess-board.svg");
-            transform: translate(-50%, -50%) scale(1.1);
-            z-index: -1;
+            @apply bg-[url('/src/assets/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 scale-110 -z-10;
         }
     }
 
@@ -30,6 +28,7 @@
             .hero__text__title__hebden-bridge {
             }
 
+            .hero__text__title__hebden-bridge,
             .hero__text__title__chess-club {
                 @apply text-[12rem];
             }
