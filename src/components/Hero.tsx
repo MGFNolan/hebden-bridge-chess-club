@@ -22,6 +22,10 @@ export default function Hero() {
                         }}
                         className="hero__text__title"
                     >
+                        <span className="hero__text__title__welcome">
+                            Welcome to
+                        </span>{" "}
+                        <br />{" "}
                         <span className="hero__text__title__hebden-bridge">
                             Hebden Bridge
                         </span>{" "}
@@ -30,29 +34,6 @@ export default function Hero() {
                             Chess Club
                         </span>
                     </motion.h1>
-                    <p className="hero__text__lede">
-                        No matter whether you’re new to chess, an online player
-                        who wants to try playing over the board, a lapsed player
-                        who is returning to the game, or an experienced wood
-                        pusher, you are most welcome to join us at Hebden Bridge
-                        Trades Club on a Monday night from 19:30. <br />
-                        <br />
-                        We’re there most weeks. Anyone{" "}
-                        <strong>over the age of 16</strong> and of{" "}
-                        <strong>any level of playing ability</strong> is welcome
-                        to join us for a game!
-                    </p>
-                    <button
-                        onClick={() => {
-                            const target =
-                                document.getElementById("contact-us");
-                            target?.scrollIntoView({ behavior: "smooth" });
-                        }}
-                        className="btn--primary"
-                        aria-label="Scroll to contact section"
-                    >
-                        Contact Us
-                    </button>
                 </div>
             </div>
         </section>
