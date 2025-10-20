@@ -34,17 +34,21 @@ export default function ClubInformation() {
                                 title: "Membership",
                                 description: (
                                     <>
-                                        Anyone is welcome to come along and play
-                                        some social chess and see how they like
-                                        the club! <br />
-                                        <br /> If you'd like to then become a
-                                        member, we charge an annual membership
-                                        fee which runs from September 1st to
-                                        August 31st:
-                                        <br />
-                                        <br />
-                                        £30 for adults (reduced to £20 for
-                                        members of the Trades Club)
+                                        <p>
+                                            Anyone is welcome to come along and
+                                            play some social chess and see how
+                                            they like the club!
+                                        </p>
+                                        <p>
+                                            If you'd like to then become a
+                                            member, we charge an annual
+                                            membership fee which runs from
+                                            September 1st to August 31st:
+                                        </p>
+                                        <p>
+                                            £30 for adults (reduced to £20 for
+                                            members of the Trades Club)
+                                        </p>
                                     </>
                                 ),
                             }}
@@ -55,22 +59,27 @@ export default function ClubInformation() {
                                 title: "Junior Chess",
                                 description: (
                                     <>
-                                        Unfortunately, we do not currently have
-                                        a junior chess club. Since the pandemic
-                                        we have made several attempts to
-                                        re-establish a separate junior club with
-                                        its own coach, so far without success.{" "}
-                                        <br />
-                                        <br />
-                                        However, we are still trying to get
-                                        something organised. If you would like
-                                        to register your interest in a junior
-                                        club with us, please email us at{" "}
-                                        <span className="email">
-                                            hebdenbridgechessclub@gmail.com
-                                        </span>{" "}
-                                        or the Contact Form below, and we'll let
-                                        you know of any change in circumstances.
+                                        <p>
+                                            Unfortunately, we do not currently
+                                            have a junior chess club. Since the
+                                            pandemic we have made several
+                                            attempts to re-establish a separate
+                                            junior club with its own coach, so
+                                            far without success.
+                                        </p>
+                                        <p>
+                                            However, we are still trying to get
+                                            something organised. If you would
+                                            like to register your interest in a
+                                            junior club with us, please email us
+                                            at{" "}
+                                            <span className="email">
+                                                hebdenbridgechessclub@gmail.com
+                                            </span>{" "}
+                                            or the Contact Form below, and we'll
+                                            let you know of any change in
+                                            circumstances.
+                                        </p>
                                     </>
                                 ),
                             }}
@@ -81,25 +90,30 @@ export default function ClubInformation() {
                                 title: "League Chess",
                                 description: (
                                     <>
-                                        If it's competitive chess you're after,
-                                        then you've come to the right place!
-                                        <br />
-                                        <br /> Last season we had four teams
-                                        participating in the Calderdale Chess
-                                        League and our B team became league
-                                        champions for 2024-25. The club also won
-                                        League 1 in 2022-23, 2021-22 and in
-                                        2018-19 and we are current holders of
-                                        the Calderdale Chess Team Lightning
-                                        title.
-                                        <br />
-                                        <br /> We also take part in online
-                                        events and have three teams in the 4
-                                        Nations Chess League (4NCL) Online
-                                        competition. Our first team won the
-                                        Division 2 title in season 7, Division 3
-                                        in seasons 6 and 5, and the Division 5
-                                        title in season 4.
+                                        <p>
+                                            If it's competitive chess you're
+                                            after, then you've come to the right
+                                            place!
+                                        </p>
+                                        <p>
+                                            Last season we had four teams
+                                            participating in the Calderdale
+                                            Chess League and our B team became
+                                            league champions for 2024-25. The
+                                            club also won League 1 in 2022-23,
+                                            2021-22 and in 2018-19 and we are
+                                            current holders of the Calderdale
+                                            Chess Team Lightning title.
+                                        </p>
+                                        <p>
+                                            We also take part in online events
+                                            and have three teams in the 4
+                                            Nations Chess League (4NCL) Online
+                                            competition. Our first team won the
+                                            Division 2 title in season 7,
+                                            Division 3 in seasons 6 and 5, and
+                                            the Division 5 title in season 4.
+                                        </p>
                                     </>
                                 ),
                             }}
@@ -110,18 +124,22 @@ export default function ClubInformation() {
                                 title: "Social Chess",
                                 description: (
                                     <>
-                                        If you aren’t yet ready to take the
-                                        plunge into competitive chess, then
-                                        that’s no problem.
-                                        <br />
-                                        <br /> We run a range of run and
-                                        educational activities over the summer
-                                        months and social chess is always
-                                        available to anyone that wants a game
-                                        right through the year. You’ll have the
-                                        opportunity to play against a range of
-                                        opponents and get tips from some of our
-                                        more experienced players if you so wish.
+                                        <p>
+                                            If you aren’t yet ready to take the
+                                            plunge into competitive chess, then
+                                            that’s no problem.
+                                        </p>
+                                        <p>
+                                            We run a range of run and
+                                            educational activities over the
+                                            summer months and social chess is
+                                            always available to anyone that
+                                            wants a game right through the year.
+                                            You’ll have the opportunity to play
+                                            against a range of opponents and get
+                                            tips from some of our more
+                                            experienced players if you so wish.
+                                        </p>
                                     </>
                                 ),
                             }}
