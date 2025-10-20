@@ -12,11 +12,11 @@ export default function WhatWeOffer() {
                 <h2 className="what-we-offer__title" id="what-we-offer-heading">
                     What We Offer
                 </h2>
-                <div className="what-we-offer__card-container" role="list">
+                <ul className="what-we-offer__card-container">
                     {WhatWeOfferContent.map((info) => (
                         <Card information={info} key={info.id} />
                     ))}
-                </div>
+                </ul>
             </div>
         </section>
     );
