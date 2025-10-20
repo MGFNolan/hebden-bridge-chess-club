@@ -26,17 +26,25 @@ export default function Footer() {
                     <div className="footer__content__icons">
                         <a
                             href="https://www.chess.com/club/hebden-bridge-chess-club"
-                            aria-label="Visit Hebden Bridge Chess Club on chess.com (opens in new tab)"
+                            aria-label="Visit Hebden Bridge Chess Club on chess.com"
+                            target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
-                            <SiChessdotcom />
+                            <SiChessdotcom />{" "}
+                            <span className="screen-reader-text">
+                                (opens in new tab)
+                            </span>
                         </a>
                         <a
                             href="https://lichess.org/team/hebden-bridge-online-cc"
-                            aria-label="Visit Hebden Bridge Chess Club on lichess.org (opens in new tab)"
+                            aria-label="Visit Hebden Bridge Chess Club on lichess.org"
+                            target="_blank"
                             rel="noopener noreferrer nofollow"
                         >
-                            <SiLichess />
+                            <SiLichess />{" "}
+                            <span className="screen-reader-text">
+                                (opens in new tab)
+                            </span>
                         </a>
                     </div>
                     <div className="footer__content__text">
@@ -45,7 +53,7 @@ export default function Footer() {
                             <a
                                 href="https://github.com/MGFNolan"
                                 target="_blank"
-                                aria-label="Visit MGFNolan's profile on GitHub (opens in new tab)"
+                                aria-label="Visit MGFNolan's profile on GitHub"
                                 rel="noopener noreferrer nofollow"
                             >
                                 Website built by MGFNolan
@@ -65,11 +73,14 @@ export default function Footer() {
                                         {" "}
                                         <a
                                             href={link.href}
-                                            aria-label={`${link.description} (opens in new tab)`}
+                                            aria-label={link.description}
                                             target="_blank"
                                             rel="noopener noreferrer nofollow"
                                         >
-                                            {link.name}
+                                            {link.name}{" "}
+                                            <span className="screen-reader-text">
+                                                (opens in new tab)
+                                            </span>
                                         </a>{" "}
                                     </li>
                                 ))}

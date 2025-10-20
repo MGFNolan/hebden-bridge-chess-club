@@ -23,6 +23,10 @@
                 svg {
                     @apply size-10 self-center mr-2 mb-10;
                 }
+
+                address span {
+                    @apply block;
+                }
             }
         }
 
@@ -51,6 +55,19 @@
 
             .footer__content__text p {
                 @apply text-[0.625rem] text-center;
+            }
+
+            .screen-reader-text {
+                @apply sr-only;
+            }
+
+            a[target="_blank"]::after {
+                content: " \2197"; /* Unicode for North East Arrow */
+                @apply inline-block;
+            }
+
+            .footer__content__icons a[target="_blank"]::after {
+                content: ""; /* Don't show icon for social media icons */
             }
         }
 
