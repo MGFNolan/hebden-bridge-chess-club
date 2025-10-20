@@ -1,38 +1,38 @@
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 
 export default function Hero() {
+    const shouldReduceMotion = useReducedMotion();
+
     return (
         <section
             id="hero"
             className="hero"
-            aria-label="Hero section: Welcome message and contact information"
+            aria-label="Hero section with a welcome message"
         >
             <div className="hero__bg">
                 <div className="container hero__text">
                     <motion.h1
-                        initial={{ opacity: 0, scale: 0 }}
+                        initial={
+                            shouldReduceMotion
+                                ? { opacity: 1, scale: 1 }
+                                : { opacity: 0, scale: 0 }
+                        }
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{
-                            duration: 0.4,
-                            scale: {
-                                type: "spring",
-                                visualDuration: 0.6,
-                                bounce: 0.5,
-                            },
-                        }}
+                        transition={
+                            shouldReduceMotion
+                                ? { duration: 0 }
+                                : {
+                                      duration: 0.6,
+                                      scale: {
+                                          type: "spring",
+                                          visualDuration: 1,
+                                          bounce: 0.5,
+                                      },
+                                  }
+                        }
                         className="hero__text__title"
                     >
-                        <span className="hero__text__title__welcome">
-                            Welcome to
-                        </span>{" "}
-                        <br />{" "}
-                        <span className="hero__text__title__hebden-bridge">
-                            Hebden Bridge
-                        </span>{" "}
-                        <br />{" "}
-                        <span className="hero__text__title__chess-club">
-                            Chess Club
-                        </span>
+                        Welcome to <br /> Hebden Bridge Chess Club
                     </motion.h1>
                 </div>
             </div>
