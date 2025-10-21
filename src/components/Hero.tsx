@@ -32,7 +32,7 @@ export default function Hero() {
                         }
                         className="hero__text__title"
                     >
-                        Welcome to <br /> Hebden Bridge Chess Club
+                        Hebden Bridge Chess Club
                     </motion.h1>
                 </div>
             </div>
