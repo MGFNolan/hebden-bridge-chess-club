@@ -18,6 +18,7 @@
         @apply relative z-10 text-center m-auto w-full;
 
         .hero__text__title {
+            @apply mb-30;
             .hero__text__title__hebden-bridge {
             }
 
