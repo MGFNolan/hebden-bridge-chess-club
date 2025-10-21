@@ -31,6 +31,12 @@ export default function ContactForm() {
         });
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        // Prevent submission if the form is not in an idle state
+        if (formState.currentState !== "idle") {
+            e.preventDefault();
+            return;
+        }
+
         e.preventDefault();
 
         if (isValid) {
@@ -90,6 +96,19 @@ export default function ContactForm() {
                         className="contact-us-form"
                         id="contact-us-form"
                     >
+                        {/* Visually hidden live region for status announcements */}
+                        <div
+                            className="screen-reader-text"
+                            role="status"
+                            aria-live="polite"
+                        >
+                            {formState.currentState === "pending" &&
+                                "Submitting form."}
+                            {formState.currentState === "success" &&
+                                "Form submitted successfully."}
+                            {formState.currentState === "error" &&
+                                `Submission failed: ${formState.errorMessage}`}
+                        </div>
                         <label className="contact-us__label" htmlFor="name">
                             <p>
                                 Name <span className="mandatory">*</span>
@@ -108,10 +127,17 @@ export default function ContactForm() {
                                 maxLength={50}
                                 pattern="[^.]*?"
                                 aria-required="true"
+                                aria-describedby={
+                                    errors.name ? "name-error" : undefined
+                                }
                                 required
                             />
                             {errors.name && (
-                                <p className="error-message" role="alertdialog">
+                                <p
+                                    id="name-error"
+                                    className="error-message"
+                                    role="alert"
+                                >
                                     {errors.name}
                                 </p>
                             )}
@@ -134,10 +160,17 @@ export default function ContactForm() {
                                 minLength={3}
                                 maxLength={50}
                                 aria-required="true"
+                                aria-describedby={
+                                    errors.email ? "email-error" : undefined
+                                }
                                 required
                             />
                             {errors.email && (
-                                <p className="error-message" role="alertdialog">
+                                <p
+                                    id="email-error"
+                                    className="error-message"
+                                    role="alert"
+                                >
                                     {errors.email}
                                 </p>
                             )}
@@ -156,6 +189,9 @@ export default function ContactForm() {
                                 className="contact-us__subject"
                                 required
                                 aria-required="true"
+                                aria-describedby={
+                                    errors.subject ? "subject-error" : undefined
+                                }
                             >
                                 <option value="" disabled>
                                     Choose a subject{" "}
@@ -171,7 +207,11 @@ export default function ContactForm() {
                                 ))}
                             </select>
                             {errors.subject && (
-                                <p className="error-message" role="alertdialog">
+                                <p
+                                    id="subject-error"
+                                    className="error-message"
+                                    role="alert"
+                                >
                                     {errors.subject}
                                 </p>
                             )}
@@ -191,11 +231,18 @@ export default function ContactForm() {
                                 style={{ height: "200px" }}
                                 className="contact-us__message"
                                 minLength={3}
+                                aria-describedby={
+                                    errors.message ? "message-error" : undefined
+                                }
                                 aria-required="true"
                                 required
                             />
                             {errors.message && (
-                                <p className="error-message" role="alertdialog">
+                                <p
+                                    id="message-error"
+                                    className="error-message"
+                                    role="alert"
+                                >
                                     {errors.message}
                                 </p>
                             )}
@@ -206,7 +253,7 @@ export default function ContactForm() {
                             className={`btn--primary contact-us__btn ${
                                 buttonStateClasses[formState.currentState]
                             }`}
-                            disabled={formState.currentState !== "idle"}
+                            aria-disabled={formState.currentState !== "idle"}
                         >
                             {formState.currentState === "idle" && "Submit"}
                             {formState.currentState === "pending" &&

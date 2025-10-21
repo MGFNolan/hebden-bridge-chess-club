@@ -5,7 +5,7 @@
 }
 
 .mobile-nav {
-    @apply flex h-full w-full max-w-96 min-w-65 flex-col items-start gap-y-18 bg-black p-6 pl-7;
+    @apply flex h-full w-full max-w-96 min-w-65 flex-col items-start gap-y-18 p-6 pl-7;
 
     .mobile-nav__links {
         @apply flex flex-col gap-y-15;

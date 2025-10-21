@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperClass } from "swiper";
-
-import { Navigation, FreeMode, Thumbs } from "swiper/modules";
+import { A11y, Navigation, FreeMode, Thumbs } from "swiper/modules";
 import { useState } from "react";
 
 import { GalleryContent } from "../utils/content";
@@ -9,6 +8,13 @@ import { GalleryContent } from "../utils/content";
 export default function Gallery() {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass | null>(null);
     const [mainSwiper, setMainSwiper] = useState<SwiperClass | null>(null);
+
+    const handleThumbnailClick = (index: number) => {
+        if (mainSwiper) {
+            mainSwiper.slideToLoop(index);
+            (mainSwiper.el as HTMLElement).focus();
+        }
+    };
 
     return (
         <section
@@ -21,24 +27,24 @@ export default function Gallery() {
                     Gallery
                 </h2>
             </div>
-            <div className="gallery__swiper">
+            <div className="gallery__swiper" id="main-swiper-container">
                 <Swiper
+                    id="main-swiper"
                     onSwiper={setMainSwiper}
                     loop={true}
                     spaceBetween={10}
                     navigation={true}
                     thumbs={{ swiper: thumbsSwiper }}
-                    modules={[FreeMode, Navigation, Thumbs]}
+                    modules={[A11y, FreeMode, Navigation, Thumbs]}
                     className="gallery-swiper"
                     aria-label="Image gallery, main display"
+                    a11y={{
+                        prevSlideMessage: "Previous image",
+                        nextSlideMessage: "Next image",
+                    }}
                 >
                     {GalleryContent.map((image) => (
-                        <SwiperSlide
-                            key={image.id}
-                            role="group"
-                            aria-roledescription="slide"
-                            aria-label={image.alt}
-                        >
+                        <SwiperSlide key={image.id}>
                             <img
                                 loading="lazy"
                                 src={image.image}
@@ -54,20 +60,23 @@ export default function Gallery() {
                     slidesPerView={3.5}
                     freeMode={true}
                     watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
+                    modules={[A11y, FreeMode, Navigation, Thumbs]}
                     className="gallery-thumbs"
                     aria-label="Thumbnail image navigation"
+                    a11y={{
+                        slideRole: "button",
+                        slideLabelMessage:
+                            "View image {{index}} of {{slidesLength}}",
+                    }}
                 >
-                    {GalleryContent.map((image) => (
+                    {GalleryContent.map((image, index) => (
                         <SwiperSlide
                             key={image.id}
-                            role="button"
                             tabIndex={0}
-                            aria-roledescription="thumbnail"
-                            aria-label={`View larger image: ${image.alt}`}
+                            onClick={() => handleThumbnailClick(index)}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ") {
-                                    mainSwiper?.slideToLoop(image.id - 1);
+                                    handleThumbnailClick(index);
                                     e.preventDefault();
                                 }
                             }}
@@ -75,7 +84,7 @@ export default function Gallery() {
                             <img
                                 loading="lazy"
                                 src={image.image}
-                                alt={`Thumbnail: ${image.alt}`}
+                                alt={image.alt}
                             />
                         </SwiperSlide>
                     ))}

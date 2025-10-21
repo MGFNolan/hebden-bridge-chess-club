@@ -10,8 +10,7 @@ export default function ClubInformationIndividual({
     return (
         <li
             className="info-individual"
-            role="listitem"
-            aria-label={`Club information: ${information.title}`}
+            aria-labelledby={`info-title-${information.id}`}
         >
             <div className="info-individual__wrapper">
                 <h3
@@ -20,12 +19,9 @@ export default function ClubInformationIndividual({
                 >
                     {information.title}
                 </h3>
-                <p
-                    className="info-individual__desciption"
-                    aria-describedby={`info-title-${information.id}`}
-                >
+                <div className="info-individual__desciption">
                     {information.description}
-                </p>
+                </div>
             </div>
         </li>
     );

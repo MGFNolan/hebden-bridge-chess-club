@@ -4,11 +4,7 @@ interface Information {
 }
 export default function Card({ information }: Information) {
     return (
-        <div
-            className="card"
-            role="listitem"
-            aria-label={`Offering: ${information.title}`}
-        >
+        <li className="card" aria-labelledby={`card-title-${information.id}`}>
             <div>
                 <img
                     src={information.image}
@@ -18,11 +14,16 @@ export default function Card({ information }: Information) {
             </div>
 
             <div className="card__text">
-                <h3 className="card__text__title">{information.title}</h3>
+                <h3
+                    className="card__text__title"
+                    id={`card-title-${information.id}`}
+                >
+                    {information.title}
+                </h3>
                 <p className="card__text__description">
                     {information.description}
                 </p>
             </div>
-        </div>
+        </li>
     );
 }

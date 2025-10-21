@@ -1,6 +1,6 @@
 .card {
     @apply min-w-[315px] max-w-[80%] justify-self-center;
-    @apply bg-orange-500 text-black rounded-md;
+    @apply rounded-md;
     @apply transition-all duration-300;
     @apply shadow-[0_0_20px_2px_rgba(249,115,22,0.7)];
 
