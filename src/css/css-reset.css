@@ -1,6 +1,6 @@
 @theme {
     --primary-colour: #000000;
-    --secondary-colour: #879bb5;
+    --secondary-colour: #ffc310;
     --tertiary-colour: #e9af00;
     --bg-colour: #ffffff;
     --spacing-section: clamp(2.5rem, 1rem + 5vw, 5rem);
