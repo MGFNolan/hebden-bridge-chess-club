@@ -1,5 +1,5 @@
 .hero {
-    @apply h-[95vh] relative overflow-hidden pt-7 mt-19;
+    @apply h-[100.1dvh] relative overflow-hidden p-0;
 
     .hero__bg {
         @apply relative flex justify-center w-full h-full;
@@ -10,33 +10,20 @@
 
             /* background image */
             @apply bg-center bg-no-repeat bg-cover;
-            @apply bg-[url('/src/assets/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 scale-110 -z-10;
+            @apply bg-[url('/src/assets/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
         }
     }
 
     .hero__text {
-        @apply relative z-10 text-center h-[50%] mx-auto;
+        @apply relative z-10 text-center m-auto w-full;
 
         .hero__text__title {
-            @apply mb-5;
-
-            /* from Google Fonts */
-            font-family: "Bangers", system-ui;
-            font-weight: 400;
-            font-style: normal;
-
             .hero__text__title__hebden-bridge {
             }
 
             .hero__text__title__hebden-bridge,
             .hero__text__title__chess-club {
             }
-        }
-
-        .hero__text__lede {
-            @apply mt-2 p-3 mx-auto;
-
-            @apply max-w-[75%];
         }
     }
 
@@ -54,36 +41,10 @@
     /* Tablet */
 
     @media (max-width: 959px) {
-        @apply pt-0;
-        .hero__bg {
-            @apply items-start pt-2;
-        }
-        .hero__text {
-            .hero__text__title {
-                .hero__text__title__chess-club {
-                }
-            }
-
-            .hero__text__lede {
-                @apply leading-6;
-            }
-        }
     }
 
     /* Mobile */
 
     @media (max-width: 760px) {
-        @apply mt-15;
-        .hero__bg {
-            @apply pb-50;
-        }
-
-        .hero__text {
-            .hero__text__title {
-                font-size: 4rem;
-            }
-            .hero__text__lede {
-            }
-        }
     }
 }
