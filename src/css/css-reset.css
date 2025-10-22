@@ -211,6 +211,7 @@ option {
 #contact-us,
 #footer {
     display: grid;
+    grid-template-columns: 100%;
 }
 
 #gallery .container {
