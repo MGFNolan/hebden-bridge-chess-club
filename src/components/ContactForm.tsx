@@ -87,7 +87,11 @@ export default function ContactForm() {
     }
 
     return (
-        <section id="contact-us" aria-labelledby="contact-us-heading">
+        <section
+            id="contact-us"
+            aria-labelledby="contact-us-heading"
+            tabIndex={-1}
+        >
             <div className="container">
                 <div className="contact-us">
                     <h2 id="contact-us-heading">Contact Us</h2>
