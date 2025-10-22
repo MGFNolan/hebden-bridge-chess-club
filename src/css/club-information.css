@@ -41,10 +41,6 @@
     /* Mobile */
 
     @media (max-width: 760px) {
-        .club-information__title {
-            @apply text-[4rem];
-        }
-
         .club-information__list {
             @apply mt-0;
         }
