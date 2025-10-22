@@ -47,5 +47,10 @@
     /* Mobile */
 
     @media (max-width: 760px) {
+        .hero__text {
+            .hero__text__title {
+                @apply text-left;
+            }
+        }
     }
 }
