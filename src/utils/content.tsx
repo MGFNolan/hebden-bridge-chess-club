@@ -146,6 +146,12 @@ const UsefulLinksContent: UsefulLinks[] = [
         name: "Power Play YouTube",
         description: "Link to the Power Play YouTube channel",
     },
+    {
+        id: 5,
+        href: "https://thetradesclub.com/",
+        name: "Trades Club",
+        description: "Link to the Trades Club website",
+    },
 ];
 
 export {
