@@ -9,8 +9,12 @@
         @apply scale-105;
     }
 
+    .card__img-container {
+        @apply w-full overflow-hidden aspect-[16/9];
+    }
+
     .card__img {
-        @apply rounded-t-sm object-cover min-h-[13rem];
+        @apply h-full w-full rounded-t-sm object-cover;
     }
     .card__text {
         @apply flex flex-col items-center;

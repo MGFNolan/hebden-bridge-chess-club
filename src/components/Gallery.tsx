@@ -45,11 +45,13 @@ export default function Gallery() {
                     >
                         {GalleryContent.map((image) => (
                             <SwiperSlide key={image.id}>
-                                <img
-                                    loading="lazy"
-                                    src={image.image}
-                                    alt={image.alt}
-                                />
+                                <div className="gallery__img-container">
+                                    <img
+                                        loading="lazy"
+                                        src={image.image}
+                                        alt={image.alt}
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -81,11 +83,13 @@ export default function Gallery() {
                                     }
                                 }}
                             >
-                                <img
-                                    loading="lazy"
-                                    src={image.image}
-                                    alt={image.alt}
-                                />
+                                <div className="gallery__thumb-container">
+                                    <img
+                                        loading="lazy"
+                                        src={image.image}
+                                        alt={image.alt}
+                                    />
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>

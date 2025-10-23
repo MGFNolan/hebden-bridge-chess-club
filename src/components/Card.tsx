@@ -5,10 +5,11 @@ interface Information {
 export default function Card({ information }: Information) {
     return (
         <li className="card" aria-labelledby={`card-title-${information.id}`}>
-            <div>
+            <div className="card__img-container">
                 <img
                     src={information.image}
                     alt={information.alt}
+                    loading="lazy"
                     className="card__img"
                 />
             </div>
