@@ -8,6 +8,14 @@
 
         .join-game__text {
             @apply text-center mx-auto;
+
+            em {
+                @apply font-bold;
+            }
+
+            strong {
+                @apply italic;
+            }
         }
     }
 }
