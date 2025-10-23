@@ -4,11 +4,11 @@ function JoinUsForAGame() {
     useEffect(() => {
         const handleHashChange = () => {
             if (window.location.hash === "#contact-us") {
-                document.getElementById("contact-us")?.focus();
+                document.getElementById("name")?.focus();
             }
         };
 
-        window.addEventListener("hashchange", handleHashChange, { once: true });
+        window.addEventListener("hashchange", handleHashChange);
 
         return () => window.removeEventListener("hashchange", handleHashChange);
     }, []);
@@ -22,7 +22,7 @@ function JoinUsForAGame() {
                     It doesn’t matter whether you’re new to chess, an online
                     player who wants to experience ‘over the board’ chess, a
                     lapsed player who’s returning to the game, or an experienced
-                    wood pusher. Please come and join us at the{" "}
+                    wood pusher. Please come and join us at{" "}
                     <em>Hebden Bridge’s Trades Club</em> on{" "}
                     <em>Monday nights from 19:30</em>. We’re there most weeks.
                 </p>
