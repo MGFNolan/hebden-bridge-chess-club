@@ -10,7 +10,7 @@
 
             /* background image */
             @apply bg-center bg-no-repeat bg-cover;
-            @apply bg-[url('/src/assets/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
+            @apply bg-[url('/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
         }
     }
 
