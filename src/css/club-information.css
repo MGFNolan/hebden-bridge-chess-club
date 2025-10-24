@@ -12,10 +12,6 @@
         @apply m-auto text-center;
     }
 
-    .location-map {
-        @apply m-auto my-5 px-5 min-w-[50vw] min-h-[65vh];
-    }
-
     /* Desktop - Smaller */
 
     @media (max-width: 1280px) {
@@ -24,9 +20,6 @@
         }
         .club-information__list {
             @apply grid-cols-1 items-center;
-        }
-        .location-map {
-            @apply min-w-[75vw] min-h-[45vh];
         }
     }
 

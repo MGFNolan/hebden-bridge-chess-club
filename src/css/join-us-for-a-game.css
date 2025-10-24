@@ -17,5 +17,9 @@
                 @apply italic;
             }
         }
+
+        .location-map {
+            @apply m-auto my-5 px-5 min-w-[50vw] min-h-[65vh];
+        }
     }
 }
