@@ -31,6 +31,15 @@ function JoinUsForAGame() {
                     <em>any level of playing ability</em> is welcome!
                 </p>
 
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.753193620293!2d-2.016736422931863!3d53.74047034516063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bea674613ed0f%3A0xa6c106b6b47c9124!2sTrades%20Club!5e0!3m2!1sen!2suk!4v1752154348422!5m2!1sen!2suk"
+                    allowFullScreen={undefined}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="location-map"
+                    title="Google Maps showing the location of The Trades Club in Hebden Bridge"
+                ></iframe>
+
                 <a href="#contact-us" className="btn--primary join-game__btn">
                     Contact Us
                 </a>
