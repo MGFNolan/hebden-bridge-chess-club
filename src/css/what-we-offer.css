@@ -1,7 +1,7 @@
 .what-we-offer {
     .what-we-offer__card-container {
         @apply grid grid-cols-3 m-auto;
-        @apply pt-7 gap-y-10;
+        @apply pt-7 gap-7;
 
         /* Desktop - Smaller */
 
