@@ -1,11 +1,11 @@
 .card {
-    @apply min-w-[315px] max-w-[80%] justify-self-center;
+    @apply justify-self-center;
     @apply rounded-md;
     @apply transition-all duration-300;
-    @apply shadow-[0_0_20px_2px_rgba(249,115,22,0.7)];
+    @apply shadow-[0_0_20px_2px_rgba(255,195,16,0.5)];
 
     &:hover {
-        @apply shadow-[0_0_50px_5px_rgba(249,115,22,0.7)];
+        @apply shadow-[0_0_35px_4px_rgba(255,195,16,0.6)];
         @apply scale-105;
     }
 
@@ -20,15 +20,18 @@
         @apply flex flex-col items-center;
         @apply px-5;
 
-        .card__text__title {
-            @apply mb-3.5;
+        p {
+            @apply text-sm;
+        }
+
+        em {
+            @apply font-bold;
         }
     }
 
     /* Desktop - Smaller */
 
     @media (max-width: 1280px) {
-        @apply grid-cols-2;
     }
 
     /* Tablet */
