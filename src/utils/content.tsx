@@ -45,7 +45,7 @@ const whatWeOfferData = [
                 <p>
                     If you decide to become a member, we charge an annual
                     membership fee which runs from{" "}
-                    <em>September 1st to August 31st</em>–{" "}
+                    <em>September 1st to August 31st</em> –{" "}
                     <strong>
                         £30 for adults (reduced to £20 for members of the Trades
                         Club)
