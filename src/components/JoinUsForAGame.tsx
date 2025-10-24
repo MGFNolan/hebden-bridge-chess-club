@@ -4,7 +4,7 @@ function JoinUsForAGame() {
     useEffect(() => {
         const handleHashChange = () => {
             if (window.location.hash === "#contact-us") {
-                document.getElementById("name")?.focus();
+                document.getElementById("name")?.focus({ preventScroll: true });
             }
         };
 
