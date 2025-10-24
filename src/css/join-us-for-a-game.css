@@ -1,0 +1,21 @@
+.join-game {
+    .container {
+        @apply flex flex-col;
+
+        .join-game__btn {
+            @apply mx-auto;
+        }
+
+        .join-game__text {
+            @apply text-center mx-auto;
+
+            em {
+                @apply font-bold;
+            }
+
+            strong {
+                @apply italic;
+            }
+        }
+    }
+}

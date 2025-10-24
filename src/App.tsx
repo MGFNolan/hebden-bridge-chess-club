@@ -18,6 +18,7 @@ import ContactForm from "./components/ContactForm";
 
 //Footer
 import Footer from "./components/Footer";
+import JoinUsForAGame from "./components/JoinUsForAGame";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                 </Header>
 
                 <Main>
+                    <JoinUsForAGame />
                     <ClubInformation />
                     <WhatWeOffer />
                     <ImageGallery />
