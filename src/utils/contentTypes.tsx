@@ -17,7 +17,7 @@ interface WhatWeOffer {
     image: string;
     alt: string;
     title: string;
-    description: string;
+    description: React.ReactNode;
 }
 
 interface Image {
