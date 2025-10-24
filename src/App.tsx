@@ -11,14 +11,13 @@ import MobileNav from "./components/Navigation/MobileNav";
 
 //Main
 import Main from "./components/Main";
-import ClubInformation from "./components/Club Information/ClubInformation";
 import WhatWeOffer from "./components/WhatWeOffer";
 import ImageGallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
+import JoinUsForAGame from "./components/JoinUsForAGame";
 
 //Footer
 import Footer from "./components/Footer";
-import JoinUsForAGame from "./components/JoinUsForAGame";
 
 function App() {
     return (
@@ -32,7 +31,7 @@ function App() {
 
                 <Main>
                     <JoinUsForAGame />
-                    <ClubInformation />
+
                     <WhatWeOffer />
                     <ImageGallery />
                     <ContactForm />
