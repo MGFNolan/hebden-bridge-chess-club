@@ -32,8 +32,8 @@ const NavLinksContent: NavLink[] = navLinksData.map((item, index) => ({
 
 const whatWeOfferData = [
     {
-        image: "/hbcc-photos/social-action-shot.jpg",
-        alt: "Two concurrent chess games taking place side by side with several people of varying ages playing or watching the games. There is a chess clock on the table in the foreground.",
+        image: "/hbcc-photos/what-we-offer/membership.jpg",
+        alt: "The Trades Club sign attached to the Trades Club building. There are leaves and branches of a tree in the background.",
         title: "Membership",
         description: (
             <>
@@ -56,25 +56,106 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "/hbcc-photos/social-action-shot.jpg",
-        alt: "Two concurrent chess games taking place side by side with several people of varying ages playing or watching the games. There is a chess clock on the table in the foreground.",
-        title: "Membership",
+        image: "/hbcc-photos/what-we-offer/league-chess.jpg",
+        alt: "Two players playing a game of chess at a table. There is a chess clock on the table in the foreground, and pieces that have been exchanged off the board.",
+        title: "League Chess",
         description: (
             <>
                 <p>
-                    While membership is required for competitive chess, you’re
-                    welcome to come along, play some social games, enjoy a drink
-                    and a chat and see how you find things, with no obligations.
+                    If it's competitive chess you're after, then you've come to
+                    the right place! This season we have four teams (comprising
+                    players of mixed abilities) in the{" "}
+                    <em>Calderdale Chess League</em>. Our B team were league
+                    champions for 2024-25.
                 </p>
                 <p>
-                    If you decide to become a member, we charge an annual
-                    membership fee which runs from{" "}
-                    <em>September 1st to August 31st</em>–{" "}
-                    <strong>
-                        £30 for adults (reduced to £20 for members of the Trades
-                        Club)
-                    </strong>
-                    .
+                    We have a strong pedigree in the local league having won the
+                    title ten times since 2000-01. We are also the current
+                    holders of the Calderdale Team Lightning title.
+                </p>
+            </>
+        ),
+    },
+    {
+        image: "/hbcc-photos/what-we-offer/online-chess.jpg",
+        alt: "Two people playing chess. One is in focus, calculating their next move. Their drinks and scoresheets are next to them.",
+        title: "Online Chess",
+        description: (
+            <>
+                <p>
+                    We take part in <em>online events</em> and have three teams
+                    competing in the <em>4NCL Online</em> (Four Nations Chess
+                    League) competition. Players of all abilities can take part.
+                    Our first team play in League 1 having progressed through
+                    the lower divisions – winning the Division 5 title in 2021,
+                    Division 3 in 2022 and Division 2 in 2023.
+                </p>
+                <p>
+                    We also have a chess club page on the{" "}
+                    <a
+                        href="https://lichess.org/team/hebden-bridge-online-cc"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                    >
+                        Lichess website
+                    </a>{" "}
+                    so come and join our community there too.
+                </p>
+            </>
+        ),
+    },
+    {
+        image: "/hbcc-photos/what-we-offer/social-chess.jpg",
+        alt: "A group of four people debating a position on the chess board.",
+        title: "Social Chess",
+        description: (
+            <>
+                <p>
+                    If you aren’t yet ready to take the plunge into competitive
+                    chess, then that’s no problem.{" "}
+                    <em>Social chess is always available</em> to anyone who
+                    wants to come along, find a dance partner, and just have
+                    fun. If you’ve never played before, we’ll find someone to
+                    show you the basics.
+                </p>
+                <p>
+                    <em>We organise all sorts of activities</em> in the summer
+                    months including mentoring, lectures from experienced
+                    players and more!
+                </p>
+            </>
+        ),
+    },
+    {
+        image: "/hbcc-photos/what-we-offer/junior-chess.jpg",
+        alt: "A room of people playing chess games. In the foreground is a young player pressing the clock after her move.",
+        title: "Junior Chess",
+        description: (
+            <>
+                <p>
+                    We’ve established a new Junior Chess Club for all ages under
+                    16. The club has its own coach and meets on{" "}
+                    <strong>Tuesday’s from 16:15 to 17:45</strong> at{" "}
+                    <em>Hebden Bridge Town Hall</em>. Please use the contact
+                    form at the bottom of the page to enquire and find out more
+                    information.
+                </p>
+            </>
+        ),
+    },
+    {
+        image: "/hbcc-photos/what-we-offer/a-safe-space.jpg",
+        alt: "In the foreground, two players discuss a position on the board with the chess board, the chess clock, and their drinks in view. In the background, another player makes a move in their own game.",
+        title: "A Safe Space",
+        description: (
+            <>
+                <p>
+                    Our membership is <em>growing and increasingly diverse</em>.
+                    Everyone is friendly and supportive.
+                </p>
+                <p>
+                    Whoever you are, you’re very welcome at the Hebden Bridge
+                    Chess Club.
                 </p>
             </>
         ),
