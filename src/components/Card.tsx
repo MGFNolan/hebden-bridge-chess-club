@@ -21,9 +21,9 @@ export default function Card({ information }: Information) {
                 >
                     {information.title}
                 </h3>
-                <p className="card__text__description">
+                <div className="card__text__description">
                     {information.description}
-                </p>
+                </div>
             </div>
         </li>
     );
