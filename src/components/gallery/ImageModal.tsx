@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { type Image } from "../../utils/contentTypes.tsx";
 import CloseIcon from "../Icons/CloseIcon.tsx";
 
@@ -6,13 +6,15 @@ interface ImageModalProps {
     images: Image[];
     initialIndex: number;
     onClose: () => void;
-    onAnnouncement: (message: string) => void;
+    onIndexChange?: (index: number) => void;
+    onAnnouncement?: (message: string) => void;
 }
 
 export default function ImageModal({
     images,
     initialIndex,
     onClose,
+    onIndexChange,
     onAnnouncement,
 }: ImageModalProps) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -27,27 +29,33 @@ export default function ImageModal({
     const isFirstImage = currentIndex === 0;
     const isLastImage = currentIndex === images.length - 1;
 
-    const goToPrevious = () => {
+    const announceImageChange = useCallback(
+        (index: number) => {
+            if (!onAnnouncement) return;
+            const image = images[index];
+            const position = `Image ${index + 1} of ${images.length}`;
+            onAnnouncement(`${position}: ${image.alt}`);
+        },
+        [images, onAnnouncement]
+    );
+
+    const goToPrevious = useCallback(() => {
         if (!isFirstImage) {
             const newIndex = currentIndex - 1;
+            onIndexChange?.(newIndex);
             setCurrentIndex(newIndex);
             announceImageChange(newIndex);
         }
-    };
+    }, [isFirstImage, currentIndex, announceImageChange, onIndexChange]);
 
-    const goToNext = () => {
+    const goToNext = useCallback(() => {
         if (!isLastImage) {
             const newIndex = currentIndex + 1;
+            onIndexChange?.(newIndex);
             setCurrentIndex(newIndex);
             announceImageChange(newIndex);
         }
-    };
-
-    const announceImageChange = (index: number) => {
-        const image = images[index];
-        const position = `Image ${index + 1} of ${images.length}`;
-        onAnnouncement(`${position}: ${image.alt}`);
-    };
+    }, [isLastImage, currentIndex, announceImageChange, onIndexChange]);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -68,12 +76,12 @@ export default function ImageModal({
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [currentIndex]);
+    }, [onClose, goToPrevious, goToNext]);
 
     useEffect(() => {
         closeButtonRef.current?.focus();
         announceImageChange(currentIndex);
-    }, []);
+    }, [currentIndex, announceImageChange]);
 
     useEffect(() => {
         const modal = modalRef.current;
@@ -103,7 +111,7 @@ export default function ImageModal({
 
         modal.addEventListener("keydown", handleTabKey);
         return () => modal.removeEventListener("keydown", handleTabKey);
-    }, [currentIndex]);
+    }, []);
 
     useEffect(() => {
         const scrollbarWidth =
