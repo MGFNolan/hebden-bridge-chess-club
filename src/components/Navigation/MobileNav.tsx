@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { NavLinksContent } from "../../utils/content";
 import { useMenuContext } from "../../context/MobileMenuContext";
 import { useState } from "react";
-import Close from "../Icons/Close";
+import Close from "../Icons/CloseIcon";
 
 export default function MobileNav() {
     const { menuOpened, setMenuOpened } = useMenuContext();
