@@ -1,0 +1,187 @@
+import { useState, useEffect, useRef } from "react";
+import { type Image } from "../../utils/contentTypes.tsx";
+import CloseIcon from "../Icons/CloseIcon.tsx";
+
+interface ImageModalProps {
+    images: Image[];
+    initialIndex: number;
+    onClose: () => void;
+    onAnnouncement: (message: string) => void;
+}
+
+export default function ImageModal({
+    images,
+    initialIndex,
+    onClose,
+    onAnnouncement,
+}: ImageModalProps) {
+    const [currentIndex, setCurrentIndex] = useState(initialIndex);
+    const modalRef = useRef<HTMLDivElement>(null);
+    const closeButtonRef = useRef<HTMLButtonElement>(null);
+
+    const prefersReducedMotion =
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const currentImage = images[currentIndex];
+    const isFirstImage = currentIndex === 0;
+    const isLastImage = currentIndex === images.length - 1;
+
+    const goToPrevious = () => {
+        if (!isFirstImage) {
+            const newIndex = currentIndex - 1;
+            setCurrentIndex(newIndex);
+            announceImageChange(newIndex);
+        }
+    };
+
+    const goToNext = () => {
+        if (!isLastImage) {
+            const newIndex = currentIndex + 1;
+            setCurrentIndex(newIndex);
+            announceImageChange(newIndex);
+        }
+    };
+
+    const announceImageChange = (index: number) => {
+        const image = images[index];
+        const position = `Image ${index + 1} of ${images.length}`;
+        onAnnouncement(`${position}: ${image.alt}`);
+    };
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            switch (e.key) {
+                case "Escape":
+                    onClose();
+                    break;
+                case "ArrowLeft":
+                    e.preventDefault();
+                    goToPrevious();
+                    break;
+                case "ArrowRight":
+                    e.preventDefault();
+                    goToNext();
+                    break;
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [currentIndex]);
+
+    useEffect(() => {
+        closeButtonRef.current?.focus();
+        announceImageChange(currentIndex);
+    }, []);
+
+    useEffect(() => {
+        const modal = modalRef.current;
+        if (!modal) return;
+
+        const focusableElements = modal.querySelectorAll<HTMLElement>(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        const handleTabKey = (e: KeyboardEvent) => {
+            if (e.key !== "Tab") return;
+
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement?.focus();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement?.focus();
+                }
+            }
+        };
+
+        modal.addEventListener("keydown", handleTabKey);
+        return () => modal.removeEventListener("keydown", handleTabKey);
+    }, [currentIndex]);
+
+    useEffect(() => {
+        const scrollbarWidth =
+            window.innerWidth - document.documentElement.clientWidth;
+        const originalPaddingRight = document.body.style.paddingRight;
+
+        document.body.style.overflow = "hidden";
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+        return () => {
+            document.body.style.overflow = "unset";
+            document.body.style.paddingRight = originalPaddingRight;
+        };
+    }, []);
+
+    return (
+        <>
+            <div
+                className="modal__backdrop"
+                onClick={onClose}
+                aria-hidden="true"
+            />
+
+            <div
+                ref={modalRef}
+                role="dialog"
+                aria-modal="true"
+                aria-label="Image viewer"
+                className="modal"
+            >
+                <div className="modal__container">
+                    <div className="modal__header">
+                        <span className="modal__counter">
+                            {currentIndex + 1} / {images.length}
+                        </span>
+                        <button
+                            ref={closeButtonRef}
+                            onClick={onClose}
+                            className="modal__close-button"
+                            aria-label="Close image viewer"
+                        >
+                            <CloseIcon className="modal__close-icon" />
+                        </button>
+                    </div>
+
+                    <div className="modal__image-container">
+                        <img
+                            src={currentImage.image}
+                            alt={currentImage.alt}
+                            className={`modal__image ${
+                                !prefersReducedMotion
+                                    ? "modal__image--animated" // Apply animation class if motion is preferred
+                                    : "" // Otherwise, no animation class
+                            }`}
+                        />
+                    </div>
+
+                    <div className="modal__footer">
+                        <button
+                            onClick={goToPrevious}
+                            disabled={isFirstImage}
+                            className="modal__nav-button"
+                            aria-label="Previous image"
+                        >
+                            ← Previous
+                        </button>
+
+                        <button
+                            onClick={goToNext}
+                            disabled={isLastImage}
+                            className="modal__nav-button"
+                            aria-label="Next image"
+                        >
+                            Next →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
