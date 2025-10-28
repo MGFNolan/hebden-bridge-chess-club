@@ -1,5 +1,5 @@
 .gallery {
-    @apply w-full max-w-7xl mx-auto px-4 py-8;
+    @apply mx-auto;
 
     .gallery__announcement {
         @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;

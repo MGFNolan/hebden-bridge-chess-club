@@ -53,78 +53,73 @@ export default function ImageGallery({ images }: { images: Image[] }) {
     return (
         <section
             id="gallery"
-            className="gallery"
+            className="gallery container"
             aria-labelledby="gallery-title"
         >
-            <div className="container">
-                <h2 className="gallery__title" id="gallery-title">
-                    Image Gallery
-                </h2>
+            <h2 className="gallery__title" id="gallery-title">
+                Image Gallery
+            </h2>
 
-                <AnimatePresence>
-                    <motion.div
-                        className="gallery__grid"
-                        initial="hidden"
-                        animate="visible"
-                        variants={{
-                            visible: { transition: { staggerChildren: 0.1 } },
-                        }}
-                    >
-                        {visibleImages.map((image, index) => (
-                            <motion.div
-                                key={image.id}
-                                className="gallery__item"
-                                variants={itemVariants}
-                                layout
-                            >
-                                <figure>
-                                    <button
-                                        onClick={(e) =>
-                                            handleImageClick(
-                                                index,
-                                                e.currentTarget
-                                            )
-                                        }
-                                        className="gallery__thumbnail"
-                                        aria-label={`View larger version of ${image.alt}`}
-                                    >
-                                        <img
-                                            src={image.image}
-                                            alt="" // Alt text is on the button, so this can be empty
-                                            loading="lazy"
-                                            className="gallery__thumbnail-image"
-                                            aria-hidden="true"
-                                        />
-                                    </button>
-                                    <figcaption className="gallery__caption">
-                                        {image.alt}
-                                    </figcaption>
-                                </figure>
-                            </motion.div>
-                        ))}
-                    </motion.div>
-                </AnimatePresence>
-
-                {!showAll && images.length > INITIAL_VISIBLE_IMAGES && (
-                    <div className="gallery__load-more-container">
-                        <button
-                            onClick={handleLoadAll}
-                            className="gallery__load-more-button"
+            <AnimatePresence>
+                <motion.div
+                    className="gallery__grid"
+                    initial="hidden"
+                    animate="visible"
+                    variants={{
+                        visible: { transition: { staggerChildren: 0.1 } },
+                    }}
+                >
+                    {visibleImages.map((image, index) => (
+                        <motion.div
+                            key={image.id}
+                            className="gallery__item"
+                            variants={itemVariants}
+                            layout
                         >
-                            Load All
-                        </button>
-                    </div>
-                )}
+                            <figure>
+                                <button
+                                    onClick={(e) =>
+                                        handleImageClick(index, e.currentTarget)
+                                    }
+                                    className="gallery__thumbnail"
+                                    aria-label={`View larger version of ${image.alt}`}
+                                >
+                                    <img
+                                        src={image.image}
+                                        alt="" // Alt text is on the button, so this can be empty
+                                        loading="lazy"
+                                        className="gallery__thumbnail-image"
+                                        aria-hidden="true"
+                                    />
+                                </button>
+                                <figcaption className="gallery__caption">
+                                    {image.alt}
+                                </figcaption>
+                            </figure>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </AnimatePresence>
 
-                {selectedIndex !== null && (
-                    <ImageModal
-                        images={images}
-                        initialIndex={selectedIndex}
-                        onClose={handleCloseModal}
-                        onIndexChange={handleModalIndexChange}
-                    />
-                )}
-            </div>
+            {!showAll && images.length > INITIAL_VISIBLE_IMAGES && (
+                <div className="gallery__load-more-container">
+                    <button
+                        onClick={handleLoadAll}
+                        className="gallery__load-more-button"
+                    >
+                        Load All
+                    </button>
+                </div>
+            )}
+
+            {selectedIndex !== null && (
+                <ImageModal
+                    images={images}
+                    initialIndex={selectedIndex}
+                    onClose={handleCloseModal}
+                    onIndexChange={handleModalIndexChange}
+                />
+            )}
         </section>
     );
 }
