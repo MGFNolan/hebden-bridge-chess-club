@@ -1,0 +1,81 @@
+.modal__backdrop {
+    @apply fixed inset-0 bg-black;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+.modal {
+    @apply fixed inset-0 flex items-center justify-center p-4;
+    z-index: 1001;
+
+    .modal__container {
+        @apply relative w-full h-full grid;
+        max-width: 1280px;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .modal__header {
+        @apply flex items-center justify-between mb-4;
+    }
+
+    .modal__counter {
+        @apply text-white text-lg font-medium;
+    }
+
+    .modal__close-button {
+        @apply relative flex items-center justify-center bg-gray-800 rounded-lg p-3 transition-colors;
+
+        &:hover {
+            @apply bg-gray-700 cursor-pointer;
+        }
+    }
+
+    .modal__close-icon {
+        @apply relative h-6 w-6;
+    }
+
+    .modal__image-container {
+        @apply flex items-center justify-center relative min-h-0; /* flex-1 is no longer needed, min-h-0 prevents overflow */
+    }
+
+    .modal__image {
+        @apply max-w-full max-h-full object-contain rounded-lg;
+
+        &--animated {
+            @apply transition-opacity duration-300;
+        }
+    }
+
+    .modal__footer {
+        @apply flex items-center justify-between mt-4;
+    }
+
+    .modal__nav-button {
+        @apply text-white bg-gray-800 rounded-lg px-6 py-3 font-medium transition-colors;
+        min-width: 120px;
+
+        &:hover {
+            @apply bg-gray-700 cursor-pointer;
+        }
+
+        &:disabled {
+            @apply bg-gray-900 text-gray-600 cursor-not-allowed;
+
+            &:hover {
+                @apply bg-gray-900;
+            }
+        }
+    }
+
+    .modal__image-caption {
+        @apply text-white text-center text-lg mx-4;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .modal__close-button,
+        .modal__nav-button,
+        .modal__image--animated {
+            @apply transition-none;
+        }
+    }
+}
