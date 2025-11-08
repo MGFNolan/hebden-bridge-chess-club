@@ -86,7 +86,7 @@ export default function ImageGallery({ images }: { images: Image[] }) {
                                 >
                                     <img
                                         src={image.image}
-                                        alt="" // Alt text is on the button, so this can be empty
+                                        alt={image.alt}
                                         loading="lazy"
                                         className="gallery__thumbnail-image"
                                         aria-hidden="true"
@@ -105,7 +105,7 @@ export default function ImageGallery({ images }: { images: Image[] }) {
                 <div className="gallery__load-more-container">
                     <button
                         onClick={handleLoadAll}
-                        className="gallery__load-more-button"
+                        className="gallery__load-more-button btn--primary"
                     >
                         Load All
                     </button>
