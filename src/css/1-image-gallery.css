@@ -55,4 +55,12 @@
     .gallery__caption {
         @apply hidden;
     }
+
+    .gallery__load-more-container {
+        @apply flex;
+    }
+
+    .gallery__load-more-button {
+        @apply mx-auto;
+    }
 }
