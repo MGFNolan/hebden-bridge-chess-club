@@ -163,8 +163,8 @@ export default function ImageModal({
                             alt={currentImage.alt}
                             className={`modal__image ${
                                 !prefersReducedMotion
-                                    ? "modal__image--animated" // Apply animation class if motion is preferred
-                                    : "" // Otherwise, no animation class
+                                    ? "modal__image--animated"
+                                    : ""
                             }`}
                         />
                     </div>
