@@ -1,8 +1,10 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
+//Styling
 import "./index.css";
 
+//React Query
 import MenuContextProvider from "./context/MobileMenuContext";
 import Page from "./components/Page";
 
@@ -22,6 +24,7 @@ import ImageGallery from "./components/gallery/ImageGallery";
 //Footer
 import Footer from "./components/Footer";
 
+//Data
 import { GalleryContent } from "./utils/content";
 
 const queryClient = new QueryClient();
