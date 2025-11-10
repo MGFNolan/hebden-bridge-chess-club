@@ -1,3 +1,6 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 import "./index.css";
 
 import MenuContextProvider from "./context/MobileMenuContext";
@@ -22,29 +25,34 @@ import Footer from "./components/Footer";
 
 import { GalleryContent } from "./utils/content";
 
+const queryClient = new QueryClient();
+
 function App() {
     return (
-        <MenuContextProvider>
-            <Page>
-                <Header>
-                    <NavBar />
-                    <Hero />
-                    <MobileNav />
-                </Header>
+        <QueryClientProvider client={queryClient}>
+            <MenuContextProvider>
+                <Page>
+                    <Header>
+                        <NavBar />
+                        <Hero />
+                        <MobileNav />
+                    </Header>
 
-                <Main>
-                    <JoinUsForAGame />
+                    <Main>
+                        <JoinUsForAGame />
 
-                    <WhatWeOffer />
-                    {/* <ImageGallery /> */}
-                    <ImageGallery images={GalleryContent} />
+                        <WhatWeOffer />
+                        {/* <ImageGallery /> */}
+                        <ImageGallery images={GalleryContent} />
 
-                    <ContactForm />
-                </Main>
+                        <ContactForm />
+                    </Main>
 
-                <Footer />
-            </Page>
-        </MenuContextProvider>
+                    <Footer />
+                </Page>
+            </MenuContextProvider>
+            <ReactQueryDevtools />
+        </QueryClientProvider>
     );
 }
 
