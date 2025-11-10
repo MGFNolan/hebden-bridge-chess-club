@@ -21,9 +21,9 @@ interface WhatWeOffer {
 }
 
 interface Image {
-    id: number;
-    image: string;
-    alt: string;
+    id: string;
+    img_url: string;
+    img_alt: string;
     title?: string;
     description?: string;
 }
