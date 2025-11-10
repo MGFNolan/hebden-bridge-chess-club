@@ -24,8 +24,6 @@ interface Image {
     id: string;
     img_url: string;
     img_alt: string;
-    title?: string;
-    description?: string;
 }
 
 interface ContactOptions {

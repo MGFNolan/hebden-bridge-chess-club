@@ -1,19 +1,21 @@
 import { useRef, useState, useEffect } from "react";
 import ImageModal from "./ImageModal";
-import { type Image } from "../../utils/contentTypes.tsx";
 import { AnimatePresence, motion } from "framer-motion";
+import useQueryGalleryImages from "../../hooks/useQueryGalleryImages.tsx";
 
-const INITIAL_VISIBLE_IMAGES = 4;
+const INITIAL_VISIBLE_IMAGES = 12;
 
-export default function ImageGallery({ images }: { images: Image[] }) {
+export default function ImageGallery() {
+    const { galleryImages, error, isLoading } = useQueryGalleryImages();
+
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [showAll, setShowAll] = useState(false);
 
     const lastFocusedElement = useRef<HTMLButtonElement | null>(null);
 
     const visibleImages = showAll
-        ? images
-        : images.slice(0, INITIAL_VISIBLE_IMAGES);
+        ? galleryImages
+        : galleryImages?.slice(0, INITIAL_VISIBLE_IMAGES);
 
     const handleImageClick = (index: number, buttonRef: HTMLButtonElement) => {
         lastFocusedElement.current = buttonRef;
@@ -37,13 +39,14 @@ export default function ImageGallery({ images }: { images: Image[] }) {
 
     useEffect(() => {
         if (
+            galleryImages &&
             selectedIndex !== null &&
             selectedIndex >= INITIAL_VISIBLE_IMAGES &&
             !showAll
         ) {
             setShowAll(true);
         }
-    }, [selectedIndex, showAll]);
+    }, [selectedIndex, showAll, galleryImages]);
 
     const itemVariants = {
         hidden: { opacity: 0, scale: 0.8 },
@@ -69,7 +72,7 @@ export default function ImageGallery({ images }: { images: Image[] }) {
                         visible: { transition: { staggerChildren: 0.1 } },
                     }}
                 >
-                    {visibleImages.map((image, index) => (
+                    {visibleImages?.map((image, index) => (
                         <motion.div
                             key={image.id}
                             className="gallery__item"
@@ -82,18 +85,18 @@ export default function ImageGallery({ images }: { images: Image[] }) {
                                         handleImageClick(index, e.currentTarget)
                                     }
                                     className="gallery__thumbnail"
-                                    aria-label={`View larger version of ${image.alt}`}
+                                    aria-label={`View larger version of ${image.img_alt}`}
                                 >
                                     <img
-                                        src={image.image}
-                                        alt={image.alt}
+                                        src={image.img_url}
+                                        alt={image.img_alt}
                                         loading="lazy"
                                         className="gallery__thumbnail-image"
                                         aria-hidden="true"
                                     />
                                 </button>
                                 <figcaption className="gallery__caption">
-                                    {image.alt}
+                                    {image.img_alt}
                                 </figcaption>
                             </figure>
                         </motion.div>
@@ -101,20 +104,22 @@ export default function ImageGallery({ images }: { images: Image[] }) {
                 </motion.div>
             </AnimatePresence>
 
-            {!showAll && images.length > INITIAL_VISIBLE_IMAGES && (
-                <div className="gallery__load-more-container">
-                    <button
-                        onClick={handleLoadAll}
-                        className="gallery__load-more-button btn--primary"
-                    >
-                        Load All
-                    </button>
-                </div>
-            )}
+            {galleryImages &&
+                !showAll &&
+                galleryImages.length > INITIAL_VISIBLE_IMAGES && (
+                    <div className="gallery__load-more-container">
+                        <button
+                            onClick={handleLoadAll}
+                            className="gallery__load-more-button btn--primary"
+                        >
+                            Load All
+                        </button>
+                    </div>
+                )}
 
-            {selectedIndex !== null && (
+            {selectedIndex !== null && galleryImages && (
                 <ImageModal
-                    images={images}
+                    images={galleryImages}
                     initialIndex={selectedIndex}
                     onClose={handleCloseModal}
                     onIndexChange={handleModalIndexChange}

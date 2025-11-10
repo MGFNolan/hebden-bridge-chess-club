@@ -24,9 +24,6 @@ import ImageGallery from "./components/gallery/ImageGallery";
 //Footer
 import Footer from "./components/Footer";
 
-//Data
-import { GalleryContent } from "./utils/content";
-
 const queryClient = new QueryClient();
 
 function App() {
@@ -44,7 +41,7 @@ function App() {
                         <JoinUsForAGame />
 
                         <WhatWeOffer />
-                        <ImageGallery images={GalleryContent} />
+                        <ImageGallery />
 
                         <ContactForm />
                     </Main>
