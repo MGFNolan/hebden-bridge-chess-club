@@ -1,3 +1,17 @@
+@theme {
+    --primary-colour: #000000;
+    --secondary-colour: #ffc310;
+    --tertiary-colour: #e9af00;
+    --bg-colour: #ffffff;
+    --spacing-section: clamp(2.5rem, 1rem + 5vw, 5rem);
+}
+
+:root {
+    @apply bg-[var(--bg-colour)];
+    @apply text-[var(--primary-colour)];
+    scroll-behavior: smooth;
+}
+
 html {
     & * :focus {
         @apply outline-none ring-2 ring-red-600 ring-offset-2;
