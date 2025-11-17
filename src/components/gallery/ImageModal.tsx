@@ -34,7 +34,7 @@ export default function ImageModal({
             if (!onAnnouncement) return;
             const image = images[index];
             const position = `Image ${index + 1} of ${images.length}`;
-            onAnnouncement(`${position}: ${image.alt}`);
+            onAnnouncement(`${position}: ${image.img_alt}`);
         },
         [images, onAnnouncement]
     );
@@ -159,8 +159,8 @@ export default function ImageModal({
 
                     <div className="modal__image-container">
                         <img
-                            src={currentImage.image}
-                            alt={currentImage.alt}
+                            src={currentImage.img_url}
+                            alt={currentImage.img_alt}
                             className={`modal__image ${
                                 !prefersReducedMotion
                                     ? "modal__image--animated"

@@ -1,5 +1,10 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+//Styling
 import "./index.css";
 
+//React Query
 import MenuContextProvider from "./context/MobileMenuContext";
 import Page from "./components/Page";
 
@@ -12,7 +17,6 @@ import MobileNav from "./components/Navigation/MobileNav";
 //Main
 import Main from "./components/Main";
 import WhatWeOffer from "./components/WhatWeOffer";
-// import ImageGallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import JoinUsForAGame from "./components/JoinUsForAGame";
 import ImageGallery from "./components/gallery/ImageGallery";
@@ -20,31 +24,33 @@ import ImageGallery from "./components/gallery/ImageGallery";
 //Footer
 import Footer from "./components/Footer";
 
-import { GalleryContent } from "./utils/content";
+const queryClient = new QueryClient();
 
 function App() {
     return (
-        <MenuContextProvider>
-            <Page>
-                <Header>
-                    <NavBar />
-                    <Hero />
-                    <MobileNav />
-                </Header>
+        <QueryClientProvider client={queryClient}>
+            <MenuContextProvider>
+                <Page>
+                    <Header>
+                        <NavBar />
+                        <Hero />
+                        <MobileNav />
+                    </Header>
 
-                <Main>
-                    <JoinUsForAGame />
+                    <Main>
+                        <JoinUsForAGame />
 
-                    <WhatWeOffer />
-                    {/* <ImageGallery /> */}
-                    <ImageGallery images={GalleryContent} />
+                        <WhatWeOffer />
+                        <ImageGallery />
 
-                    <ContactForm />
-                </Main>
+                        <ContactForm />
+                    </Main>
 
-                <Footer />
-            </Page>
-        </MenuContextProvider>
+                    <Footer />
+                </Page>
+            </MenuContextProvider>
+            <ReactQueryDevtools />
+        </QueryClientProvider>
     );
 }
 

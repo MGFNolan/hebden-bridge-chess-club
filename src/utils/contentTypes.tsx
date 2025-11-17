@@ -21,11 +21,9 @@ interface WhatWeOffer {
 }
 
 interface Image {
-    id: number;
-    image: string;
-    alt: string;
-    title?: string;
-    description?: string;
+    id: string;
+    img_url: string;
+    img_alt: string;
 }
 
 interface ContactOptions {
