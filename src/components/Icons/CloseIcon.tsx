@@ -1,12 +1,13 @@
 interface CloseIconProps {
     className?: string;
+    onClick?: () => void;
 }
 
-export default function CloseIcon({ className }: CloseIconProps) {
+export default function CloseIcon({ className, onClick }: CloseIconProps) {
     return (
-        <div className={className}>
-            <div className="absolute left-1/2 top-1/2 h-0.5 w-6 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-orange-500" />
-            <div className="absolute left-1/2 top-1/2 h-0.5 w-6 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-orange-500" />
+        <div className={className} onClick={onClick}>
+            <div className="absolute h-0.5 w-6 rotate-45 bg-white" />
+            <div className="absolute h-0.5 w-6 -rotate-45 bg-white" />
         </div>
     );
 }
