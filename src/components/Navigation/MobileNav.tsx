@@ -46,7 +46,7 @@ export default function MobileNav() {
                 }}
                 className="mobile-nav bg-black"
             >
-                <Close onClick={() => setMenuOpened(false)} className="z-10" />
+                <Close onClick={() => setMenuOpened(false)} />
                 <motion.ul
                     animate={menuOpened ? "visible" : "hidden"}
                     variants={{
