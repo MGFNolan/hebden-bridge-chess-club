@@ -39,10 +39,6 @@ function JoinUsForAGame() {
                     className="location-map"
                     title="Google Maps showing the location of The Trades Club in Hebden Bridge"
                 ></iframe>
-
-                <a href="#contact-us" className="btn--primary join-game__btn">
-                    Contact Us
-                </a>
             </div>
         </section>
     );
