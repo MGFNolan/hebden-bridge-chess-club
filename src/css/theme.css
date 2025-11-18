@@ -1,7 +1,7 @@
 @theme {
     --primary-colour: #000000;
     --secondary-colour: #ffc310;
-    --tertiary-colour: #e9af00;
+    --tertiary-colour: #6e260e;
     --bg-colour: #ffffff;
     --spacing-section: clamp(2.5rem, 1rem + 5vw, 5rem);
 }
@@ -19,22 +19,23 @@ html {
 }
 
 .btn--primary {
-    @apply my-3 px-5 py-2.5;
-    @apply transition-all duration-350;
-    @apply cursor-pointer place-content-center rounded-xl;
-    @apply border-orange-500 border-2 bg-black text-orange-500 font-bold;
+    @apply my-2 px-3 py-1.5;
+    @apply inline-flex items-center justify-center;
+    @apply transition-transform duration-300;
+    @apply cursor-pointer rounded-xl;
+    @apply border-[var(--secondary-colour)] border-2 bg-black text-[var(--secondary-colour)] font-bold;
 
     &:enabled:hover {
-        @apply bg-orange-500 text-black scale-105;
+        @apply scale-105;
     }
 }
 
 .btn--idle {
-    @apply bg-black opacity-100 font-semibold;
+    @apply text-gray-600 border-gray-600 border-2 bg-gray-300 opacity-60 font-semibold;
 }
 
 .btn--pending {
-    @apply bg-orange-500 opacity-50 font-semibold text-black cursor-not-allowed;
+    @apply bg-[var(--secondary-colour)] opacity-50 font-semibold text-black cursor-not-allowed;
 }
 
 .btn--success {
@@ -42,7 +43,7 @@ html {
 }
 
 .btn--error {
-    @apply bg-red-700 border-white opacity-100 font-bold text-white cursor-not-allowed;
+    @apply bg-red-700 border-black opacity-100 font-bold text-white cursor-not-allowed;
 }
 
 .email {

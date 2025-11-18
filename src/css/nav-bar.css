@@ -1,6 +1,5 @@
 .nav {
     @apply m-auto pt-3 w-full;
-    /* @apply shadow-[inset_0_-4px_4px_rgba(249,115,22,0.3)]; */
     @apply fixed top-0 z-999;
 
     .nav__links {

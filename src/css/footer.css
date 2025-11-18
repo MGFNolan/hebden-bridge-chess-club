@@ -1,5 +1,5 @@
 .footer {
-    @apply px-35;
+    @apply px-35 bg-[url(/dark-wood-pattern.jpg)] text-[var(--secondary-colour)];
 
     h2 {
         @apply text-[1.5rem] leading-[1.3] mb-[.5rem] text-left;
