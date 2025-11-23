@@ -2,10 +2,18 @@
     @apply justify-self-center;
     @apply rounded-md;
     @apply transition-all duration-300;
-    @apply shadow-[0_0_20px_2px_rgba(255,195,16,0.5)];
+    @apply shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover;
+
+    &:nth-child(odd) {
+        @apply bg-[url(/dark-wood-pattern.jpg)] text-[var(--secondary-colour)];
+    }
+
+    &:nth-child(even) {
+        @apply bg-[url(/light-wood-pattern.jpg)] text-[var(--primary-colour)];
+    }
 
     &:hover {
-        @apply shadow-[0_0_35px_4px_rgba(255,195,16,0.6)];
+        @apply shadow-[0_0_25px_3px_rgba(92,64,51,0.8)];
         @apply scale-105;
     }
 
@@ -19,6 +27,7 @@
     .card__text {
         @apply flex flex-col items-center;
         @apply px-5;
+        font-weight: 500;
 
         p {
             @apply text-sm;
