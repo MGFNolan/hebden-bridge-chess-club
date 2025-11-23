@@ -2,10 +2,10 @@ import { createClient } from "@supabase/supabase-js";
 import type { Image } from "../utils/contentTypes";
 import { type Database } from "./Database";
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_API_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_API_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-const supabase = createClient<Database>(supabaseUrl, supabaseKey);
+const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
 
 export async function getGalleryImages() {
     const { data, error } = await supabase.from("GalleryImages").select();
