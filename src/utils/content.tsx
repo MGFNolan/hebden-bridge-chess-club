@@ -5,12 +5,12 @@ import {
     type UsefulLinks,
 } from "./contentTypes";
 
-import membershipImg from "/hbcc-photos/what-we-offer/membership.jpg";
-import leagueChessImg from "/hbcc-photos/what-we-offer/league-chess.jpg";
-import onlineChessImg from "/hbcc-photos/what-we-offer/online-chess.jpg";
-import socialChessImg from "/hbcc-photos/what-we-offer/social-chess.jpg";
-import juniorChessImg from "/hbcc-photos/what-we-offer/junior-chess.jpg";
-import safeSpaceImg from "/hbcc-photos/what-we-offer/a-safe-space.jpg";
+import membershipImg from "../assets/what-we-offer/membership.jpg";
+import leagueChessImg from "../assets/what-we-offer/league-chess.jpg";
+import onlineChessImg from "../assets/what-we-offer/online-chess.jpg";
+import socialChessImg from "../assets/what-we-offer/social-chess.jpg";
+import juniorChessImg from "../assets/what-we-offer/junior-chess.jpg";
+import safeSpaceImg from "../assets/what-we-offer/a-safe-space.jpg";
 
 const navLinksData = [
     {
