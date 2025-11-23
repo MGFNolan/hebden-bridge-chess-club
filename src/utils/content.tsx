@@ -5,6 +5,13 @@ import {
     type UsefulLinks,
 } from "./contentTypes";
 
+import membershipImg from "/hbcc-photos/what-we-offer/membership.jpg";
+import leagueChessImg from "/hbcc-photos/what-we-offer/league-chess.jpg";
+import onlineChessImg from "/hbcc-photos/what-we-offer/online-chess.jpg";
+import socialChessImg from "/hbcc-photos/what-we-offer/social-chess.jpg";
+import juniorChessImg from "/hbcc-photos/what-we-offer/junior-chess.jpg";
+import safeSpaceImg from "/hbcc-photos/what-we-offer/a-safe-space.jpg";
+
 const navLinksData = [
     {
         href: "#club-information",
@@ -31,7 +38,7 @@ const NavLinksContent: NavLink[] = navLinksData.map((item, index) => ({
 
 const whatWeOfferData = [
     {
-        image: "hbcc-photos/what-we-offer/membership.jpg",
+        image: membershipImg,
         alt: "The Trades Club sign attached to the Trades Club building. There are leaves and branches of a tree in the background.",
         title: "Membership",
         description: (
@@ -55,7 +62,7 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "hbcc-photos/what-we-offer/league-chess.jpg",
+        image: leagueChessImg,
         alt: "Two players playing a game of chess at a table. There is a chess clock on the table in the foreground, and pieces that have been exchanged off the board.",
         title: "League Chess",
         description: (
@@ -76,7 +83,7 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "hbcc-photos/what-we-offer/online-chess.jpg",
+        image: onlineChessImg,
         alt: "Two people playing chess. One is in focus, calculating their next move. Their drinks and scoresheets are next to them.",
         title: "Online Chess",
         description: (
@@ -104,7 +111,7 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "hbcc-photos/what-we-offer/social-chess.jpg",
+        image: socialChessImg,
         alt: "A group of four people debating a position on the chess board.",
         title: "Social Chess",
         description: (
@@ -126,7 +133,7 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "hbcc-photos/what-we-offer/junior-chess.jpg",
+        image: juniorChessImg,
         alt: "A room of people playing chess games. In the foreground is a young player pressing the clock after her move.",
         title: "Junior Chess",
         description: (
@@ -143,7 +150,7 @@ const whatWeOfferData = [
         ),
     },
     {
-        image: "hbcc-photos/what-we-offer/a-safe-space.jpg",
+        image: safeSpaceImg,
         alt: "In the foreground, two players discuss a position on the board with the chess board, the chess clock, and their drinks in view. In the background, another player makes a move in their own game.",
         title: "A Safe Space",
         description: (
