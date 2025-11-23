@@ -3,7 +3,7 @@ interface CloseIconProps {
     onClick?: () => void;
 }
 
-export default function CloseIcon({ className, onClick }: CloseIconProps) {
+export default function CloseIcon({ onClick }: CloseIconProps) {
     return (
         <div
             className="z-10 flex cursor-pointer items-center justify-center"

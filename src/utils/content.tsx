@@ -1,5 +1,4 @@
 import {
-    type Image,
     type NavLink,
     type WhatWeOffer,
     type ContactOptions,
@@ -166,38 +165,6 @@ const WhatWeOfferContent: WhatWeOffer[] = whatWeOfferData.map(
     (item, index) => ({ ...item, id: index + 1 })
 );
 
-const galleryData = [
-    {
-        image: "/hbcc-photos/board-close-up-colour.jpg",
-        alt: "A table with a chess board and pieces set up for a game. There is a chess clock, extra Queen pieces, and a scoresheet. In the background but out of focus is a similarly set up table.",
-    },
-    {
-        image: "/hbcc-photos/move-close-up.jpg",
-        alt: "A man playing as Black in a game of chess, making his move with a Black pawn.",
-    },
-    {
-        image: "/hbcc-photos/trades-club-inside.jpg",
-        alt: "A black door close up depicting the words Trades Club.",
-    },
-    {
-        image: "/hbcc-photos/wide-shot.jpg",
-        alt: "Ten people playing chess across five tables. Each player is either thinking, making a move, or writing down a move they just made.",
-    },
-    {
-        image: "/hbcc-photos/player-thinking.jpg",
-        alt: "A man and a woman playing chess. The woman is looking at the board and calculating.",
-    },
-    {
-        image: "/hbcc-photos/scratching-face.jpg",
-        alt: "A man with a pen in hand, scratching his face while he thinks on his next move.",
-    },
-];
-
-const GalleryContent: Image[] = galleryData.map((item, index) => ({
-    ...item,
-    id: index + 1,
-}));
-
 const contactOptionsData = [
     { option: "Join the Club" },
     { option: "Question" },
@@ -244,7 +211,6 @@ const UsefulLinksContent: UsefulLinks[] = usefulLinksData.map(
 export {
     NavLinksContent,
     WhatWeOfferContent,
-    GalleryContent,
     ContactOptionsContent,
     UsefulLinksContent,
 };

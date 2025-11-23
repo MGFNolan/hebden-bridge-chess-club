@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from "react";
 import ImageModal from "./ImageModal";
 import { AnimatePresence, motion } from "framer-motion";
 import useQueryGalleryImages from "../../hooks/useQueryGalleryImages.tsx";
+import Loader from "../Loader.tsx";
+import Error from "../Error.tsx";
 
 const INITIAL_VISIBLE_IMAGES = 12;
 
@@ -72,6 +74,7 @@ export default function ImageGallery() {
                         visible: { transition: { staggerChildren: 0.1 } },
                     }}
                 >
+                    {isLoading && !error && <Loader />}
                     {visibleImages?.map((image, index) => (
                         <motion.div
                             key={image.id}
@@ -124,6 +127,13 @@ export default function ImageGallery() {
                     onClose={handleCloseModal}
                     onIndexChange={handleModalIndexChange}
                 />
+            )}
+
+            {!isLoading && error && (
+                <Error>
+                    It looks like something went wrong while loading our recent
+                    news.
+                </Error>
             )}
         </section>
     );
