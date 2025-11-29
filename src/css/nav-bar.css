@@ -1,47 +1,3 @@
-@layer utilities {
-    .wood-grain-dark {
-        /* Dark wood CSS pattern */
-        background-color: #1c120c; /* Dark base */
-        background-image: linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.07) 50%,
-                transparent 50%
-            ),
-            linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.13) 50%,
-                transparent 50%
-            ),
-            linear-gradient(
-                90deg,
-                transparent 50%,
-                rgba(255, 255, 255, 0.17) 50%
-            ),
-            linear-gradient(
-                90deg,
-                transparent 50%,
-                rgba(255, 255, 255, 0.19) 50%
-            );
-        background-size: 13px, 29px, 37px, 53px;
-        background-blend-mode: soft-light;
-    }
-
-    .wood-grain-light {
-        /* Light wood CSS pattern */
-        background-color: #bf6136; /* Light base */
-        background-image: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.07) 50%,
-                transparent 50%
-            ),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.13) 50%, transparent 50%),
-            linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.17) 50%),
-            linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.19) 50%);
-        background-size: 13px, 29px, 37px, 53px;
-        background-blend-mode: soft-light;
-    }
-}
-
 .nav {
     @apply m-auto pt-3 w-full;
     @apply fixed top-0 z-[999];
@@ -56,7 +12,7 @@
         a {
             @apply break-words tracking-wider text-balance text-[#ffc310] text-center font-extrabold text-lg;
             @apply w-full h-full p-2 flex items-center justify-center transition-all duration-300;
-            @apply border-2 border-black/50;
+
             text-shadow: 1px 1px 2px rgb(0 0 0 / 0.8);
             -webkit-text-stroke: 0.03rem black;
             box-shadow: inset 0 0 10px rgb(0 0 0 / 0.7),
@@ -64,11 +20,13 @@
         }
 
         &:nth-child(odd) a {
-            @apply wood-grain-dark;
+            @apply bg-[url(/dark-wood-pattern.jpg)];
+            @apply bg-cover bg-center;
         }
 
         &:nth-child(even) a {
-            @apply wood-grain-light;
+            @apply bg-[url(/light-wood-pattern.jpg)];
+            @apply bg-cover bg-center;
         }
 
         a:hover {
