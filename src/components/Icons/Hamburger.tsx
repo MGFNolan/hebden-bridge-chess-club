@@ -7,7 +7,7 @@ export default function Hamburger() {
             aria-label="Open mobile navigation menu"
             aria-expanded={menuOpened}
             aria-controls="mobile-nav"
-            className="hidden cursor-pointer flex-col justify-center gap-y-2 max-md:flex max-sm:gap-y-1.75 bg-black/40 p-1 rounded-sm"
+            className="hidden cursor-pointer flex-col justify-center gap-y-2 max-md:flex max-sm:gap-y-1.75 bg-black/40 p-1 rounded-sm absolute right-3 top-3"
             onClick={() => setMenuOpened(true)}
         >
             <div className="h-[0.15rem] w-7 shrink-0 grow-0 rounded-3xl bg-[#ffc310] max-sm:h-[3px] max-sm:w-6" />
