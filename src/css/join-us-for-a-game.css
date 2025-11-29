@@ -19,7 +19,7 @@
         }
 
         .location-map {
-            @apply m-auto my-5 px-5 min-w-[50vw] min-h-[65vh];
+            @apply m-auto my-5 w-[100%] h-[50dvh];
         }
     }
 }
