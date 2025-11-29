@@ -1,39 +1,87 @@
+@layer utilities {
+    .wood-grain-dark {
+        /* Dark wood CSS pattern */
+        background-color: #1c120c; /* Dark base */
+        background-image: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.07) 50%,
+                transparent 50%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.13) 50%,
+                transparent 50%
+            ),
+            linear-gradient(
+                90deg,
+                transparent 50%,
+                rgba(255, 255, 255, 0.17) 50%
+            ),
+            linear-gradient(
+                90deg,
+                transparent 50%,
+                rgba(255, 255, 255, 0.19) 50%
+            );
+        background-size: 13px, 29px, 37px, 53px;
+        background-blend-mode: soft-light;
+    }
+
+    .wood-grain-light {
+        /* Light wood CSS pattern */
+        background-color: #bf6136; /* Light base */
+        background-image: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.07) 50%,
+                transparent 50%
+            ),
+            linear-gradient(90deg, rgba(0, 0, 0, 0.13) 50%, transparent 50%),
+            linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.17) 50%),
+            linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.19) 50%);
+        background-size: 13px, 29px, 37px, 53px;
+        background-blend-mode: soft-light;
+    }
+}
+
 .nav {
     @apply m-auto pt-3 w-full;
-    @apply fixed top-0 z-999;
+    @apply fixed top-0 z-[999];
 
     .nav__links {
-        @apply flex items-stretch gap-x-10;
+        @apply flex items-stretch justify-center mx-auto;
     }
 
     .nav__link-individual {
-        overflow-wrap: break-word;
-        letter-spacing: 0.1rem;
-        text-wrap: balance;
-        color: #ffc310;
-        text-align: center;
-        filter: drop-shadow(0.05em 0.05em black);
-        -webkit-text-stroke: 0.04rem black;
-        font-family: "Faustina", serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-size: 1.2rem;
+        @apply w-28 h-14;
 
-        &:hover {
-            /* @apply text-orange-400; */
+        a {
+            @apply break-words tracking-wider text-balance text-[#ffc310] text-center font-extrabold text-lg;
+            @apply w-full h-full p-2 flex items-center justify-center transition-all duration-300;
+            @apply border-2 border-black/50;
+            text-shadow: 1px 1px 2px rgb(0 0 0 / 0.8);
+            -webkit-text-stroke: 0.03rem black;
+            box-shadow: inset 0 0 10px rgb(0 0 0 / 0.7),
+                0 4px 6px rgb(0 0 0 / 0.4);
+        }
+
+        &:nth-child(odd) a {
+            @apply wood-grain-dark;
+        }
+
+        &:nth-child(even) a {
+            @apply wood-grain-light;
+        }
+
+        a:hover {
+            @apply border-[var(--secondary-colour)];
         }
     }
 
     .nav__group {
-        @apply flex justify-between items-center;
-        @apply pb-2 px-10;
+        @apply relative flex items-center pb-2 px-10;
 
         .nav__group__logo {
             svg {
-                @apply size-13.5;
-                color: #ffc310;
-                @apply bg-black/40 p-1 rounded-sm;
+                @apply absolute top-0 left-5 size-[3.375rem] bg-black/40 p-1 rounded-sm text-[var(--secondary-colour)];
             }
         }
     }
@@ -44,11 +92,12 @@
 .nav {
     @media (max-width: 1280px) {
         .nav__links {
-            @apply gap-x-6;
         }
 
         .nav__link-individual {
-            @apply text-sm;
+            a {
+                @apply text-base;
+            }
         }
     }
 }
