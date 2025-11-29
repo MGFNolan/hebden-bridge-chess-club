@@ -44,7 +44,7 @@ export default function MobileNav() {
                     duration: 0.35,
                     ease: "easeInOut",
                 }}
-                className="mobile-nav bg-black"
+                className="mobile-nav"
             >
                 <Close onClick={() => setMenuOpened(false)} />
                 <motion.ul
