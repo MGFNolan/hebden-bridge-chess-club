@@ -1,56 +1,32 @@
 .hero {
     @apply h-[100.1dvh] relative overflow-hidden p-0;
+}
 
-    .hero__bg {
-        @apply relative flex justify-center w-full h-full;
+.hero__background {
+    @apply relative flex justify-center w-full h-full;
+}
 
-        &::before {
-            content: "";
-            @apply absolute top-1/2 left-1/2 w-full h-full;
+.hero__background::before {
+    content: "";
+    @apply absolute top-1/2 left-1/2 w-full h-full;
 
-            /* background image */
-            @apply bg-center bg-no-repeat bg-cover;
-            @apply bg-[url('/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
-        }
-    }
+    /* background image */
+    @apply bg-center bg-no-repeat bg-cover;
+    @apply bg-[url('/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
+}
 
-    .hero__text {
-        @apply relative z-10 text-center m-auto w-full;
+.hero__content {
+    @apply relative z-10 text-center m-auto w-full;
+}
 
-        .hero__text__title {
-            @apply mb-30;
-            .hero__text__title__hebden-bridge {
-            }
+.hero__title {
+    @apply mb-30;
+}
 
-            .hero__text__title__hebden-bridge,
-            .hero__text__title__chess-club {
-            }
-        }
-    }
+/* Mobile */
 
-    /* Desktop - Smaller */
-
-    @media (max-width: 1280px) {
-        .hero__text {
-            .hero__text__title {
-                .hero__text__title__chess-club {
-                }
-            }
-        }
-    }
-
-    /* Tablet */
-
-    @media (max-width: 959px) {
-    }
-
-    /* Mobile */
-
-    @media (max-width: 760px) {
-        .hero__text {
-            .hero__text__title {
-                @apply text-left;
-            }
-        }
+@media (max-width: 760px) {
+    .hero__title {
+        @apply text-left;
     }
 }

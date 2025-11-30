@@ -9,8 +9,8 @@ export default function Hero() {
             className="hero"
             aria-label="Hero section with a welcome message"
         >
-            <div className="hero__bg">
-                <div className="container hero__text">
+            <div className="hero__background">
+                <div className="container hero__content">
                     <motion.h1
                         initial={
                             shouldReduceMotion
@@ -30,7 +30,7 @@ export default function Hero() {
                                       },
                                   }
                         }
-                        className="hero__text__title"
+                        className="hero__title"
                     >
                         Hebden Bridge Chess Club
                     </motion.h1>
