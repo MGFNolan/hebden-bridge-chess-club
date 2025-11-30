@@ -9,7 +9,7 @@
 }
 
 .mobile-nav__close {
-    /* No specific styles needed yet, but class is ready */
+    @apply text-[var(--secondary-colour)];
 }
 
 .mobile-nav__list {

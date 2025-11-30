@@ -150,7 +150,7 @@ export default function ImageModal({
                         <button
                             ref={closeButtonRef}
                             onClick={onClose}
-                            className="gallery-modal__close-button"
+                            className="gallery-modal__close-button btn--primary btn--idle"
                             aria-label="Close image viewer"
                         >
                             <CloseIcon className="gallery-modal__close-icon" />
@@ -173,7 +173,7 @@ export default function ImageModal({
                         <button
                             onClick={goToPrevious}
                             disabled={isFirstImage}
-                            className="gallery-modal__nav-button"
+                            className="gallery-modal__nav-button btn--primary btn--idle"
                             aria-label="Previous image"
                         >
                             ← Previous
@@ -182,7 +182,7 @@ export default function ImageModal({
                         <button
                             onClick={goToNext}
                             disabled={isLastImage}
-                            className="gallery-modal__nav-button"
+                            className="gallery-modal__nav-button btn--primary btn--idle"
                             aria-label="Next image"
                         >
                             Next →

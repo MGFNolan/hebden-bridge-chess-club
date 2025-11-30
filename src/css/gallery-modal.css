@@ -24,15 +24,12 @@
 }
 
 .gallery-modal__close-button {
-    @apply relative flex items-center justify-center bg-gray-800 rounded-lg p-3 transition-colors;
-
-    &:hover {
-        @apply bg-gray-700 cursor-pointer;
-    }
+    /* Override btn--primary to restore original shape */
+    @apply p-3 rounded-lg;
 }
 
 .gallery-modal__close-icon {
-    @apply relative h-6 w-6;
+    @apply h-6 w-6 text-black;
 }
 
 .gallery-modal__image-container {
@@ -52,19 +49,11 @@
 }
 
 .gallery-modal__nav-button {
-    @apply text-white bg-gray-800 rounded-lg px-6 py-3 font-medium transition-colors;
+    /* Styling is now handled by .btn--primary and .btn--idle from theme.css */
     min-width: 120px;
 
-    &:hover {
-        @apply bg-gray-700 cursor-pointer;
-    }
-
     &:disabled {
-        @apply bg-gray-900 text-gray-600 cursor-not-allowed;
-
-        &:hover {
-            @apply bg-gray-900;
-        }
+        @apply opacity-50 cursor-not-allowed scale-100;
     }
 }
 
@@ -74,7 +63,6 @@
 
 @media (prefers-reduced-motion: reduce) {
     .gallery-modal__close-button,
-    .gallery-modal__nav-button,
     .gallery-modal__image--animated {
         @apply transition-none;
     }
