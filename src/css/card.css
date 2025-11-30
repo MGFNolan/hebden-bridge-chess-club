@@ -5,11 +5,11 @@
     @apply shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover;
 
     &:nth-child(odd) {
-        @apply bg-[url(/dark-wood-pattern.jpg)] text-[var(--secondary-colour)];
+        @apply bg-[url(/dark-wood-pattern.jpg)] bg-cover bg-top text-[var(--secondary-colour)];
     }
 
     &:nth-child(even) {
-        @apply bg-[url(/light-wood-pattern.jpg)] text-[var(--primary-colour)];
+        @apply bg-[url(/light-wood-pattern.jpg)] bg-cover bg-bottom text-[var(--primary-colour)];
     }
 
     &:hover {
