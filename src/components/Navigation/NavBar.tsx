@@ -1,39 +1,45 @@
+import { useEffect } from "react";
 import { NavLinksContent } from "../../utils/content";
 import Hamburger from "./../Icons/Hamburger.tsx";
 import LogoIcon from "./../Icons/LogoIcon.tsx";
 
 export default function NavBar() {
-    let prevScrollPos = window.pageYOffset;
+    useEffect(() => {
+        let prevScrollPos = window.pageYOffset;
 
-    window.onscroll = () => {
-        const currentScrollPos = window.pageYOffset;
-        const navbar = document.getElementById("navbar");
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const navbar = document.getElementById("navbar");
 
-        if (navbar) {
-            // Transition opacity instead of top
-            navbar.style.transition = "opacity 0.5s ease";
-
-            if (prevScrollPos > currentScrollPos) {
-                navbar.style.opacity = "1";
-            } else {
-                navbar.style.opacity = "0";
+            if (navbar) {
+                if (prevScrollPos > currentScrollPos || currentScrollPos < 10) {
+                    navbar.style.opacity = "1";
+                } else {
+                    navbar.style.opacity = "0";
+                }
             }
-        }
+            prevScrollPos = currentScrollPos;
+        };
 
-        prevScrollPos = currentScrollPos;
-    };
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <nav className="nav" aria-label="Main navigation" id="navbar">
             <div className="nav__group">
-                <a href="/" className="nav__group__logo" aria-label="Home">
+                <a href="/" className="nav__logo" aria-label="Home">
                     <LogoIcon />
                 </a>
 
                 <ul className="nav__links">
                     {NavLinksContent.map((link) => (
-                        <li key={link.id} className="nav__link-individual">
+                        <li key={link.id} className="nav__item">
                             <a
+                                className="nav__link"
                                 href={link.href}
                                 aria-current={
                                     location.pathname === link.href

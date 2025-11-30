@@ -1,5 +1,5 @@
 .footer {
-    @apply px-35 bg-[url(/dark-wood-pattern.jpg)] text-[var(--secondary-colour)];
+    @apply px-8 bg-[url(/dark-wood-pattern.jpg)] bg-cover text-[var(--secondary-colour)];
 
     h2 {
         @apply text-[1.5rem] leading-[1.3] mb-[.5rem] text-left;
@@ -7,141 +7,107 @@
 
     .footer__content {
         @apply flex justify-between;
+    }
 
-        .footer__left,
-        .footer__middle,
-        .footer__right {
-            @apply min-w-[30%] justify-center flex;
+    .footer__location,
+    .footer__center-column,
+    .footer__useful-links {
+        @apply justify-center flex;
+    }
+
+    .footer__location {
+        @apply justify-start flex-col;
+    }
+
+    .footer__location-content,
+    .footer__useful-links-content {
+        @apply flex;
+
+        svg {
+            @apply size-10 self-start mr-2;
         }
+    }
 
-        .footer__left {
-            @apply justify-start flex flex-col;
+    .footer__center-column {
+        @apply flex-col justify-end gap-5;
+    }
 
-            .footer__left__content {
-                @apply flex;
+    .footer__logo {
+        @apply flex justify-center;
 
-                svg {
-                    @apply size-10 self-center mr-2 mb-10;
-                }
-
-                address span {
-                    @apply block;
-                }
-            }
+        svg {
+            @apply size-20;
         }
+    }
 
-        .footer__middle {
-            @apply flex-col justify-end gap-5;
+    .footer__socials {
+        @apply flex justify-center gap-10;
 
-            .footer__content__logo {
-                @apply flex justify-center;
+        a {
+            @apply transition-transform duration-200;
 
-                svg {
-                    @apply size-20;
-                }
+            svg {
+                @apply size-7;
             }
 
-            .footer__content__icons {
-                @apply flex justify-center;
-
-                & * {
-                    @apply size-7 mx-5 justify-self-center transition-all duration-200;
-
-                    &:hover {
-                        @apply scale-105;
-                    }
-                }
-            }
-
-            .footer__content__text p {
-                @apply text-[0.625rem] text-center;
-            }
-
-            .screen-reader-text {
-                @apply sr-only;
-            }
-
-            a[target="_blank"]::after {
-                content: " \2197"; /* Unicode for North East Arrow */
-                @apply inline-block;
-            }
-
-            .footer__content__icons a[target="_blank"]::after {
-                content: ""; /* Don't show icon for social media icons */
+            &:hover {
+                @apply scale-105;
             }
         }
+    }
 
-        .footer__right {
-            @apply justify-end flex;
+    .footer__copyright {
+        @apply text-[0.625rem] text-center;
+    }
 
-            .footer__right__content {
-                @apply flex;
+    /* Add arrow to external links, but not social icons */
+    .footer__useful-links a[target="_blank"]::after,
+    .footer__copyright a[target="_blank"]::after {
+        content: " \2197"; /* Unicode for North East Arrow */
+        @apply inline-block;
+    }
 
-                svg {
-                    @apply size-10 self-center mr-2 mb-10;
-                }
-            }
-        }
+    .footer__useful-links {
+        @apply justify-end flex-col;
+    }
+
+    .screen-reader-text {
+        @apply sr-only;
     }
 
     /* Desktop - Smaller */
-
     @media (max-width: 1280px) {
-        @apply px-0;
-
-        .footer__left,
-        .footer__middle,
-        .footer__right {
-            @apply min-w-[0%];
-        }
+        @apply px-4;
     }
 
     /* Tablet */
-
     @media (max-width: 959px) {
         @apply px-2;
 
         .footer__content {
-            @apply flex-col gap-2;
-
-            .footer__left {
-                @apply order-1 justify-center m-auto text-center;
-
-                p {
-                    @apply w-[100%];
-                }
-            }
-
-            .footer__middle {
-                @apply order-3 justify-center m-auto;
-            }
-
-            .footer__right {
-                @apply order-2 justify-center m-auto text-center;
-            }
-
-            .footer__left__content,
-            .footer__right__content {
-                @apply flex-col;
-
-                /* For whatever reason, this would not work without the !important tag */
-                svg {
-                    margin-right: 0 !important;
-                    margin-bottom: 1.5rem !important;
-                }
-            }
+            @apply flex-col gap-8;
         }
 
-        /* .footer__left__content,
-        .footer__right__content {
+        .footer__location {
+            @apply order-1 m-auto text-center;
+        }
+
+        .footer__center-column {
+            @apply order-3 m-auto;
+        }
+
+        .footer__useful-links {
+            @apply order-2 m-auto text-center;
+        }
+
+        .footer__location-content,
+        .footer__useful-links-content {
+            @apply flex-col items-center;
+
             svg {
-                @apply hidden;
+                @apply mr-0 mb-4;
+                @apply self-center;
             }
-        } */
-    }
-
-    /* Mobile */
-
-    @media (max-width: 760px) {
+        }
     }
 }

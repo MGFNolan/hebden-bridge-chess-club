@@ -1,68 +1,86 @@
 .gallery {
-    @apply w-[100%] m-auto;
+    @apply mx-auto;
 
-    .gallery__img-container {
-        @apply overflow-hidden aspect-[3/2];
+    .gallery__announcement {
+        @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+        clip: rect(0, 0, 0, 0);
     }
 
-    .gallery__img-container img {
-        @apply w-full h-full object-cover;
+    .gallery__grid {
+        @apply grid gap-6;
+        grid-template-columns: 1fr;
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 1280px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        & > *:nth-child(odd) .gallery__thumbnail::before {
+            background-image: url("/dark-wood-pattern.jpg");
+        }
+
+        & > *:nth-child(even) .gallery__thumbnail::before {
+            background-image: url("/light-wood-pattern.jpg");
+        }
     }
 
-    .gallery__thumb-container {
-        @apply overflow-hidden aspect-[3/1];
-    }
+    .gallery__thumbnail {
+        @apply relative w-full rounded-lg transition-transform aspect-square;
 
-    .gallery__thumb-container img {
-        @apply w-full h-full object-cover;
-    }
-
-    .swiper {
-        @apply w-[50%] h-[100%];
-    }
-
-    .gallery-thumbs {
-        @apply mt-5;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        @apply text-orange-500 bg-black/30;
-        @apply rounded-full p-8;
-        @apply transition-all duration-300 ease-in-out;
+        &::before {
+            content: "";
+            @apply absolute -z-10 rounded-lg;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background-size: cover;
+            background-position: center;
+        }
 
         &:hover {
-            @apply font-bold;
+            @apply scale-105 cursor-pointer;
+
+            .gallery__thumbnail-overlay {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+            .gallery__thumbnail-label {
+                @apply opacity-100;
+            }
         }
     }
 
-    /* For the main Swiper images */
-    .swiper-slide img {
-        @apply w-full object-cover cursor-grab;
-
-        &:active {
-            @apply cursor-grabbing;
-        }
+    .gallery__thumbnail-image {
+        @apply w-full h-full object-cover rounded-lg;
+        box-shadow: 0 0 5px white;
     }
 
-    /* Desktop - Smaller */
-
-    @media (max-width: 1280px) {
-        .swiper {
-            @apply w-[65%];
-        }
+    .gallery__thumbnail-overlay {
+        @apply absolute inset-0 bg-black transition-opacity flex items-center justify-center;
+        background-color: rgba(0, 0, 0, 0);
     }
 
-    /* Tablet */
-
-    @media (max-width: 959px) {
-        .swiper {
-            @apply w-[80%];
-        }
+    .gallery__thumbnail-label {
+        @apply text-white text-lg font-semibold opacity-0;
     }
 
-    /* Mobile */
+    .gallery__caption {
+        @apply hidden;
+    }
 
-    @media (max-width: 760px) {
+    .gallery__load-more-container {
+        @apply flex;
+    }
+
+    .gallery__load-more-button {
+        @apply mx-auto;
     }
 }

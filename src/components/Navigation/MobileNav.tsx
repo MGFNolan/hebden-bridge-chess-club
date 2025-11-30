@@ -22,7 +22,7 @@ export default function MobileNav() {
                     display: "flex",
                 },
             }}
-            className="mobile-nav-wrapper"
+            className="mobile-nav-overlay"
             id="mobile-nav"
             role="dialog"
             aria-modal="true"
@@ -46,7 +46,10 @@ export default function MobileNav() {
                 }}
                 className="mobile-nav"
             >
-                <Close onClick={() => setMenuOpened(false)} />
+                <Close
+                    onClick={() => setMenuOpened(false)}
+                    className="mobile-nav__close"
+                />
                 <motion.ul
                     animate={menuOpened ? "visible" : "hidden"}
                     variants={{
@@ -63,14 +66,16 @@ export default function MobileNav() {
                         ease: "easeOut",
                         delay: 0.05,
                     }}
-                    className="mobile-nav__links"
+                    className="mobile-nav__list"
                 >
                     {NavLinksContent.map((link) => (
                         <li
                             key={link.id}
-                            className={`mobile-nav__link-individual ${
-                                activeLinkId === link.id ? "gap-y-6" : "gap-y-0"
-                            }`}
+                            className={`mobile-nav__item ${
+                                activeLinkId === link.id
+                                    ? "mobile-nav__item--active"
+                                    : ""
+                            }`.trim()}
                             onClick={() => {
                                 setActiveLinkId(
                                     activeLinkId === link.id ? -1 : link.id
@@ -78,12 +83,12 @@ export default function MobileNav() {
                                 setMenuOpened(false);
                             }}
                         >
-                            <div className="mobile-nav__link-individual__wrapper">
+                            <div className="mobile-nav__item-content">
                                 <a
                                     href={link.href}
-                                    className={`text-[var(--secondary-colour)] ${
+                                    className={`mobile-nav__link ${
                                         activeLinkId === link.id
-                                            ? "underline"
+                                            ? "mobile-nav__link--active"
                                             : ""
                                     }`}
                                     aria-current={

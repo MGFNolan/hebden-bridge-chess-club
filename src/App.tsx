@@ -19,7 +19,7 @@ import Main from "./components/Main";
 import WhatWeOffer from "./components/WhatWeOffer";
 import ContactForm from "./components/ContactForm";
 import JoinUsForAGame from "./components/JoinUsForAGame";
-import ImageGallery from "./components/gallery/ImageGallery";
+import ImageGallery from "./components/gallery/Gallery";
 
 //Footer
 import Footer from "./components/Footer";

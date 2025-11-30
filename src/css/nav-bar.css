@@ -1,84 +1,59 @@
 .nav {
     @apply m-auto pt-3 w-full;
     @apply fixed top-0 z-[999];
+    transition: opacity 0.5s ease;
+}
 
-    .nav__links {
-        @apply flex items-stretch justify-center mx-auto;
-    }
+.nav__group {
+    @apply relative flex items-center pb-2 px-10;
+}
 
-    .nav__link-individual {
-        @apply w-28 h-14;
+.nav__logo svg {
+    @apply absolute top-0 left-5 size-[3.375rem] bg-black/40 p-1 rounded-sm text-[var(--secondary-colour)];
+}
 
-        a {
-            @apply break-words tracking-wider text-balance text-[#ffc310] text-center font-extrabold text-lg;
-            @apply w-full h-full p-2 flex items-center justify-center transition-all duration-300;
+.nav__links {
+    @apply flex items-stretch justify-center mx-auto;
+}
 
-            text-shadow: 1px 1px 2px rgb(0 0 0 / 0.8);
-            -webkit-text-stroke: 0.03rem black;
-            box-shadow: inset 0 0 10px rgb(0 0 0 / 0.7),
-                0 4px 6px rgb(0 0 0 / 0.4);
-        }
+.nav__item {
+    @apply w-28 h-14;
+}
 
-        &:nth-child(odd) a {
-            @apply bg-[url(/dark-wood-pattern.jpg)];
-            @apply bg-cover bg-center;
-        }
+.nav__link {
+    @apply break-words tracking-wider text-balance text-[#ffc310] text-center font-extrabold text-lg;
+    @apply w-full h-full p-2 flex items-center justify-center transition-all duration-300;
 
-        &:nth-child(even) a {
-            @apply bg-[url(/light-wood-pattern.jpg)];
-            @apply bg-cover bg-center;
-        }
+    text-shadow: 1px 1px 2px rgb(0 0 0 / 0.8);
+    -webkit-text-stroke: 0.03rem black;
+    box-shadow: inset 0 0 10px rgb(0 0 0 / 0.7), 0 4px 6px rgb(0 0 0 / 0.4);
+}
 
-        a:hover {
-            @apply border-[var(--secondary-colour)];
-        }
-    }
+.nav__item:nth-child(odd) .nav__link {
+    @apply bg-[url(/dark-wood-pattern.jpg)];
+    @apply bg-cover bg-center;
+}
 
-    .nav__group {
-        @apply relative flex items-center pb-2 px-10;
+.nav__item:nth-child(even) .nav__link {
+    @apply bg-[url(/light-wood-pattern.jpg)];
+    @apply bg-cover bg-center;
+}
 
-        .nav__group__logo {
-            svg {
-                @apply absolute top-0 left-5 size-[3.375rem] bg-black/40 p-1 rounded-sm text-[var(--secondary-colour)];
-            }
-        }
+.nav__link:hover {
+    @apply border-[var(--secondary-colour)];
+}
+
+/* Tablet */
+@media (max-width: 959px) {
+    .nav__links,
+    .nav__item {
+        @apply hidden;
     }
 }
 
 /* Desktop - Smaller */
-
-.nav {
-    @media (max-width: 1280px) {
-        .nav__links {
-        }
-
-        .nav__link-individual {
-            a {
-                @apply text-base;
-            }
-        }
-    }
-}
-
-/* Tablet */
-
-.nav {
-    @media (max-width: 959px) {
-        .nav__links {
-            @apply hidden;
-        }
-
-        .nav__link-individual {
-            @apply hidden;
-        }
-    }
-}
-
-/* Mobile */
-
-.nav {
-    @media (max-width: 760px) {
-        .nav__link-individual {
-        }
+@media (max-width: 1280px) {
+    .nav__link {
+        @apply text-base;
     }
 }

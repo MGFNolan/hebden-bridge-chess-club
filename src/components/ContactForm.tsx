@@ -110,10 +110,7 @@ export default function ContactForm() {
                                 `Submission failed: ${formState.errorMessage}`}
                         </div>
                         <label className="contact-us__label" htmlFor="name">
-                            <p>
-                                Name <span className="mandatory">*</span>
-                            </p>
-
+                            Name <span className="mandatory">*</span>
                             <input
                                 autoComplete="name"
                                 className="contact-us__name"
@@ -122,7 +119,7 @@ export default function ContactForm() {
                                 name="name"
                                 value={values.name}
                                 onChange={handleChange}
-                                placeholder="Write your name here"
+                                placeholder="e.g. Charlie Smith"
                                 minLength={3}
                                 maxLength={50}
                                 pattern="[^.]*?"
@@ -144,10 +141,7 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="email">
-                            <p>
-                                Email <span className="mandatory">*</span>
-                            </p>
-
+                            Email <span className="mandatory">*</span>
                             <input
                                 autoComplete="email"
                                 className="contact-us__email"
@@ -156,7 +150,7 @@ export default function ContactForm() {
                                 name="email"
                                 value={values.email}
                                 onChange={handleChange}
-                                placeholder="Write your email here so we can reply to you"
+                                placeholder="e.g. charlie.smith@example.com"
                                 minLength={3}
                                 maxLength={50}
                                 aria-required="true"
@@ -177,10 +171,7 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="subject">
-                            <p>
-                                Subject <span className="mandatory">*</span>
-                            </p>
-
+                            Subject <span className="mandatory">*</span>
                             <select
                                 id="subject"
                                 name="subject"
@@ -218,16 +209,13 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="message">
-                            <p>
-                                Message <span className="mandatory">*</span>
-                            </p>
-
+                            Message <span className="mandatory">*</span>
                             <textarea
                                 id="message"
                                 name="message"
                                 value={values.message}
                                 onChange={handleChange}
-                                placeholder="Write your message here"
+                                placeholder="e.g. Hello - I am wondering if the chess club is on this coming Monday..."
                                 style={{ height: "200px" }}
                                 className="contact-us__message"
                                 minLength={3}

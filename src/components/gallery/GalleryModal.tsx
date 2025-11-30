@@ -130,7 +130,7 @@ export default function ImageModal({
     return (
         <>
             <div
-                className="modal__backdrop"
+                className="gallery-modal__backdrop"
                 onClick={onClose}
                 aria-hidden="true"
             />
@@ -140,40 +140,40 @@ export default function ImageModal({
                 role="dialog"
                 aria-modal="true"
                 aria-label="Image viewer"
-                className="modal"
+                className="gallery-modal"
             >
-                <div className="modal__container">
-                    <div className="modal__header">
-                        <span className="modal__counter">
+                <div className="gallery-modal__container">
+                    <div className="gallery-modal__header">
+                        <span className="gallery-modal__counter">
                             {currentIndex + 1} / {images.length}
                         </span>
                         <button
                             ref={closeButtonRef}
                             onClick={onClose}
-                            className="modal__close-button"
+                            className="gallery-modal__close-button btn--primary btn--idle"
                             aria-label="Close image viewer"
                         >
-                            <CloseIcon className="modal__close-icon" />
+                            <CloseIcon className="gallery-modal__close-icon" />
                         </button>
                     </div>
 
-                    <div className="modal__image-container">
+                    <div className="gallery-modal__image-container">
                         <img
                             src={currentImage.img_url}
                             alt={currentImage.img_alt}
-                            className={`modal__image ${
+                            className={`gallery-modal__image ${
                                 !prefersReducedMotion
-                                    ? "modal__image--animated"
+                                    ? "gallery-modal__image--animated"
                                     : ""
                             }`}
                         />
                     </div>
 
-                    <div className="modal__footer">
+                    <div className="gallery-modal__footer">
                         <button
                             onClick={goToPrevious}
                             disabled={isFirstImage}
-                            className="modal__nav-button"
+                            className="gallery-modal__nav-button btn--primary btn--idle"
                             aria-label="Previous image"
                         >
                             ← Previous
@@ -182,7 +182,7 @@ export default function ImageModal({
                         <button
                             onClick={goToNext}
                             disabled={isLastImage}
-                            className="modal__nav-button"
+                            className="gallery-modal__nav-button btn--primary btn--idle"
                             aria-label="Next image"
                         >
                             Next →

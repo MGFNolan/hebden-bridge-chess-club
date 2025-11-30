@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import ImageModal from "./ImageModal";
+import ImageModal from "./GalleryModal.tsx";
 import { AnimatePresence, motion } from "framer-motion";
 import useQueryGalleryImages from "../../hooks/useQueryGalleryImages.tsx";
 import Loader from "../Loader.tsx";
@@ -62,7 +62,7 @@ export default function ImageGallery() {
             aria-labelledby="gallery-title"
         >
             <h2 className="gallery__title" id="gallery-title">
-                Image Gallery
+                Gallery
             </h2>
 
             <AnimatePresence>
@@ -121,7 +121,7 @@ export default function ImageGallery() {
                 )}
 
             {selectedIndex !== null && galleryImages && (
-                <ImageModal
+                <ImageModal // This component uses the gallery-modal CSS
                     images={galleryImages}
                     initialIndex={selectedIndex}
                     onClose={handleCloseModal}
