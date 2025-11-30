@@ -1,25 +1,24 @@
 .join-game {
-    .container {
-        @apply flex flex-col;
+    /* The container inside is a flex column */
+}
+.join-game > .container {
+    @apply flex flex-col;
+}
 
-        .join-game__btn {
-            @apply mx-auto;
-        }
+.join-game__heading {
+    /* No specific styles needed yet, but class is ready */
+}
 
-        .join-game__text {
-            @apply text-center mx-auto;
+.join-game__text {
+    @apply text-center mx-auto;
+}
+.join-game__text em {
+    @apply font-bold;
+}
+.join-game__text strong {
+    @apply italic;
+}
 
-            em {
-                @apply font-bold;
-            }
-
-            strong {
-                @apply italic;
-            }
-        }
-
-        .location-map {
-            @apply m-auto my-5 w-[100%] h-[50dvh];
-        }
-    }
+.join-game__map {
+    @apply m-auto my-5 w-[100%] h-[50dvh];
 }

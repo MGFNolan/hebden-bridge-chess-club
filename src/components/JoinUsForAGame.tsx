@@ -20,7 +20,9 @@ function JoinUsForAGame() {
             aria-labelledby="join-game-heading"
         >
             <div className="container">
-                <h2 id="join-game-heading">Join us For a Game?</h2>
+                <h2 id="join-game-heading" className="join-game__heading">
+                    Join us For a Game?
+                </h2>
 
                 <p className="join-game__text">
                     It doesn’t matter whether you’re new to chess, an online
@@ -40,7 +42,7 @@ function JoinUsForAGame() {
                     allowFullScreen={undefined}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="location-map"
+                    className="join-game__map"
                     title="Google Maps showing the location of The Trades Club in Hebden Bridge"
                 ></iframe>
             </div>
