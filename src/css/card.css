@@ -1,11 +1,8 @@
 .card {
-    @apply justify-self-center;
-    @apply rounded-md;
-    @apply transition-all duration-300;
-    @apply shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover relative isolate;
+    @apply justify-self-center rounded-md transition-all duration-300 shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover relative isolate;
 
     &:nth-child(odd) {
-        @apply bg-[url(/dark-wood-pattern.jpg)] bg-cover bg-top text-white;
+        @apply bg-[url(/dark-wood-pattern.jpg)] bg-top text-white;
 
         &::before {
             background: rgba(0, 0, 0, 0.3);
@@ -13,20 +10,20 @@
     }
 
     &:nth-child(even) {
-        @apply bg-[url(/light-wood-pattern.jpg)] bg-cover bg-bottom text-white;
+        @apply bg-[url(/light-wood-pattern.jpg)] bg-bottom text-white;
 
         &::before {
             background: rgba(0, 0, 0, 0.4);
         }
     }
 
+    /* This pseudo-element creates the dark overlay on the background image */
     &::before {
         @apply content-[''] absolute inset-0 z-0 rounded-md;
     }
 
     &:hover {
-        @apply shadow-[0_0_25px_3px_rgba(92,64,51,0.8)];
-        @apply scale-105;
+        @apply shadow-[0_0_25px_3px_rgba(92,64,51,0.8)] scale-105;
     }
 
     .card__img-container {
@@ -34,23 +31,19 @@
     }
 
     .card__img {
-        @apply h-full w-full rounded-t-sm object-cover;
+        @apply h-full w-full rounded-t-md object-cover;
     }
     .card__text {
-        @apply flex flex-col items-center;
-        @apply px-5;
-        @apply font-[500] tracking-wide text-shadow-lg;
+        @apply flex flex-col items-center px-5 font-[500] tracking-wide text-shadow-lg;
 
         p {
-            @apply text-sm;
-            @apply relative z-10;
+            @apply text-sm relative z-10;
         }
 
         em {
             @apply font-bold;
         }
     }
-
     /* Desktop - Smaller */
 
     @media (max-width: 1280px) {
@@ -59,12 +52,12 @@
     /* Tablet */
 
     @media (max-width: 959px) {
-        @apply grid-cols-2;
+        /* Styles for tablet view */
     }
 
     /* Mobile */
 
     @media (max-width: 760px) {
-        @apply grid-cols-1 max-w-[90%];
+        @apply max-w-[90%];
     }
 }
