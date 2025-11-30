@@ -110,10 +110,7 @@ export default function ContactForm() {
                                 `Submission failed: ${formState.errorMessage}`}
                         </div>
                         <label className="contact-us__label" htmlFor="name">
-                            <p>
-                                Name <span className="mandatory">*</span>
-                            </p>
-
+                            Name <span className="mandatory">*</span>
                             <input
                                 autoComplete="name"
                                 className="contact-us__name"
@@ -144,10 +141,7 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="email">
-                            <p>
-                                Email <span className="mandatory">*</span>
-                            </p>
-
+                            Email <span className="mandatory">*</span>
                             <input
                                 autoComplete="email"
                                 className="contact-us__email"
@@ -177,10 +171,7 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="subject">
-                            <p>
-                                Subject <span className="mandatory">*</span>
-                            </p>
-
+                            Subject <span className="mandatory">*</span>
                             <select
                                 id="subject"
                                 name="subject"
@@ -218,10 +209,7 @@ export default function ContactForm() {
                         </label>
 
                         <label className="contact-us__label" htmlFor="message">
-                            <p>
-                                Message <span className="mandatory">*</span>
-                            </p>
-
+                            Message <span className="mandatory">*</span>
                             <textarea
                                 id="message"
                                 name="message"

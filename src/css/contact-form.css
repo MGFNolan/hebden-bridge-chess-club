@@ -15,12 +15,14 @@
             }
         }
 
-        .contact-us__label {
-            @apply mt-3 ml-2 block;
-
-            p {
-                @apply mb-[0.5rem];
+        .contact-us__subject {
+            option {
+                @apply text-[var(--secondary-colour)];
             }
+        }
+
+        .contact-us__label {
+            @apply mt-3 ml-2 block mb-[0.5rem];
         }
 
         .contact-us__btn {
