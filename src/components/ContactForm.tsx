@@ -119,7 +119,7 @@ export default function ContactForm() {
                                 name="name"
                                 value={values.name}
                                 onChange={handleChange}
-                                placeholder="Write your name here"
+                                placeholder="e.g. Charlie Smith"
                                 minLength={3}
                                 maxLength={50}
                                 pattern="[^.]*?"
@@ -150,7 +150,7 @@ export default function ContactForm() {
                                 name="email"
                                 value={values.email}
                                 onChange={handleChange}
-                                placeholder="Write your email here so we can reply to you"
+                                placeholder="e.g. charlie.smith@example.com"
                                 minLength={3}
                                 maxLength={50}
                                 aria-required="true"
@@ -215,7 +215,7 @@ export default function ContactForm() {
                                 name="message"
                                 value={values.message}
                                 onChange={handleChange}
-                                placeholder="Write your message here"
+                                placeholder="e.g. Hello - I am wondering if the chess club is on this coming Monday..."
                                 style={{ height: "200px" }}
                                 className="contact-us__message"
                                 minLength={3}
