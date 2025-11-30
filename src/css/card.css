@@ -2,14 +2,26 @@
     @apply justify-self-center;
     @apply rounded-md;
     @apply transition-all duration-300;
-    @apply shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover;
+    @apply shadow-[0_0_20px_2px_rgba(92,64,51,0.7)] bg-cover relative isolate;
 
     &:nth-child(odd) {
-        @apply bg-[url(/dark-wood-pattern.jpg)] bg-cover bg-top text-[var(--secondary-colour)];
+        @apply bg-[url(/dark-wood-pattern.jpg)] bg-cover bg-top text-white;
+
+        &::before {
+            background: rgba(0, 0, 0, 0.3);
+        }
     }
 
     &:nth-child(even) {
-        @apply bg-[url(/light-wood-pattern.jpg)] bg-cover bg-bottom text-[var(--primary-colour)];
+        @apply bg-[url(/light-wood-pattern.jpg)] bg-cover bg-bottom text-white;
+
+        &::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &::before {
+        @apply content-[''] absolute inset-0 z-0 rounded-md;
     }
 
     &:hover {
@@ -18,7 +30,7 @@
     }
 
     .card__img-container {
-        @apply w-full overflow-hidden aspect-[16/9];
+        @apply w-full overflow-hidden aspect-[16/9] relative z-10;
     }
 
     .card__img {
@@ -27,10 +39,11 @@
     .card__text {
         @apply flex flex-col items-center;
         @apply px-5;
-        font-weight: 500;
+        @apply font-[500] tracking-wide text-shadow-lg;
 
         p {
             @apply text-sm;
+            @apply relative z-10;
         }
 
         em {
