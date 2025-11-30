@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from "motion/react";
+import heroImage from "/hbcc-hero-image.jpg";
 
 export default function Hero() {
     const shouldReduceMotion = useReducedMotion();
@@ -10,6 +11,11 @@ export default function Hero() {
             aria-label="Hero section with a welcome message"
         >
             <div className="hero__background">
+                <img
+                    src={heroImage}
+                    alt="A chess board with pieces set up in a park in Hebden Bridge"
+                    className="hero__background-image"
+                />
                 <div className="container hero__content">
                     <motion.h1
                         initial={

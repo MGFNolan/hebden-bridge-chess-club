@@ -6,13 +6,9 @@
     @apply relative flex justify-center w-full h-full;
 }
 
-.hero__background::before {
-    content: "";
+.hero__background-image {
     @apply absolute top-1/2 left-1/2 w-full h-full;
-
-    /* background image */
-    @apply bg-center bg-no-repeat bg-cover;
-    @apply bg-[url('/hbcc-hero-image.jpg')] -translate-x-1/2 -translate-y-1/2 -z-10;
+    @apply object-cover -translate-x-1/2 -translate-y-1/2 -z-10;
 }
 
 .hero__content {
