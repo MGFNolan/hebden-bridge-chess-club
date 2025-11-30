@@ -21,10 +21,29 @@
         @media (min-width: 1280px) {
             grid-template-columns: repeat(4, 1fr);
         }
+
+        & > *:nth-child(odd) .gallery__thumbnail::before {
+            background-image: url("/dark-wood-pattern.jpg");
+        }
+
+        & > *:nth-child(even) .gallery__thumbnail::before {
+            background-image: url("/light-wood-pattern.jpg");
+        }
     }
 
     .gallery__thumbnail {
-        @apply relative w-full overflow-hidden rounded-lg transition-transform aspect-square;
+        @apply relative w-full rounded-lg transition-transform aspect-square;
+
+        &::before {
+            content: "";
+            @apply absolute -z-10 rounded-lg;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background-size: cover;
+            background-position: center;
+        }
 
         &:hover {
             @apply scale-105 cursor-pointer;
@@ -40,7 +59,8 @@
     }
 
     .gallery__thumbnail-image {
-        @apply w-full h-full object-cover;
+        @apply w-full h-full object-cover rounded-lg;
+        box-shadow: 0 0 5px white;
     }
 
     .gallery__thumbnail-overlay {
