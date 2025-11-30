@@ -121,7 +121,7 @@ export default function ImageGallery() {
                 )}
 
             {selectedIndex !== null && galleryImages && (
-                <ImageModal
+                <ImageModal // This component uses the gallery-modal CSS
                     images={galleryImages}
                     initialIndex={selectedIndex}
                     onClose={handleCloseModal}
