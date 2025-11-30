@@ -106,6 +106,7 @@
 
             svg {
                 @apply mr-0 mb-4;
+                @apply self-center;
             }
         }
     }
