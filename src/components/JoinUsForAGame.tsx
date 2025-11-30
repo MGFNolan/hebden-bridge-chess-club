@@ -14,7 +14,11 @@ function JoinUsForAGame() {
     }, []);
 
     return (
-        <section className="join-game" aria-labelledby="join-game-heading">
+        <section
+            className="join-game"
+            id="join-us-for-a-game"
+            aria-labelledby="join-game-heading"
+        >
             <div className="container">
                 <h2 id="join-game-heading">Join us For a Game?</h2>
 

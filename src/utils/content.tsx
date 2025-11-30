@@ -14,8 +14,8 @@ import safeSpaceImg from "../assets/what-we-offer/a-safe-space.jpg";
 
 const navLinksData = [
     {
-        href: "#club-information",
-        text: "Club Information",
+        href: "#join-us-for-a-game",
+        text: "Join us For a Game",
     },
     {
         href: "#what-we-offer",

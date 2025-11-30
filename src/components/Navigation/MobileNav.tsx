@@ -44,7 +44,7 @@ export default function MobileNav() {
                     duration: 0.35,
                     ease: "easeInOut",
                 }}
-                className="mobile-nav bg-black"
+                className="mobile-nav"
             >
                 <Close onClick={() => setMenuOpened(false)} />
                 <motion.ul
@@ -81,9 +81,9 @@ export default function MobileNav() {
                             <div className="mobile-nav__link-individual__wrapper">
                                 <a
                                     href={link.href}
-                                    className={`text-orange-500 ${
+                                    className={`text-[var(--secondary-colour)] ${
                                         activeLinkId === link.id
-                                            ? "text-orange-600"
+                                            ? "underline"
                                             : ""
                                     }`}
                                     aria-current={
