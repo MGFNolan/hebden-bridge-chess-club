@@ -4,88 +4,83 @@ import { IoInformationCircle } from "react-icons/io5";
 import { UsefulLinksContent } from "../utils/content";
 import LogoIcon from "./Icons/LogoIcon";
 
+const socialLinks = [
+    {
+        id: "chesscom",
+        href: "https://www.chess.com/club/hebden-bridge-chess-club",
+        label: "Visit Hebden Bridge Chess Club on chess.com",
+        Icon: SiChessdotcom,
+    },
+    {
+        id: "lichess",
+        href: "https://lichess.org/team/hebden-bridge-online-cc",
+        label: "Visit Hebden Bridge Chess Club on lichess.org",
+        Icon: SiLichess,
+    },
+];
+
 export default function Footer() {
     return (
         <footer id="footer" className="footer">
             <div className="container footer__content">
-                <div className="footer__left">
+                <div className="footer__location">
                     <h2>Where to Find Us</h2>
-                    <div className="footer__left__content">
+                    <div className="footer__location-content">
                         <FaLocationDot aria-hidden="true" />
-                        <p>
+                        <address>
                             The Trades Club <br /> Holme Street <br /> Hebden
                             Bridge <br /> HX7 8EE
-                        </p>
+                        </address>
                     </div>
                 </div>
-                <div className="footer__middle">
-                    <div className="footer__content__logo">
+                <div className="footer__center-column">
+                    <div className="footer__logo">
                         <LogoIcon aria-hidden="true" />
                     </div>
 
-                    <div className="footer__content__icons">
-                        <a
-                            href="https://www.chess.com/club/hebden-bridge-chess-club"
-                            aria-label="Visit Hebden Bridge Chess Club on chess.com"
-                            target="_blank"
-                            rel="noopener noreferrer nofollow"
-                        >
-                            <SiChessdotcom />{" "}
-                            <span className="screen-reader-text">
-                                (opens in new tab)
-                            </span>
-                        </a>
-                        <a
-                            href="https://lichess.org/team/hebden-bridge-online-cc"
-                            aria-label="Visit Hebden Bridge Chess Club on lichess.org"
-                            target="_blank"
-                            rel="noopener noreferrer nofollow"
-                        >
-                            <SiLichess />{" "}
-                            <span className="screen-reader-text">
-                                (opens in new tab)
-                            </span>
-                        </a>
-                    </div>
-                    <div className="footer__content__text">
-                        <p>
-                            © 2025 Hebden Bridge Chess Club |{" "}
+                    <div className="footer__socials">
+                        {socialLinks.map(({ id, href, label, Icon }) => (
                             <a
-                                href="https://github.com/MGFNolan"
+                                key={id}
+                                href={href}
+                                aria-label={label}
                                 target="_blank"
-                                aria-label="Visit MGFNolan's profile on GitHub"
                                 rel="noopener noreferrer nofollow"
                             >
-                                Website built by MGFNolan
+                                <Icon />
                             </a>
-                        </p>
+                        ))}
                     </div>
+                    <p className="footer__copyright">
+                        © 2025 Hebden Bridge Chess Club |{" "}
+                        <a
+                            href="https://github.com/MGFNolan"
+                            target="_blank"
+                            aria-label="Visit MGFNolan's profile on GitHub"
+                            rel="noopener noreferrer nofollow"
+                        >
+                            Website built by MGFNolan
+                        </a>
+                    </p>
                 </div>
-                <div className="footer__right">
-                    <div>
-                        {" "}
-                        <h2>Useful Links</h2>
-                        <div className="footer__right__content">
-                            <IoInformationCircle aria-hidden="true" />
-                            <ul>
-                                {UsefulLinksContent.map((link) => (
-                                    <li key={link.id}>
-                                        {" "}
-                                        <a
-                                            href={link.href}
-                                            aria-label={link.description}
-                                            target="_blank"
-                                            rel="noopener noreferrer nofollow"
-                                        >
-                                            {link.name}{" "}
-                                            <span className="screen-reader-text">
-                                                (opens in new tab)
-                                            </span>
-                                        </a>{" "}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                <div className="footer__useful-links">
+                    <h2>Useful Links</h2>
+                    <div className="footer__useful-links-content">
+                        <IoInformationCircle aria-hidden="true" />
+                        <ul>
+                            {UsefulLinksContent.map((link) => (
+                                <li key={link.id}>
+                                    <a
+                                        href={link.href}
+                                        aria-label={link.description}
+                                        target="_blank"
+                                        rel="noopener noreferrer nofollow"
+                                    >
+                                        {link.name}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
