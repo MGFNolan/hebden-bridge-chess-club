@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import heroImage from "/hbcc-hero-image.jpg";
+import heroImageHq from "/hbcc-hero-image.jpg";
+import heroImageLq from "/hbcc-hero-image-sm.jpeg";
 
 export default function Hero() {
     const shouldReduceMotion = useReducedMotion();
+    const [imageSrc, setImageSrc] = useState(heroImageLq);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = heroImageHq;
+        img.onload = () => {
+            setImageSrc(heroImageHq);
+        };
+    }, []);
 
     return (
         <section
@@ -12,7 +23,7 @@ export default function Hero() {
         >
             <div className="hero__background">
                 <img
-                    src={heroImage}
+                    src={imageSrc}
                     alt="A chess board with pieces set up in a park in Hebden Bridge"
                     className="hero__background-image"
                 />
