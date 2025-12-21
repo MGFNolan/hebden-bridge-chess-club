@@ -1,5 +1,5 @@
 .hero {
-    @apply h-[100svh] relative overflow-hidden p-0;
+    @apply h-[100.1svh] relative overflow-hidden p-0;
 }
 
 .hero__background {
@@ -7,7 +7,7 @@
 }
 
 .hero__background-image {
-    @apply absolute top-0 left-0 w-full h-full;
+    @apply absolute top-1/2 left-1/2 h-[100%] w-[100%] -translate-x-1/2 -translate-y-1/2;
     @apply bg-cover bg-center bg-no-repeat -z-10;
 }
 
