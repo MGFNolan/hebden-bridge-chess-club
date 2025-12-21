@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import heroImageHq from "/hbcc-hero-image.jpg";
 import heroImageLq from "/hbcc-hero-image-sm.jpeg";
@@ -6,6 +6,7 @@ import heroImageLq from "/hbcc-hero-image-sm.jpeg";
 export default function Hero() {
     const shouldReduceMotion = useReducedMotion();
     const [imageSrc, setImageSrc] = useState(heroImageLq);
+    const heroRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const img = new Image();
@@ -20,8 +21,20 @@ export default function Hero() {
         };
     }, []);
 
+    useEffect(() => {
+        if (heroRef.current) {
+            // Set the height statically to the window's inner height on load
+            heroRef.current.style.height = `${window.innerHeight}px`;
+        }
+    }, []);
+
     return (
-        <section id="hero" className="hero" aria-label="Hero section">
+        <section
+            id="hero"
+            className="hero"
+            aria-label="Hero section"
+            ref={heroRef}
+        >
             <div className="hero__background">
                 <div
                     className="hero__background-image"
