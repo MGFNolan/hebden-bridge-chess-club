@@ -23,6 +23,6 @@
 
 @media (max-width: 760px) {
     .hero__title {
-        @apply text-left;
+        @apply text-left mt-[12.5dvh];
     }
 }

@@ -131,8 +131,8 @@ export default function ImageGallery() {
 
             {!isLoading && error && (
                 <Error>
-                    It looks like something went wrong while loading our recent
-                    news.
+                    It looks like something went wrong while loading our
+                    Gallery.
                 </Error>
             )}
         </section>
