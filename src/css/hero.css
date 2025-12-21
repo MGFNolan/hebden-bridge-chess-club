@@ -8,7 +8,7 @@
 
 .hero__background-image {
     @apply absolute top-0 left-0 w-full h-full;
-    @apply bg-cover bg-center -z-10;
+    @apply bg-cover bg-center bg-no-repeat -z-10;
 }
 
 .hero__content {
