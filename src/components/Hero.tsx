@@ -21,17 +21,14 @@ export default function Hero() {
     }, []);
 
     return (
-        <section
-            id="hero"
-            className="hero"
-            aria-label="Hero section with a welcome message"
-        >
+        <section id="hero" className="hero" aria-label="Hero section">
             <div className="hero__background">
-                <img
-                    src={imageSrc}
-                    alt="A chess board with pieces set up in a park in Hebden Bridge"
+                <div
                     className="hero__background-image"
-                />
+                    style={{ backgroundImage: `url(${imageSrc})` }}
+                    role="img"
+                    aria-label="A chess board with pieces set up in a park in Hebden Bridge"
+                ></div>
                 <div className="container hero__content">
                     <motion.h1
                         initial={
