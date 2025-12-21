@@ -13,6 +13,11 @@ export default function Hero() {
         img.onload = () => {
             setImageSrc(heroImageHq);
         };
+
+        // Cleanup function to prevent setting state on an unmounted component
+        return () => {
+            img.onload = null;
+        };
     }, []);
 
     return (
