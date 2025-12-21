@@ -1,5 +1,5 @@
 .hero {
-    @apply h-[100svh] relative overflow-hidden p-0;
+    @apply h-[100dvh] relative overflow-hidden p-0;
 }
 
 .hero__background {
@@ -7,7 +7,7 @@
 }
 
 .hero__background-image {
-    @apply absolute top-0 left-0 w-full h-[105%];
+    @apply absolute top-0 left-0 w-full h-full;
     @apply bg-cover bg-center bg-no-repeat -z-10;
 }
 
@@ -23,6 +23,6 @@
 
 @media (max-width: 760px) {
     .hero__title {
-        @apply text-left mt-[12.5svh];
+        @apply text-left mt-[12.5dvh];
     }
 }
