@@ -15,11 +15,11 @@ import safeSpaceImg from "../assets/what-we-offer/a-safe-space.jpg";
 const navLinksData = [
     {
         href: "#join-us-for-a-game",
-        text: "Join us For a Game",
+        text: "Join us for a Game",
     },
     {
         href: "#what-we-offer",
-        text: "What We Offer",
+        text: "What we offer",
     },
     {
         href: "#gallery",
@@ -27,7 +27,7 @@ const navLinksData = [
     },
     {
         href: "#contact-us",
-        text: "Contact Us",
+        text: "Contact us",
     },
 ];
 
@@ -140,8 +140,8 @@ const whatWeOfferData = [
             <>
                 <p>
                     We’ve established a new Junior Chess Club for all ages under
-                    16. The club has its own coach and meets on{" "}
-                    <strong>Tuesday’s from 16:15 to 17:45</strong> at{" "}
+                    16. The club has its own coach and meets every{" "}
+                    <strong>Wednesday from 16:15 to 17:45</strong> at{" "}
                     <em>Hebden Bridge Town Hall</em>. Please use the contact
                     form at the bottom of the page to enquire and find out more
                     information.
