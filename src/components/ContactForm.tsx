@@ -90,7 +90,7 @@ export default function ContactForm() {
         <section id="contact-us" aria-labelledby="contact-us-heading">
             <div className="container">
                 <div className="contact-us">
-                    <h2 id="contact-us-heading">Contact Us</h2>
+                    <h2 id="contact-us-heading">Contact us</h2>
                     <form
                         onSubmit={handleSubmit}
                         className="contact-us-form"
