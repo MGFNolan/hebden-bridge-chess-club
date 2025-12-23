@@ -31,7 +31,11 @@ export default function NavBar() {
     return (
         <nav className="nav" aria-label="Main navigation" id="navbar">
             <div className="nav__group">
-                <a href="/" className="nav__logo" aria-label="Home">
+                <a
+                    href="/hebden-bridge-chess-club/"
+                    className="nav__logo"
+                    aria-label="Home"
+                >
                     <LogoIcon />
                 </a>
 

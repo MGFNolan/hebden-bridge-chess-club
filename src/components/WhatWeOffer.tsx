@@ -10,7 +10,7 @@ export default function WhatWeOffer() {
         >
             <div className="container">
                 <h2 className="what-we-offer__title" id="what-we-offer-heading">
-                    What We Offer
+                    What we offer
                 </h2>
                 <ul className="what-we-offer__card-container">
                     {WhatWeOfferContent.map((info) => (

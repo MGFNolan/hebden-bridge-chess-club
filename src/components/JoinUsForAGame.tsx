@@ -21,7 +21,7 @@ function JoinUsForAGame() {
         >
             <div className="container">
                 <h2 id="join-game-heading" className="join-game__heading">
-                    Join us For a Game?
+                    Join us for a game
                 </h2>
 
                 <p className="join-game__text">
