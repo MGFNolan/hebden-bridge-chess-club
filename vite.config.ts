@@ -4,6 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: "/hebden-bridge-chess-club/",
     plugins: [react(), tailwindcss()],
 });
