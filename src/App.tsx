@@ -1,5 +1,5 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 //Styling
 import "./index.css";
@@ -19,16 +19,17 @@ import Main from "./components/Main";
 import WhatWeOffer from "./components/WhatWeOffer";
 import ContactForm from "./components/ContactForm";
 import JoinUsForAGame from "./components/JoinUsForAGame";
-import ImageGallery from "./components/gallery/Gallery";
+// import ImageGallery from "./components/gallery/Gallery";
 
 //Footer
 import Footer from "./components/Footer";
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 
 function App() {
     return (
-        <QueryClientProvider client={queryClient}>
+        // <QueryClientProvider client={queryClient}>
+        <div>
             <MenuContextProvider>
                 <Page>
                     <Header>
@@ -41,7 +42,7 @@ function App() {
                         <JoinUsForAGame />
 
                         <WhatWeOffer />
-                        <ImageGallery />
+                        {/* <ImageGallery /> */}
 
                         <ContactForm />
                     </Main>
@@ -49,8 +50,9 @@ function App() {
                     <Footer />
                 </Page>
             </MenuContextProvider>
-            <ReactQueryDevtools />
-        </QueryClientProvider>
+            {/* <ReactQueryDevtools /> */}
+        </div>
+        // </QueryClientProvider>
     );
 }
 
