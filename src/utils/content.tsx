@@ -38,30 +38,6 @@ const NavLinksContent: NavLink[] = navLinksData.map((item, index) => ({
 
 const whatWeOfferData = [
     {
-        image: membershipImg,
-        alt: "The Trades Club sign attached to the Trades Club building. There are leaves and branches of a tree in the background.",
-        title: "Membership",
-        description: (
-            <>
-                <p>
-                    While membership is required for competitive chess, you’re
-                    welcome to come along, play some social games, enjoy a drink
-                    and a chat and see how you find things, with no obligations.
-                </p>
-                <p>
-                    If you decide to become a member, we charge an annual
-                    membership fee which runs from{" "}
-                    <em>September 1st to August 31st</em> –{" "}
-                    <strong>
-                        £30 for adults (reduced to £20 for members of the Trades
-                        Club)
-                    </strong>
-                    .
-                </p>
-            </>
-        ),
-    },
-    {
         image: leagueChessImg,
         alt: "Two players playing a game of chess at a table. There is a chess clock on the table in the foreground, and pieces that have been exchanged off the board.",
         title: "League Chess",
@@ -162,6 +138,30 @@ const whatWeOfferData = [
                 <p>
                     Whoever you are, you’re very welcome at the Hebden Bridge
                     Chess Club.
+                </p>
+            </>
+        ),
+    },
+        {
+        image: membershipImg,
+        alt: "The Trades Club sign attached to the Trades Club building. There are leaves and branches of a tree in the background.",
+        title: "Membership",
+        description: (
+            <>
+                <p>
+                    While membership is required for competitive chess, you’re
+                    welcome to come along, play some social games, enjoy a drink
+                    and a chat and see how you find things, with no obligations.
+                </p>
+                <p>
+                    If you decide to become a member, we charge an annual
+                    membership fee which runs from{" "}
+                    <em>September 1st to August 31st</em> –{" "}
+                    <strong>
+                        £30 for adults (reduced to £20 for members of the Trades
+                        Club)
+                    </strong>
+                    .
                 </p>
             </>
         ),
