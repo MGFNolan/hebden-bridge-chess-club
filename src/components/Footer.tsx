@@ -52,7 +52,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <p className="footer__copyright">
-                        © 2025 Hebden Bridge Chess Club |{" "}
+                        © 2026 Hebden Bridge Chess Club |{" "}
                         <a
                             href="https://github.com/MGFNolan"
                             target="_blank"
