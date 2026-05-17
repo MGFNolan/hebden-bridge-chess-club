@@ -8,7 +8,7 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
 
 export async function getGalleryImages() {
-    const { data, error } = await supabase.from("GalleryImages").select();
+    const { data, error } = await supabase.from("hbcc-photos-table").select();
 
     if (error) {
         throw new Error(

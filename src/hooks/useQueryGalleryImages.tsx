@@ -7,7 +7,7 @@ export default function useQueryGalleryImages() {
         error,
         isLoading,
     } = useQuery({
-        queryKey: ["galleryImages"],
+        queryKey: ["hbcc-photos-table"],
         queryFn: getGalleryImages,
     });
 
